@@ -1,0 +1,73 @@
+
+@import "../styles/abstracts/variables";
+
+@import "../styles/base/typography";
+@import "../styles/base/animations";
+
+
+
+.section {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+
+    background-color: $color-white;
+    // background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,1));
+
+    &Light {
+        background-color: $color-gray900;
+        // background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+        color: $color-gray100;
+    }
+    &Dark {
+        background-color: $color-gray100;
+        color: $color-gray900;
+    }
+    
+}
+
+
+.thisElement {
+    padding-top: $spacing-48;
+    padding-bottom: $spacing-48;
+}
+
+
+// SELECTOR STYLES
+
+
+
+.ulist {
+    display: flex;
+
+    padding-right: $spacing-24;
+    padding-left: $spacing-24;
+
+    .tagline {
+        display: inline-block;
+        animation-name: moveInRight;
+        animation-duration: 2.2s;
+        animation-timing-function: ease-out;
+    }
+
+    .item {
+        margin-right: $spacing-24;
+
+        &:nth-child(2) {
+            margin-left: auto;
+        }
+    
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+}
+
+.spacer {
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+
+
+}

@@ -1,0 +1,65 @@
+
+
+
+
+
+
+.wrapper {
+    max-width: 1728px;
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+    padding-left: $spacing-48;
+    padding-right: $spacing-48;
+  }
+  
+  
+
+
+
+
+.columns {
+    display: flex;
+  
+    .columnHeader {
+        margin-bottom: $spacing-24;
+  
+        &Centered {
+            text-align: center;
+        }
+    }
+  
+    .column {
+        padding-right: $spacing-24;
+        padding-left: $spacing-24;
+  
+        &_1x {
+            flex-basis: 25%;
+    
+        }
+        &_2x {
+            flex-basis: 50%;
+    
+        }
+        &_4x {
+            flex-basis: 100%;
+        }
+    }
+  }
+  
+
+
+  .singleColumn {
+
+    &Centered {
+        text-align: center;
+    }
+
+
+    max-width: 864px;
+    margin: auto;
+
+    padding-left: $spacing-48;
+    padding-right: $spacing-48;
+  }

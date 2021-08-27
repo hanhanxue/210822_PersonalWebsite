@@ -1,0 +1,44 @@
+---
+category: 'Guide'
+
+publishedAt: ''
+tileSize: ''
+title: ''
+summary: ''
+---
+
+<!-- 
+- [Motivation](#motivation)
+- [Strategies](#strategies)
+- [Subpath](#subpath) -->
+
+
+Next.js has been designed for gradual adoption. With Next.js, you can continue using your existing code and add as much (or as little) React as you need. By starting small and incrementally adding more pages, you can prevent derailing feature work by avoiding a complete rewrite.
+
+Many companies need to modernize their tech stack to reduce costs, increase developer productivity, and provide the best experience for their customers. Component-driven development has greatly improved the deployment velocity and reusability of modern codebases.
+
+And with over 8 million downloads/month, React is the leading component-driven choice for developers. Next.js, the React framework for production, enables you to incrementally adopt React.
+
+## Motivation
+
+
+In an increasingly mobile world, improving and tracking your Core Web Vitals is critical for success. Your customers are likely distributed across the world with varying internet speeds. Every second (or millisecond) of additional time spent waiting for a page to load or an action to complete could be the difference between a sale, impression, or conversion.
+
+If you're modernizing your tech stack, you might be facing challenges like:
+
+- Your application has years of legacy code that is difficult to reason about and would take years (and millions of dollars) to rewrite completely.
+- Your page load times continue to increase as the size and complexity of the application grows. Simple marketing pages are as slow as the most complex pages.
+- You're trying to scale your development team, but are facing issues adding more developers into the existing codebase.
+- You have outdated CI/CD and DevOps processes, which decrease developer productivity and make it difficult to safely and reliably roll out new changes.
+-  Your application is not responsive for mobile devices and it's impossible to update the global page styling without breaking other parts of the application.
+
+You know you need to do something, but it can be overwhelming to understand where to start. By incrementally adopting Next.js, you can begin to solve the above issues and transform your application. Let's discuss a few different strategies for adopting Next.js into your existing tech stack.
+
+## Strategies
+
+### Subpath
+
+The first strategy is to configure your server or proxy such that, everything under a specific subpath points to a Next.js app. For example, your existing website might be at example.com, and you might configure your proxy such that example.com/store serves a Next.js e-commerce store.
+
+Using ```basePath```, you can configure your Next.js application's assets and links to automatically work with your new subpath ```'/store'```. Since each page in Next.js is its own standalone route, pages like pages/products.js will route to example.com/store/products in your application.
+

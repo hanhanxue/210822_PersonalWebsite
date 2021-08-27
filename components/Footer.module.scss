@@ -1,0 +1,17 @@
+
+@import "../styles/abstracts/variables";
+@import "../styles/base/typography";
+
+
+
+.section {
+    background-color: $color-gray900;
+}
+
+.thisElement {
+    padding-top: $spacing-64;
+    padding-bottom: $spacing-64;
+}
+
+// SELECTOR STYLES
+

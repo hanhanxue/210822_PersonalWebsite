@@ -1,0 +1,90 @@
+
+@import "../styles/abstracts/variables";
+@import "../styles/base/typography";
+
+.section {
+    background-color: $color-gray900;
+}
+
+
+.thisElement {
+    padding-top: $spacing-64;
+    padding-bottom: $spacing-128;
+
+    // background-color: red;
+    //background-color: red;
+}
+
+
+
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: $spacing-neg6;
+    margin-right: $spacing-neg6;
+    margin-bottom: $spacing-neg6;
+    margin-left: $spacing-neg6;
+
+    //background-color: blue;
+
+    .tile {
+        position: relative;
+
+        .card {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+
+            display: flex;
+            flex-direction: column;
+
+            color: $color-text-white;
+            padding: $spacing-24;
+
+            .copyBoxMeta {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: $spacing-24;
+            }
+    
+            .projectLink {
+                margin-top: auto;
+            }
+        }
+
+
+        &Large {
+            flex-basis: calc(971 / 1740 * 99%);
+        }
+
+        &Medium {
+            flex-basis: calc(746 / 1740 * 99%);
+        }
+
+        &Small {
+            flex-basis: calc(479 / 1740 * 99%);
+        }
+        
+
+        flex-grow: 1;
+        flex-shrink: 0;
+        
+        height: 384px;
+    
+        margin-top: $spacing-6;
+        margin-right: $spacing-6;
+        margin-bottom: $spacing-6;
+        margin-left: $spacing-6;
+    
+        background-color: gray;
+    
+
+
+
+
+    
+    }
+
+}
+

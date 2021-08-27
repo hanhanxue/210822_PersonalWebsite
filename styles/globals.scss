@@ -1,0 +1,38 @@
+
+@import "./abstracts/variables";
+@import "./base/typography";
+@import "./base/grid";
+
+
+  
+HTML, body, * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+
+
+a {
+  text-decoration: none;
+  color: $color-gray100;
+}
+
+h1 {
+  margin: 0;
+  font-weight: unset;
+}
+
+h2 {
+  margin: 0;
+  font-weight: unset;
+}
+
+h3 {
+  margin: 0;
+  font-weight: unset;
+}
+
+ul {
+  list-style: none;
+}
+  
