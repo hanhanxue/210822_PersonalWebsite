@@ -50,7 +50,46 @@ $color-gray600: #6B6B6B;
 $color-gray700: #AEAEAE;
 $color-gray900: #F6F6F6;
 
-$color-text-primary: #000000;
-$color-text-secondary: #868686;
-$color-text-white: #ffffff;
 
+
+// Color
+
+$color-main-primary: #EC1C24;
+$color-main-white: #FFFFFF;
+$color-main-black: #000000;
+
+$color-gray-100: #282828;
+
+$color-gray-600: #6B6B6B;
+$color-gray-700: #AEAEAE;
+$color-gray-900: #F6F6F6;
+
+$color-text-primary: #0f0f0f;
+$color-text-secondary: #868686;
+$color-text-white: #F6F6F6;
+
+
+
+
+
+
+// Grid
+
+
+
+$grid-maxWidth: 1680px;
+
+
+$grid-spacing-neg6: rem(-6);
+
+$grid-spacing-6: rem(6);
+
+$grid-spacing-12: rem(12);
+$grid-spacing-24: rem(24);
+
+$grid-spacing-32: rem(32);
+$grid-spacing-48: rem(48);
+
+$grid-spacing-64: rem(64);
+
+$grid-spacing-128: rem(128);

@@ -7,7 +7,7 @@ import ShareTile from '../../components/ShareTile'
 
 
 
-import { getDirectories, getSingles } from '../../lib/serverUtils'
+import { getDirContent, getSingles } from '../../lib/serverUtils'
 
 
 
@@ -15,7 +15,7 @@ import styles from '../../components/ShareTile.module.scss'
 
 
 
-const ShareList = ( { shareSingles }) => {
+const Share = ( { shareSingles }) => {
 
 
 
@@ -30,15 +30,25 @@ const ShareList = ( { shareSingles }) => {
         <Header theme='Light' />
 
 
+
+
+
         <main className={styles.section}>
-        <div className={`${styles.wrapper}`}>
-        <div className={styles.thisElement}>
+        <div className={styles.wrapper}>
+        <div className={styles.letterBox}>
 
-            <div className={styles.tiles}>
+            <div className={styles.tilesContainer}>
 
-            {shareSingles.map((s, index) => (
+            {shareSingles.reverse().map((s, index) => (
                 
-                <ShareTile title={s.title} date={s.date} size={s.size} category={s.category} key={index} />
+                <ShareTile 
+                coverImage={s.coverImage} 
+                title={s.title} 
+                date={s.date} 
+                size={s.size} 
+                category={s.category} 
+
+                key={index} />
 
             ))}
 
@@ -52,14 +62,14 @@ const ShareList = ( { shareSingles }) => {
 
 
 
-        <Footer />
+        <Footer theme='Light' />
 
         </>
 
     )
 }
 
-export default ShareList
+export default Share
 
 
 
@@ -73,8 +83,8 @@ export const getStaticProps = async () => {
 
     let shareSingles = []
 
-    const directories = await getDirectories('content/share')
-    shareSingles = getSingles('content/share', directories)
+    const directories = await getDirContent('content/share')
+    shareSingles = await getSingles('content/share', directories)
 
 
 

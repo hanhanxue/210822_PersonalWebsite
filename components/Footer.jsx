@@ -1,15 +1,17 @@
+
+
 import moment from 'moment'
 import NextLink from 'next/link'
 
 import styles from './Footer.module.scss'
 
 
-const Footer = () => {
+const Footer = ( {theme} ) => {
     return (
 
-        <section className={`${styles.section}`}>
+        <section className={`${styles.section} ${styles['section' + theme]}`}>
         <footer className={`wrapper ${styles.section}`}>
-        <div className={styles.thisElement}>
+        <div className={styles.letterBox}>
 
             <div className={`columns`}>
 

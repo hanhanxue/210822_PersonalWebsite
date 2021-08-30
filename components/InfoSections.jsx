@@ -16,7 +16,7 @@ return (
             <div className={`columns`}>
                 <div className={`column column_2x`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>He is currently working on autonomous vehicles at <Link href="/"><a>Woven Planet North America</a></Link> in San Francisco.</p>
+                    <p className={`title_2`}>He is currently working on autonomous vehicles at <Link href="/"><a>Woven Planet</a></Link> in New York.</p>
                 </div>
                 <div className={`column column_1x`}>
                     <h2 className={`title_2 columnHeader`}>Contact</h2>
@@ -49,7 +49,7 @@ return (
                 <h2 className={`title_2 columnHeader columnHeaderCentered`}>Work Experience</h2>
                 <ul>
                     <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>San Francisco ~ USA</div>
+                        <div className={`body_1 ${styles.flexRowItemLeft}`}>New York ~ USA</div>
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Product Designer ~ Woven Planet</h3>
                         <div className={`body_1 ${styles.flexRowItemRight}`}>Aug 2021 — Present</div>
                     </li>
@@ -87,7 +87,7 @@ return (
         </section>
 
 
-        <section className={`${styles.section} ${styles.sectionWhite}`}>
+        <section className={`${styles.section} ${styles.sectionLight}`}>
         <div className={`wrapper`}>
         <div className={styles.thisElement}>
 

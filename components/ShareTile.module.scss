@@ -8,7 +8,7 @@
 
 .wrapper {
  
-        max-width: 1380px;
+        max-width: 1476px;
       
         margin-left: auto;
         margin-right: auto;
@@ -18,16 +18,98 @@
  
 }
 
-.thisElement {
+.letterBox {
     padding-top: $spacing-64;
     padding-bottom: $spacing-128;
 
-    // background-color: red;
-    //background-color: red;
+
 }
 
 
+.tilesContainer {
+    display: flex;
+    flex-wrap: wrap;
 
+    margin: $grid-spacing-neg6;
+
+
+    .tile {
+        // The size of the padding as a percentage, relative to the width of the containing block.
+        padding-top: calc(592 / 1392 * 100%);
+
+        //background-color: red;
+        position: relative;
+
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        &Large {
+            flex-basis: 50%;
+        }
+
+        &Small {
+            flex-basis: 25%;
+        }
+
+        .card {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            margin: $grid-spacing-6;
+
+            display: flex;
+            flex-direction: column;
+
+
+
+            //background-color: blue;
+
+
+            .imageFrame {
+                cursor: pointer;
+                flex-grow: 1;
+                flex-shrink: 0;
+
+                background-position: center;
+                background-size: cover;
+            }
+
+
+            .textFrame {
+                background-color: $color-main-white;
+                padding: $grid-spacing-24;
+
+                .flexItem {
+                    color: $color-text-primary;
+                    z-index: 1;
+                }
+    
+                .metaFrame {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: $grid-spacing-12;
+
+                    .metaDate {
+                        color: $color-text-secondary;
+                    }
+                }
+    
+                .titleFrame {
+                    min-height: rem(96); //TODO CONVERT TO HEADLINE LINE HEIGHT
+                }
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+}
 
 .tiles {
     display: flex;
@@ -41,6 +123,7 @@
     //background-color: blue;
 
     .tile {
+
         flex-grow: 1;
         flex-shrink: 1;
         
@@ -77,13 +160,14 @@
 
         .copyBoxMain {
             min-height: rem(96);
-            margin-bottom: $spacing-12;
+
             color: $color-text-primary
         }
 
         .copyBoxMeta {
             display: flex;
             justify-content: space-between;
+            margin-bottom: $spacing-12;
 
             .metaDate {
                 color: $color-text-secondary

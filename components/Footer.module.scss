@@ -5,10 +5,25 @@
 
 
 .section {
-    background-color: $color-gray900;
+
+    &White {
+        background-color: $color-white;
+    }
+
+    &Light {
+        background-color: $color-gray-900;
+        color: $color-gray100;
+    }
+    
+    &Dark {
+        background-color: $color-gray-100;
+        color: $color-gray900;
+    }
+
+
 }
 
-.thisElement {
+.letterBox {
     padding-top: $spacing-64;
     padding-bottom: $spacing-64;
 }

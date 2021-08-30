@@ -1,0 +1,141 @@
+---
+tileSize: "single"
+
+title: "Code in Houdini"
+date: 2018-05-18T12:00:00-00:00
+draft: false
+
+summary: "Houdini expression and script snippets."
+tags: ["Tag 1", "Tag 2"]
+categories: ["Reference", "Category 2"]
+category: 'Reference'
+---
+
+<!--postText START--> {{< postText >}} 
+<h2>General</h2>
+
+<p>This is a list of the point attributes that are used with the Copy SOP and point instancing.</p>
+<!--postText END--> {{< /postText >}} 
+<!--postCodeSnippet START--> {{< postCode c "linenos=table, hl_lines=, linenostart=1" >}}
+orient // float4 (quaternion)
+pscale // float
+scale // float3
+N // vector
+up // vector
+v // vector
+rot // float4 (quaternion)
+trans
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+
+
+
+
+
+
+
+
+
+
+<!--postText START--> {{< postText >}} 
+<h2>Expression Functions</h2>
+<p>Grab input. Bbox sits on ground.</p>
+<!--postText END--> {{< /postText >}}
+<!--postCodeSnippet START--> {{< postCode c "linenos=table, hl_lines=, linenostart=1" >}}
+ bbox(opinputpath(".", 0), D_YMIN) * -1.0
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+
+
+
+
+
+
+
+
+<!--postText START--> {{< postText >}} 
+<h2>VEX</h2>
+
+
+<p>VEX @attribute_name syntax for different datatypes.</p>
+<!--postText END--> {{< /postText >}}
+<!--postCodeSnippet START--> {{< postCode c "linenos=table, hl_lines=, linenostart=1" >}}
+
+f@name  // float
+u@name  // vector2 (2 floats)
+v@name  // vector (3 floats)
+p@name  // vector4 (4 floats)
+
+i@name  // int
+
+2@name  // matrix2 (2×2 floats)
+3@name  // matrix3 (3×3 floats)
+4@name  // matrix (4×4 floats)
+
+s@name
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+
+<!--postText START--> {{< postText >}} 
+<p>Template for point cloud lookup.</p>
+<!--postText END--> {{< /postText >}}
+<!--postCodeSnippet START--> {{< postCode c "linenos=table, hl_lines=, linenostart=1" >}}
+float radius = chf("radius");
+int maxpoints = chi("maxpoints");
+
+int handle = pcopen(0, "P", v@P, radius, maxpoints);
+
+int cloud_ptnum = -1;
+float cloud_dist = 0.0;
+vector cloud_P = {0.0, 0.0, 0.0};
+vector cloud_foo = {0.0, 0.0, 0.0};
+
+while (pciterate(handle)) 
+{
+    // Skip self
+    pcimport(handle, "point.number", cloud_ptnum);
+    if (cloud_ptnum == i@ptnum) continue;
+
+    pcimport(handle, "point.distance", cloud_dist);
+    pcimport(handle, "P", cloud_P);
+    pcimport(handle, "foo", cloud_foo);
+}
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+
+
+
+<!--postText START--> {{< postText >}} 
+<p>Create orient attribute.</p>
+<!--postText END--> {{< /postText >}}
+<!--postCodeSnippet START--> {{< postCode c "linenos=table, hl_lines=, linenostart=1" >}}
+matrix3 m = ident();
+vector z_front;
+vector y_up;
+vector x_left;
+
+z_front = normalize(v@tangent);           // set front
+y_up = normalize(v@normal);               // set up
+x_left = normalize(v@bitangent);          // set left
+
+m = set(x_left, y_up, z_front);
+
+p@orient = quaternion(m);
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+
+
+<!--postText START--> {{< postText >}} 
+
+<h2>Python</h2>
+<p>Create default node color.</p>
+<!--postText END--> {{< /postText >}}
+<!--postCodeSnippet START--> {{< postCode py "linenos=table, hl_lines=, linenostart=1" >}}
+import soptoolutils
+
+node = soptoolutils.genericTool(kwargs, '$HDA_NAME')
+
+node.setColor(hou.Color(.4392, .3804, 0.7843))
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+

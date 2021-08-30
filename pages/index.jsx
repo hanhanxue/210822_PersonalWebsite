@@ -8,10 +8,10 @@ import WorkTile from '../components/WorkTile'
 
 import styles from '../components/WorkTile.module.scss'
 
-import { getDirectories, getSingles } from '../lib/serverUtils'
+import { getDirContent, getSingles } from '../lib/serverUtils'
 
 
-const WorkList = ({ workSingles }) => {
+const Work = ({ workSingles }) => {
   return (
     <>
       <Head>
@@ -24,28 +24,25 @@ const WorkList = ({ workSingles }) => {
       
 
 
-
-
-
-      <main className={styles.section}>
+        <main className={styles.section}>
         <div className={`wrapper`}>
-        <div className={styles.thisElement}>
+        <div className={styles.letterBox}>
 
-            <div className={styles.tiles}>
+        <div className={styles.tilesContainer}>
 
 
           {workSingles.reverse().map((w, index) => (
-            <WorkTile title={w.title} date={w.date} size={w.size} category={w.category} client={w.client} key={index} />
+            <WorkTile 
+              coverImage={w.coverImage} 
+              title={w.title} 
+              date={w.date} 
+              size={w.size} 
+              category={w.category} 
+
+              client={w.client} 
+
+              key={index} />
           ))}
-            {/* <WorkTile category='Concept' year='2019' title='Genesis' client='for Epoch' size='L' />
-            <WorkTile category='Concept' year='2019' title='Genesis' client='for Epoch' size='M' />
-
-            <WorkTile category='Concept' year='2019' title='Genesis' client='for Epoch' size='S' />
-            <WorkTile category='Concept' year='2019' title='Genesis' client='for Epoch' size='M' />
-            <WorkTile category='Concept' year='2019' title='Genesis' client='for Epoch' size='S' /> */}
-
-
-
 
             </div>
 
@@ -56,21 +53,23 @@ const WorkList = ({ workSingles }) => {
 
 
 
-      <Footer />
+      <Footer theme='Light' />
 
     </>
   )
 }
 
-export default WorkList
+export default Work
 
 
 export const getStaticProps = async () => {
   let workSingles = []
 
-  const directories = await getDirectories('content/work')
-  workSingles = getSingles('content/work', directories)
+  const directories = await getDirContent('content/work')
+  workSingles = await getSingles('content/work', directories)
 
+
+  //console.log(workSingles)
   return {
       props: {
           workSingles,

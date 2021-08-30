@@ -1,0 +1,103 @@
+---
+tileSize: "single"
+
+title: "Camera in OpenGL"
+date: 2020-05-01T12:00:00-00:00
+draft: false
+
+summary: "Camera class for OpenGL scene navigation."
+tags: ["Tag 1", "Tag 2"]
+categories: ["Asset", "Category 2"]
+
+category: 'Asset'
+---
+
+
+
+<!--postText--> {{< postText >}} 
+<p>When the topic of camera implementation in OpenGL is introduced, most of the resources I have come across opt for a first-person shooter (FPS) style system. This make sense for those who are interested in learning OpenGL for game applications, but from a UX standpoint it is a sub optimal scheme for scene navigation. The type of camera found in most 3D modeling software (Maya, Houdini, Cinema 4D, Blender, Rhino to name just a few) offers a more intuitive way to navigate around in 3D space. Since I'm more interested in applications for content creation, I have implemented this type of camera for use in my OpenGL projects.</p>
+
+<h2>The Code</h2>
+
+<p>The object expects as inputs two floats (I recommend using delta x and y cursor coordinates) and enables tumbling, tracking and dollying. Object outputs view and projection matrices for use in your shader.</p>
+
+<p>You can find the .h and .cpp files <a class="link link--loud-simple" href="https://gist.github.com/hanhanxue/f235cfbea08b0e1db7cc828608643b1f">here</a>. Below is the .h file to give an idea of available methods:</p>
+{{< /postText >}} <!--postText-->
+
+
+
+<!--postCodeSnippet START--> {{< postCode cpp "linenos=table, hl_lines=, linenostart=1" >}}
+#pragma once
+
+#include <glm\glm.hpp>
+#include <glm\gtc\matrix_transform.hpp>
+
+
+class cameraEuler
+{
+
+public:
+	cameraEuler(float width = 1280.0f, float height = 720.0f);
+
+
+	void home();
+
+	void tumble(float delta_xpos, float delta_ypos);
+	void track(float delta_xpos, float delta_ypos);
+	void dolly(float delta_xpos, float delta_ypos);
+	void zoom(float delta_xpos, float delta_ypos);
+
+
+	void setAspectRatio(float width, float height);
+
+	glm::mat4 getPivotMatrix() const;
+	glm::mat4 getViewMatrix() const;
+	glm::mat4 getProjectionMatrix() const;
+
+	~cameraEuler();
+
+
+private:
+
+	const float TUMBLE_SPEED = 0.005f;
+	const float TRACK_SPEED = 0.005f;
+	const float DOLLY_SPEED = 0.005f;
+	const float ZOOM_SPEED = 0.05f;
+
+	const float PITCH_CONSTRAINT_UPPER = 179.9f;
+	const float PITCH_CONSTRAINT_LOWER = 0.1f;
+	const glm::vec3 WORLDUP = glm::vec3(0.0f, 1.0f, 0.0f);
+
+	const float MIN_FOV = 18.0f;
+	const float MAX_FOV = 120.0f;
+
+	float frontSwitch = 1.0f;
+
+
+	// Camera params
+	float pitch;
+	float aspectRatio;
+	float fov = 45.0f;
+
+	glm::vec3 pivot;
+	glm::vec3 position;
+
+	glm::vec3 front;
+	glm::vec3 up;
+	glm::vec3 right;
+
+	glm::mat4 view;
+	glm::mat4 projection;
+
+	void updateCamera();
+};
+
+
+{{< /postCode >}} <!--postCodeSnippet END--> 
+
+
+
+
+
+
+
