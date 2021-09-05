@@ -1,28 +1,57 @@
 ---
-header: "dark"
-footer: "grey"
 
-tileSize: "medium"
+title: ''
+subtitle: 'Imaginary places.'
 
-title: "Portal"
-date: 2019-10-19T12:00:00-00:00 
-draft: false
 
-headline: "Smart living."
-tags: ["Tag 1", "Tag 2"]
-categories: ["Product Design", "Category 2"]
+categories: ['Architecture']
 client: 'Epoch'
-year: "0000"
 
-heroVimeo:
-heroRatio:
 ---
 
-<!--commentary-->{{< projCommentary title="Project" subtitle="Synopsis" >}}
-Agatha is a visual journey through imaginary places. Coming soon.
-{{< /projCommentary >}}
+
+<SectionHero 
+title={title} 
+client={client} 
+subtitle={subtitle}
+categories={categories}
+date={date}
+directory={directory}
+image={{
+    src: 'hero.jpg',
+    width: '2560',
+    height: '1384',
+}}
+/>
 
 
-<!--image-->{{< projImage filename="002*" size="small" alt="alt text" >}}
 
-<!--image-->{{< projImage filename="003*" size="small" alt="alt text" >}}
+<SectionDetail
+title='Synopsis'
+detail='Portal is a visual journey through imaginary places.
+'
+ />
+
+
+<SectionImage
+type='max'
+directory={directory}
+image={{
+    src: '001_agatha_hanhanxue.jpg',
+    width: '2560',
+    height: '1068',
+}}
+/>
+
+
+
+<SectionGallery
+directory={directory}
+images={[
+     {src: '002_agatha_hanhanxue.jpg', width: '2560', height: '1440', size: 'L'},
+    {src: '003_agatha_hanhanxue.jpg', width: '2560', height: '1068', size: 'L'},
+    {src: '003.jpg', width: '2560', height: '1384', size: 'L'},
+     ]}
+ />
+
+

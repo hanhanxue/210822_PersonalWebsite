@@ -5,8 +5,8 @@ import NextImage from 'next/image'
 
 
 // HHX JSX
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import Header from '../../components/global/Header'
+import Footer from '../../components/global/Footer'
 
 
 // HHX JS
@@ -21,12 +21,12 @@ import path from 'path'
 
 import {getDirContent} from '../../lib/serverUtils'
 
-import styles from '../../components/PlaySections.module.scss'
+import PlayMain from '../../components/play/PlayMain'
 
 const sizeOf = require('image-size')
 
 
-const Play = ( {images}) => {
+const PlayPage = ( {images}) => {
     return (
         <>
         <Head>
@@ -36,29 +36,7 @@ const Play = ( {images}) => {
 
         <Header theme='Light' />
 
-<main className={`${styles.section}`}>
-<div className={`wrapper `}> 
-<div className={`${styles.letterBox}`}>
-
-
-<div className={`${styles.tilesContainer}`}>
-
-{images.reverse().map(i => ( 
-            <div className={`${styles.image}`}>
-            <NextImage src={`/content/play/${i.image}`} width={i.dimensions.width} height={i.dimensions.height} />
-            </div>
-            ))}
-
-</div>
-
-
-</div>
-</div>
-</main>
-
-
-
-      
+        <PlayMain images={images} />
          
 
         <Footer theme='Light' />
@@ -67,7 +45,7 @@ const Play = ( {images}) => {
      );
 }
 
-export default Play;
+export default PlayPage;
 
 
 export const getStaticProps = async () => {

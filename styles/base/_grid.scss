@@ -1,7 +1,21 @@
 
 
 
+.section {
+    &White {
+        background-color: $color-main-white;
+        color: $color-text-primary;
+    }
+    &Light {
+        background-color: $color-gray-900;
+        color: $color-text-primary;
+    }
+    &Dark {
+        background-color: $color-gray-100;
+        color: $color-text-white;
+    }
 
+}
 
 
 .wrapper {
@@ -14,6 +28,13 @@
   
     padding-left: $grid-spacing-48;
     padding-right: $grid-spacing-48;
+
+    // Layout change header change
+    @include respond(phone_Portrait) { // < 640
+        padding-left: $grid-spacing-12;
+        padding-right: $grid-spacing-12;
+    
+    }
   }
   
   
@@ -22,7 +43,13 @@
 
 
 .columns {
+
+
     display: flex;
+    flex-wrap: wrap;
+
+    flex-shrink: 1;
+    flex-grow: 0;
   
     .columnHeader {
         margin-bottom: $grid-spacing-24;
@@ -35,10 +62,11 @@
     .column {
         padding-right: $grid-spacing-24;
         padding-left: $grid-spacing-24;
-  
+
+
+
         &_1x {
             flex-basis: 25%;
-    
         }
         &_2x {
             flex-basis: 50%;
@@ -47,7 +75,36 @@
         &_4x {
             flex-basis: 100%;
         }
+        @include respond(tablet_Portrait) { // < 1200px
+
+            &_1x {
+                flex-basis: 50%;
+            }
+            &:nth-child(1){
+                margin-bottom: $grid-spacing-64;
+            }
+            &:nth-child(2){
+                margin-bottom: $grid-spacing-64;
+            }
+        }
+            // Layout change header change
+    @include respond(phone_Portrait) { // < 640
+        &_1x {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        &_2x {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        margin-bottom: $grid-spacing-64;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
+
+    }
+
   }
   
 

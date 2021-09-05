@@ -1,65 +1,45 @@
+
+
 import Head from 'next/head'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 
-
-import WorkTile from '../components/WorkTile'
-
-
-import styles from '../components/WorkTile.module.scss'
 
 import { getDirContent, getSingles } from '../lib/serverUtils'
 
 
-const Work = ({ workSingles }) => {
+import Footer from '../components/global/Footer'
+import Header from '../components/global/Header'
+import WorkMain from '../components/work/WorkMain'
+
+
+
+
+
+
+const WorkPage = ({ workSingles }) => {
   return (
     <>
       <Head>
         <title>Han Han Xue</title>
       </Head>
 
-
-
       <Header theme='Light' />
-      
-
-
-        <main className={styles.section}>
-        <div className={`wrapper`}>
-        <div className={styles.letterBox}>
-
-        <div className={styles.tilesContainer}>
-
-
-          {workSingles.reverse().map((w, index) => (
-            <WorkTile 
-              coverImage={w.coverImage} 
-              title={w.title} 
-              date={w.date} 
-              size={w.size} 
-              category={w.category} 
-
-              client={w.client} 
-
-              key={index} />
-          ))}
-
-            </div>
-
-        </div>
-        </div>
-        </main>
-
-
-
-
+      <WorkMain workSingles={workSingles} />
       <Footer theme='Light' />
-
     </>
   )
 }
 
-export default Work
+export default WorkPage
+
+
+
+
+
+
+
+
+
+
 
 
 export const getStaticProps = async () => {

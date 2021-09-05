@@ -1,9 +1,10 @@
 
 
 import Head from 'next/head'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-import ShareTile from '../../components/ShareTile'
+
+import Footer from '../../components/global/Footer'
+import Header from '../../components/global/Header'
+import ShareMain  from '../../components/share/ShareMain'
 
 
 
@@ -11,11 +12,9 @@ import { getDirContent, getSingles } from '../../lib/serverUtils'
 
 
 
-import styles from '../../components/ShareTile.module.scss'
 
 
-
-const Share = ( { shareSingles }) => {
+const SharePage = ( { shareSingles }) => {
 
 
 
@@ -32,33 +31,7 @@ const Share = ( { shareSingles }) => {
 
 
 
-
-        <main className={styles.section}>
-        <div className={styles.wrapper}>
-        <div className={styles.letterBox}>
-
-            <div className={styles.tilesContainer}>
-
-            {shareSingles.reverse().map((s, index) => (
-                
-                <ShareTile 
-                coverImage={s.coverImage} 
-                title={s.title} 
-                date={s.date} 
-                size={s.size} 
-                category={s.category} 
-
-                key={index} />
-
-            ))}
-
-
-
-            </div>
-
-        </div>
-        </div>
-        </main>
+<ShareMain shareSingles={shareSingles} />
 
 
 
@@ -69,7 +42,7 @@ const Share = ( { shareSingles }) => {
     )
 }
 
-export default Share
+export default SharePage
 
 
 

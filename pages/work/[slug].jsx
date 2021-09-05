@@ -1,24 +1,33 @@
 
 
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
+import Footer from '../../components/global/Footer'
+import Header from '../../components/global/Header'
 
 import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/serverUtils'
 import { genSlug, genPaths } from '../../lib/clientUtils'
 
+import { MDXRemote } from 'next-mdx-remote'
+import {MDXComponents, HeaderTitle } from '../../components/work/WorkMDXComponents'
+
+
 
 const WorkSingle = ( {source, frontMatter}) => {
 
-    // console.log(source)
-    // console.log(frontMatter)
+
     return ( 
         <>
 
-            <Header theme='Dark' />
+        <Header theme='Dark' />
+
+        <section>
+
+            <MDXRemote {...source} components={MDXComponents } />
 
 
+        </section>
 
-            <Footer />
+
+        <Footer />
         </>
 
      );
@@ -64,10 +73,12 @@ export const getStaticProps = async ({params}) => {
     // Read index.mdx inside the directory file
     const {content, data} = getMatter('content/work', directory)
 
-    // Compile MDX
-    const mdxSource = await getMDXSource(content, data)
+
     // Auto generate relevant props
     const frontMatter = autoProps(directory, data)
+
+    // Compile MDX
+    const mdxSource = await getMDXSource(content, frontMatter)
 
     //console.log(mdxSource)
     return {

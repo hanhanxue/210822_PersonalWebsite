@@ -1,19 +1,20 @@
 
-@import "../styles/abstracts/variables";
+@import "../../styles/abstracts/variables";
+@import '../../styles/abstracts/mixins';
 
 .section {
     &Light {
-        background-color: $color-gray900;
+        background-color: $color-gray-900;
     }
     &White {
-        background-color: $color-white;
+        background-color: $color-main-white;
     }
 }
 
 
 .thisElement {
-    padding-top: $spacing-64;
-    padding-bottom: $spacing-64;
+    padding-top: $grid-spacing-64;
+    padding-bottom: $grid-spacing-64;
 }
 
 // SELECTOR STYLES
@@ -21,7 +22,7 @@
 .flexRow {
     display: flex;
     align-items: center;
-    margin-bottom: $spacing-24;
+    margin-bottom: $grid-spacing-24;
 
 
     &ItemLeft {
@@ -43,12 +44,17 @@
         margin-bottom: 0;
     }
 
+        // Layout change to PHONE
+        @include respond(phone_Portrait) { // < 640
+            flex-direction: column;
+        }
+
 }
 
 .row {
     text-align: center;
 
-    margin-bottom: $spacing-24;
+    margin-bottom: $grid-spacing-24;
 
     &:last-child {
         margin-bottom: 0;

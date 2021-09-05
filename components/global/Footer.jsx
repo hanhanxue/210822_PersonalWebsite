@@ -1,16 +1,16 @@
 
 
 import moment from 'moment'
-import NextLink from 'next/link'
 
 import styles from './Footer.module.scss'
+import MyLink from './MyLink'
 
 
 const Footer = ( {theme} ) => {
     return (
 
-        <section className={`${styles.section} ${styles['section' + theme]}`}>
-        <footer className={`wrapper ${styles.section}`}>
+        <section className={`section section${theme}`}>
+        <footer className={`wrapper`}>
         <div className={styles.letterBox}>
 
             <div className={`columns`}>
@@ -19,7 +19,8 @@ const Footer = ( {theme} ) => {
                 <div className={`column column_1x`}>
                     <h3 className={`headline columnHeader`}>Contact</h3>
                     <ul className={`body_1`}>
-                        <li><NextLink href="mailto:hello@hanhanxue.com"><a>hello@hanhanxue.com</a></NextLink></li>
+                        <li><MyLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyLink></li>
+                        
                     </ul>
                 </div>
 
@@ -28,10 +29,10 @@ const Footer = ( {theme} ) => {
                 <div className={`column column_1x`}>
                     <h3 className={`headline columnHeader`}>Social</h3>
                     <ul className={`body_1`}>
-                        <li><NextLink href="/"><a>Github</a></NextLink></li>
-                        <li><NextLink href="/"><a>Instagram</a></NextLink></li>
-                        <li><NextLink href="/"><a>LinkedIn</a></NextLink></li>
-                        <li><NextLink href="/"><a>YouTube</a></NextLink></li>
+                        <li><MyLink href='/'>Github</MyLink></li>
+                        <li><MyLink href='/'>Instagram</MyLink></li>
+                        <li><MyLink href='/'>LinkedIn</MyLink></li>
+                        <li><MyLink href='/'>YouTube</MyLink></li>
                     </ul>
                 </div>
 
@@ -40,7 +41,7 @@ const Footer = ( {theme} ) => {
                 <div className={`column column_1x`}>
                     <h3 className={`headline columnHeader`}>Studio</h3>
                     <ul className={`body_1`}>
-                        <li><NextLink href="/"><a>Epoch</a></NextLink></li>
+                        <li><MyLink href='/'>Epoch</MyLink></li>
                     </ul>
                 </div>
 

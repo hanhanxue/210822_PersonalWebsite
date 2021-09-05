@@ -1,5 +1,5 @@
 
-import styles from './MDXComponents.module.scss'
+import styles from './ShareMDXComponents.module.scss'
 import NextLink from 'next/link'
 
 

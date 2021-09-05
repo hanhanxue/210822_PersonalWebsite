@@ -1,0 +1,114 @@
+
+
+
+@import "../../styles/abstracts/variables";
+
+
+.letterBox {
+    padding-top: $grid-spacing-64;
+    padding-bottom: $grid-spacing-64;
+}
+
+.section {
+
+    &Dark {
+        color: $color-text-white;
+        background-color: $color-gray-100;
+    }
+
+    &Light {
+        color: $color-text-primary;
+        background-color: $color-gray-900;
+    }
+
+    &White {
+        color: $color-text-primary;
+        background-color: $color-main-white;
+    }
+
+}
+
+
+
+
+.sectionTitle {
+    text-align: center;
+}
+
+
+.sectionMeta {
+    text-align: center;
+    margin-bottom: $grid-spacing-48;
+}
+
+.sectionSubtitle {
+    text-align: center;
+    margin-bottom: $grid-spacing-64;
+}
+
+.videoFrame {
+
+    position: relative;
+    width: 100%;
+    // padding-top: 56.25%;
+    // padding-top: 41.68%;
+
+    margin-bottom: $grid-spacing-64;
+}
+
+.imageFrame {
+    margin-bottom: $grid-spacing-64;
+    &Max{
+        margin-bottom: 0;
+    }
+}
+
+.video {
+    // border-radius: $grid-spacing-12;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.imagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: $grid-spacing-neg6;
+
+}
+
+.tile {
+    position: relative;
+
+    //flex-grow: 1;
+    flex-shrink: 0;
+
+
+
+    &L {
+        flex-basis: 100%;
+    }
+
+    &S {
+        flex-basis: 50%;
+    }
+
+    
+}
+
+.nextImage {
+    display: inline-block;
+
+    // Small spacing issue
+    vertical-align: bottom;
+    line-height: 0;
+
+}
+
+.card {
+    margin: $grid-spacing-6
+}

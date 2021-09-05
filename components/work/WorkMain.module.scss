@@ -1,0 +1,76 @@
+
+
+
+@import "../../styles/abstracts/variables";
+
+
+.section {
+    background-color: $color-gray-900;
+}
+
+
+.letterBox {
+    padding-top: $grid-spacing-64;
+    padding-bottom: $grid-spacing-128;
+}
+
+
+
+
+.tilesContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: $grid-spacing-neg6;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // position: relative;
+
+        // .card {
+        //     position: absolute;
+        //     top: 0; right: 0; bottom: 0; left: 0;
+
+        //     display: flex;
+        //     flex-direction: column;
+
+        //     color: $color-text-white;
+        //     padding: $grid-spacing-24;
+
+        //     .copyBoxMeta {
+        //         display: flex;
+        //         justify-content: space-between;
+        //         margin-bottom: $grid-spacing-24;
+        //     }
+    
+        //     .projectLink {
+        //         margin-top: auto;
+        //     }
+        // }
+
+        
+        // height: 384px;
+    
+        // margin-top: $grid-spacing-6;
+        // margin-right: $grid-spacing-6;
+        // margin-bottom: $spacing-6;
+        // margin-left: $spacing-6;
+    
+        // background-color: gray;
+    
+

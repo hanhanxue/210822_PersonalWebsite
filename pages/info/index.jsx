@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
+import Footer from '../../components/global/Footer'
+import Header from '../../components/global/Header'
 
 
-import InfoSections from '../../components/InfoSections'
+import InfoMain from '../../components/info/InfoMain'
 
-const Info = () => {
+const InfoPage = () => {
     return (
         <>
         <Head>
@@ -14,7 +14,7 @@ const Info = () => {
         
 
         <Header theme='White' />
-        <InfoSections />
+        <InfoMain />
         <Footer theme='Light' />
 
         </>
@@ -22,4 +22,4 @@ const Info = () => {
     )
 }
 
-export default Info
+export default InfoPage

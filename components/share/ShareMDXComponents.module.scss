@@ -1,40 +1,41 @@
 
-//@import "../styles/abstracts/functions";
-@import "../styles/abstracts/variables";
+
+
+@import "../../styles/abstracts/variables";
 
 
 
 
 
 .p {
-    margin-bottom: $spacing-24;
+    margin-bottom: $grid-spacing-24;
 
 }
 
 .h2 {
-    padding-top: $spacing-48;
+    padding-top: $grid-spacing-48;
 
-    margin-bottom: $spacing-24;
+    margin-bottom: $grid-spacing-24;
 }
 
 .h3 {
-    padding-top: $spacing-12;
+    padding-top: $grid-spacing-12;
 
-    margin-bottom: $spacing-24;
+    margin-bottom: $grid-spacing-24;
 }
 
 .ul {
 
-    margin-bottom: $spacing-24;
+    margin-bottom: $grid-spacing-24;
 
     list-style-position: outside;
-    padding-left: $spacing-24;
+    padding-left: $grid-spacing-24;
     
 
 }
 
 .li {
-    margin-bottom: $spacing-12;
+    margin-bottom: $grid-spacing-12;
 
     &::before {
         content: '-';
@@ -45,7 +46,7 @@
 }
 
 .code {
-    color: $color-primary;
+    color: $color-main-primary;
 }
 
 
@@ -56,13 +57,16 @@
     //outline: none;
     font-weight: 600;
     opacity: 0;
-    margin-left: $spacing-4;
-    color: $color-primary;
+    margin-left: $grid-spacing-24;
+    color: $color-main-primary;
 
     // &:hover {
     //     opacity: 100;
     // }
 }
+
+
+
 
 .heading:hover .autolinkHeadings {
     opacity: 100;

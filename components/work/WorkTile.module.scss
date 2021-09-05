@@ -1,0 +1,178 @@
+
+
+@import '../../styles/abstracts/mixins';
+@import "../../styles/abstracts/variables";
+
+
+
+//background-color: blue;
+
+.tile {
+    position: relative;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    //background-color: red;
+
+    // The size of the padding as a percentage, relative to the width of the containing block.
+    padding-top: calc(372 / 1596 * 100%);
+    @include respond(tablet_Portrait) { // < 1056px
+        padding-top: 33%;
+    }
+    @include respond(phone_Portrait) { // < 640
+        padding-top: 50%;
+    }
+
+    &Large {
+        flex-basis: calc(900 / 1596 * 100%);
+        @include respond(tablet_Portrait) { // < 1056px
+            flex-basis: 50%;
+        }
+            // Layout change header change
+    @include respond(phone_Portrait) { // < 640
+        flex-basis: 100%;
+    }
+    }
+
+    &Medium {
+        flex-basis: calc(696 / 1596 * 100%);
+        @include respond(tablet_Portrait) { // < 1056px
+            flex-basis: 50%;
+        }
+            // Layout change header change
+    @include respond(phone_Portrait) { // < 640
+        flex-basis: 100%;
+    }
+    }
+
+    &Small {
+        flex-basis: calc(450 / 1596 * 100%);
+        @include respond(tablet_Portrait) { // < 1056px
+            flex-basis: 50%;
+        }
+            // Layout change header change
+    @include respond(phone_Portrait) { // < 640
+        flex-basis: 100%;
+    }
+    }
+    
+
+    .card {
+
+        cursor: pointer;
+
+        background-position: center;
+        background-size: cover;
+
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+
+        margin: $grid-spacing-6;
+        padding: $grid-spacing-24;
+
+        display: flex;
+        flex-direction: column;
+
+        .flexItem {
+            z-index: 1;
+        }
+
+        .metaFrame {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $grid-spacing-24;
+        }
+
+        .titleFrame {
+            margin-bottom: $grid-spacing-24;
+        }
+
+        
+        .linkFrame {
+            margin-top: auto; 
+        }
+
+        &::before {
+
+            transition: .618s;                
+            opacity: 0;
+        
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:hover {
+            &::before {
+                transition: .382s;
+                opacity: 1; 
+            }
+        }
+
+
+
+    &Work {
+
+        .flexItem {
+            color: $color-text-white;
+        }
+
+        .linkFrame {
+            margin-top: auto;
+            transition: .618s;
+            opacity: 0;   
+        }
+
+        &::before {
+            background-image: radial-gradient(circle at top center, transparent 0, rgba(0, 0, 0, 0.5));
+        }
+
+        &:hover {
+            .linkFrame {
+                transition: .382s;
+                opacity: 1; 
+            }
+        }
+    }
+
+
+
+    &Bulletin {
+
+        //cursor: default;
+        z-index: 15;
+
+        background-color: $color-main-white;
+
+        .flexItem {
+            color: $color-text-primary;
+        }
+
+        .detailFrame {
+            margin-bottom: $grid-spacing-48;
+        }
+
+        &::before {
+            background-color: $color-gray-900;
+        }
+
+        &Open {
+            bottom: auto;
+            transition: .382s;
+
+            background-color: $color-gray-900;
+        }
+        
+    }
+
+
+    }
+
+
+
+
+}

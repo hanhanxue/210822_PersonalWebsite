@@ -2,38 +2,40 @@
 
 
 
-@import "../styles/abstracts/variables";
-@import "../styles/base/animations";
-
+@import "../../styles/abstracts/variables";
+@import "../../styles/base/animations";
+@import '../../styles/abstracts/mixins';
 
 
 .section {
 
-    position: fixed;
+    //position: absolute;
+    //top: 0px;
+
     width: 100%;
     z-index: 999;
 
 
     &White {
-        background-color: $color-white;
+        background-color: $color-main-white;
     }
 
     &Light {
         background-color: $color-gray-900;
-        color: $color-gray100;
+        color: $color-gray-100;
     }
     
     &Dark {
         background-color: $color-gray-100;
-        color: $color-gray900;
+        color: $color-gray-900;
     }
     
 }
 
 
 .letterBox {
-    padding-top: $spacing-48;
-    padding-bottom: $spacing-48;
+    padding-top: $grid-spacing-48;
+    padding-bottom: $grid-spacing-48;
 }
 
 
@@ -58,6 +60,10 @@
             animation-timing-function: ease-out;
         }
 
+        @include respond(phone_Portrait) { // < 640
+            display: none;
+        }
+
     }
 
 
@@ -71,6 +77,11 @@
                 margin-right: 0;
             }
         }
+
+        @include respond(phone_Portrait) { // < 640
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
@@ -82,6 +93,39 @@
 
 
 
+
+
+
+
+.logoFrame {
+    display: none;
+
+
+    margin-bottom: $grid-spacing-32;
+
+    text-align: center;
+
+    @include respond(phone_Portrait) { // < 640
+        display: block;
+    }
+}
+
+
+
+
+
+.imageFrame {
+
+   display: inline-block;
+
+    // Small spacing issue
+    vertical-align: bottom;
+    line-height: 0;
+
+
+
+
+}
 
 
 
@@ -101,8 +145,8 @@
 // .ulist {
 //     display: flex;
 
-//     padding-right: $spacing-24;
-//     padding-left: $spacing-24;
+//     padding-right: $grid-spacing-24;
+//     padding-left: $grid-spacing-24;
 
 //     .tagline {
 //         display: inline-block;
@@ -112,7 +156,7 @@
 //     }
 
 //     .item {
-//         margin-right: $spacing-24;
+//         margin-right: $grid-spacing-24;
 
 //         &:nth-child(2) {
 //             margin-left: auto;

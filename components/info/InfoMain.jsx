@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
+import MyLink from '../global/MyLink'
 
-import styles from './InfoSections.module.scss'
+import styles from './InfoMain.module.scss'
 
 
 
@@ -16,21 +17,21 @@ return (
             <div className={`columns`}>
                 <div className={`column column_2x`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>He is currently working on autonomous vehicles at <Link href="/"><a>Woven Planet</a></Link> in New York.</p>
+                    <p className={`title_2`}>He is currently working on autonomous vehicles at <MyLink href='/'>Woven Planet</MyLink> in New York.</p>
                 </div>
                 <div className={`column column_1x`}>
                     <h2 className={`title_2 columnHeader`}>Contact</h2>
                     <ul className={`title_3`}>
-                        <li><Link href="mailto:hello@hanhanxue.com"><a>hello@hanhanxue.com</a></Link></li>
+                        <li><MyLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyLink></li>
                     </ul>
                 </div>
                 <div className={`column column_1x`}>
                     <h2 className={`title_2 columnHeader`}>Social</h2>
                     <ul className={`title_3`}>
-                        <li><Link href="/"><a>Github</a></Link></li>
-                        <li><Link href="/"><a>Instagram</a></Link></li>
-                        <li><Link href="/"><a>LinkedIn</a></Link></li>
-                        <li><Link href="/"><a>YouTube</a></Link></li>
+                        <li><MyLink href='/'>Github</MyLink></li>
+                        <li><MyLink href='/'>Instagram</MyLink></li>
+                        <li><MyLink href='/'>LinkedIn</MyLink></li>
+                        <li><MyLink href='/'>YouTube</MyLink></li>
                     </ul>
                 </div>
             </div>

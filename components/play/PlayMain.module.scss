@@ -1,6 +1,6 @@
 
 
-@import "../styles/abstracts/variables";
+@import "../../styles/abstracts/variables";
 
 .section {
     background-color: $color-gray-900;
@@ -29,3 +29,16 @@
     // max-width: 960px;
     // max-height: 760px;
 }
+
+
+.wrapper {
+
+
+    margin-left: auto;
+    margin-right: auto;
+  
+    padding-left: $grid-spacing-48;
+    padding-right: $grid-spacing-48;
+  }
+  
+  

@@ -1,0 +1,28 @@
+
+
+
+
+@import "../../styles/abstracts/variables";
+
+.a {
+    text-decoration: none;
+    transition: .22s;
+
+    &:link {
+        color: inherit;
+    }
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover
+    {
+        transition: .22s;
+        color: $color-main-primary;
+    }
+
+    &:focus
+    {
+        
+    }
+}
