@@ -4,14 +4,14 @@ import styles from './WorkMDXComponents.module.scss'
 import NextLink from 'next/link'
 import NextImage from 'next/image'
 
-var moment = require('moment'); // require
+let moment = require('moment'); // require
 
 export const MDXComponents = {
 
 
     // ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()}
 
-SectionHero: (props ) => (
+SectionTitle: (props ) => (
     <section className={`${styles.section} ${styles.sectionDark}`}>
     <div className={`wrapper`}>
     <div className={`${styles.letterBox}`}>

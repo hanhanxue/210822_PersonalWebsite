@@ -19,12 +19,11 @@ const WorkSingle = ( {source, frontMatter}) => {
 
         <Header theme='Dark' />
 
-        <section>
-
-            <MDXRemote {...source} components={MDXComponents } />
 
 
-        </section>
+        <MDXRemote {...source} components={MDXComponents } />
+
+
 
 
         <Footer />

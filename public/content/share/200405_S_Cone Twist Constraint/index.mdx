@@ -1,61 +1,30 @@
 ---
-tileSize: "single"
 
-title: "Cone Twist Constraint"
-date: 2020-04-05T12:00:00-00:00
-draft: false
+title: ''
+subtitle: 'Setup reference for Cone Twist Constraint relationship in Houdini.'
 
-summary: "Setup reference for Cone Twist Constraint relationship in Houdini."
-tags: ["Tag 1", "Tag 2"]
-categories: ["Reference", "Category 2"]
 
-category: 'Reference'
+categories: ['Reference']
+
 ---
 
-<!--postText--> {{< postText >}} 
-<p>One of the most versatile constraint types in Rigid Body Dynamics (RBD) simulations is the Cone Twist Constraint. You can make it behave like a pin constraint or a glue constraint by placing limitations on its degrees of freedom, and it can also behave like anything in between. Cone Twist Constraints can add that next level of realism to dynamic relationships, yet it's not as widely used as it could be or setup incorrectly due partly to a lack of documentation and perhaps understanding of how it works.</p>
-
-<p>So here are a few examples to hopefully clarify how the system behaves.</p>
-
-{{< /postText >}} <!--postText--> 
-
-<!--postImage--> {{< postImage filename="301*" size="small" alt="alt text" >}} 
-
-
- {{< postText >}} 
- <h2>The Basics</h2>
-
-<p>Like the name suggests, the Cone Twist Constraint comprises of two components, the cone component which is constrained by <mark>constrained_twist_axis</mark> (source of confusing through unfortunate naming), and the twisting component which is constrained by <mark>constrained_up_axis</mark>. Below we illustrate what each component does separately.</p>
- {{< /postText >}}
-
-
-<!--postImage--> {{< postImage filename="000*" size="small" alt="alt text" >}} 
+<SectionTitle 
+title={title} 
+subtitle={subtitle}
+categories={categories}
+date={date}
+/>
 
 
 
- {{< postText >}} 
+One of the most versatile constraint types in Rigid Body Dynamics (RBD) simulations is the Cone Twist Constraint. You can make it behave like a pin constraint or a glue constraint by placing limitations on its degrees of freedom, and it can also behave like anything in between. Cone Twist Constraints can add that next level of realism to dynamic relationships, yet it's not as widely used as it could be or setup incorrectly due partly to a lack of documentation and perhaps understanding of how it works.
 
- <h2>Examples</h2>
- <h3>Cone Component</h3>
+So here are a few examples to hopefully clarify how the system behaves.
 
- <p>A good way to demonstrate how the cone component behaves is through a bell and clapper analogy, where the clapper represents the <mark>constrained_twist_axis</mark> and the bell represents the cone. The images below show how one affects the other.</p>
+## Basics
 
- {{< /postText >}}
-<!--postImage--> {{< postImage filename="302*" size="small" alt="alt text" >}}
-<!--postImage--> {{< postImage filename="303*" size="small" alt="alt text" >}}
-
- {{< postText >}} 
- <p>Here is another example.</p>
- {{< /postText >}}
-
-<!--postImage--> {{< postImage filename="304*" size="small" alt="alt text" >}}
-<!--postImage--> {{< postImage filename="305*" size="small" alt="alt text" >}}
+Like the name suggests, the Cone Twist Constraint comprises of two components, the cone component which is constrained by constrained_twist_axis (source of confusing through unfortunate naming), and the twisting component which is constrained by constrained_up_axis. Below we illustrate what each component does separately.
 
 
-
- {{< postText >}} 
- <h3>Twist Component</h3>
-<p>Using the same model, the twist component allows for rotational movement around the constrained_twist_axis, where the angle of rotation is limited through the <mark>constrained_up_axis</mark>.</p>
- {{< /postText >}}
-<!--postImage--> {{< postImage filename="306*" size="small" alt="alt text" >}}
-<!--postImage--> {{< postImage filename="307*" size="small" alt="alt text" >}}
+## Examples
+### Cone Component

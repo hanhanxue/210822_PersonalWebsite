@@ -15,25 +15,34 @@ return (
         <div className={styles.thisElement}>
 
             <div className={`columns`}>
+
                 <div className={`column column_2x`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
                     <p className={`title_2`}>He is currently working on autonomous vehicles at <MyLink href='/'>Woven Planet</MyLink> in New York.</p>
                 </div>
-                <div className={`column column_1x`}>
-                    <h2 className={`title_2 columnHeader`}>Contact</h2>
-                    <ul className={`title_3`}>
-                        <li><MyLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyLink></li>
-                    </ul>
+
+                <div className={`columns column_2x`}>
+
+
+                                <div className={`column column_2x columnForceBottomMargin`}>
+                                    <h2 className={`title_2 columnHeader`}>Contact</h2>
+                                    <ul className={`title_3`}>
+                                        <li><MyLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyLink></li>
+                                    </ul>
+                                </div>
+                                <div className={`column column_2x`}>
+                                    <h2 className={`title_2 columnHeader`}>Social</h2>
+                                    <ul className={`title_3`}>
+                                        <li><MyLink href='/'>Github</MyLink></li>
+                                        <li><MyLink href='/'>Instagram</MyLink></li>
+                                        <li><MyLink href='/'>LinkedIn</MyLink></li>
+                                        <li><MyLink href='/'>YouTube</MyLink></li>
+                                    </ul>
+                                </div>
+
+
                 </div>
-                <div className={`column column_1x`}>
-                    <h2 className={`title_2 columnHeader`}>Social</h2>
-                    <ul className={`title_3`}>
-                        <li><MyLink href='/'>Github</MyLink></li>
-                        <li><MyLink href='/'>Instagram</MyLink></li>
-                        <li><MyLink href='/'>LinkedIn</MyLink></li>
-                        <li><MyLink href='/'>YouTube</MyLink></li>
-                    </ul>
-                </div>
+
             </div>
 
         </div>

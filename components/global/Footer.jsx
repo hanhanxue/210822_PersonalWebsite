@@ -9,8 +9,8 @@ import MyLink from './MyLink'
 const Footer = ( {theme} ) => {
     return (
 
-        <section className={`section section${theme}`}>
-        <footer className={`wrapper`}>
+        <footer className={`section section${theme}`}>
+        <div className={`wrapper`}>
         <div className={styles.letterBox}>
 
             <div className={`columns`}>
@@ -58,8 +58,8 @@ const Footer = ( {theme} ) => {
             </div>
 
         </div>
+        </div>
         </footer>
-        </section>
 
     )
 }

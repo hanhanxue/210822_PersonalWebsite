@@ -7,9 +7,7 @@ import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/ser
 import { genSlug, genPaths} from '../../lib/clientUtils'
 
 import { MDXRemote } from 'next-mdx-remote'
-import MDXComponents from '../../components/share/ShareMDXComponents'
-
-import { ShareTitleSection } from '../../components/share/ShareMain'
+import ShareMDXComponents from '../../components/share/ShareMDXComponents'
 
 
 
@@ -27,22 +25,35 @@ const ShareSingle = ( {source, frontMatter} ) => {
     //console.log(frontMatter.date)
     return (
         <>
+        <Header />
 
-            <Header />
+        <MDXRemote {...source} components={ShareMDXComponents} />
 
-            <ShareTitleSection title={frontMatter.title} category={frontMatter.category} date={frontMatter.date}/>
-
-            <section>
-                <MDXRemote {...source} components={MDXComponents} scope={data} />
-            </section>
-
-
-            <Footer />
+        <Footer />
         </>
     )
 }
 
 export default ShareSingle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -27,26 +27,12 @@ padding-bottom: $grid-spacing-128;
 
 // SELECTOR STYLES
 
-
-
-
-.title {
-    margin-bottom: $grid-spacing-32;
-}
-
-.categoryTime {
-    color: $color-gray-600;
-}
-
 .tilesContainer {
     display: flex;
     flex-wrap: wrap;
 
     margin: $grid-spacing-neg6;
 
-    max-width: 1392px;
-
 }
-
 
 

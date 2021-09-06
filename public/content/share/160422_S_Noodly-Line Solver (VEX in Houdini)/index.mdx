@@ -1,37 +1,27 @@
 ---
-tileSize: "single"
 
-title: "Noodly-Line Solver (VEX in Houdini)"
-date: 2016-04-22T12:00:00-00:00
-draft: false
+title: ''
+subtitle: 'A VEX implementation of differential growth.'
 
-summary: "A VEX implementation of differential growth."
-tags: ["Tag 1", "Tag 2"]
-categories: ["R&D", "Category 2"]
 
-category: 'R&D'
+categories: ['R&D']
 
 ---
-<!--postText--> {{< postText >}} 
-<p>I’ve seen a lot of tests of this effect recently, and thought I’d jump in and do my own version.</p>
-{{< /postText >}}
-
-<!--videoModule--> {{< postVimeo id="163908095" ratio="56.25" size="small">}}
-
-<!--postText--> {{< postText >}} 
-<p>The very first time I saw the noodle solver was in <a class="link link--loud-simple" href="https://www.youtube.com/watch?v=9HI8FerKr6Q">this video</a> by Deskriptiv over a year ago. Then when recently Simon Holmedal posted <a class="link link--loud-simple" href="https://vimeo.com/151311218">this test</a>, it got me kind of curious. Finally yesterday I stumbled upon <a class="link link--loud-simple" href="https://vimeo.com/163472985">this post</a> by Jan Fischer, and after reading the description I realized that it’s actually a pretty simple system.</p>
-
-<p>So to recap Jan’s write-up on the system: there are basically 3 forces that gets integrated by the solver. First force, is a vector pointing in the opposite direction to the average position of neighboring points. Second force, is a vector pointing towards the average position of the point before and after in the line (I’m not sure how much this really affects the system, Jan says that it makes the sim more stable so I put it in there). The third force is a vector that points away from the bounding surface of the volume, this force only gets applied when the position of the point at the future integration step is outside of the volume.</p>
-
-<p>You can <a class="link link--loud-simple" href="https://www.dropbox.com/s/vyj5gggygwkd2a0/Noodly-Line%20Solver%20%28hhx%29.zip?dl=0">download</a> the .hip file. From playing around with the system for a bit, the most important values seem to be the multipliers to the three forces mentioned above, as well as the max number of points in the point cloud lookup for forces 1 and 3.</p>
-{{< /postText >}}
 
 
+<SectionTitle 
+title={title} 
+subtitle={subtitle}
+categories={categories}
+date={date}
+/>
 
 
-<!--
-<a class="link link--loud-simple" href="https://deskriptiv.com/">Deskriptiv</a> 
-<a class="link link--loud-simple" href="http://www.simonholmedal.com/">Simon Holmedal</a> 
-<a class="link link--loud-simple" href="http://janfischer.daportfolio.com/">Jan Fischer</a>
+I’ve seen a lot of tests of this effect recently, and thought I’d jump in and do my own version.
 
--->
+The very first time I saw the noodle solver was in <a class="link link--loud-simple" href="https://www.youtube.com/watch?v=9HI8FerKr6Q">this video</a> by Deskriptiv over a year ago. Then when recently Simon Holmedal posted <a class="link link--loud-simple" href="https://vimeo.com/151311218">this test</a>, it got me kind of curious. Finally yesterday I stumbled upon <a class="link link--loud-simple" href="https://vimeo.com/163472985">this post</a> by Jan Fischer, and after reading the description I realized that it’s actually a pretty simple system.
+
+So to recap Jan’s write-up on the system: there are basically 3 forces that gets integrated by the solver. First force, is a vector pointing in the opposite direction to the average position of neighboring points. Second force, is a vector pointing towards the average position of the point before and after in the line (I’m not sure how much this really affects the system, Jan says that it makes the sim more stable so I put it in there). The third force is a vector that points away from the bounding surface of the volume, this force only gets applied when the position of the point at the future integration step is outside of the volume.
+
+You can <a class="link link--loud-simple" href="https://www.dropbox.com/s/vyj5gggygwkd2a0/Noodly-Line%20Solver%20%28hhx%29.zip?dl=0">download</a> the .hip file. From playing around with the system for a bit, the most important values seem to be the multipliers to the three forces mentioned above, as well as the max number of points in the point cloud lookup for forces 1 and 3.
+

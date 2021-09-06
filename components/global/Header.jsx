@@ -92,13 +92,13 @@ const Header = ( {theme} ) => {
     return (
 
         <>
-        <header className={`${styles.section} ${styles['section' + theme]}`}  >
+        <header className={`section section${theme}`}>
         <div className={`wrapper`}>
         <div className={`${styles.letterBox}`}>
 
             <div className={`${styles.logoFrame}`}>
         <div className={`${styles.imageFrame}`}>
-                <NextImage className={``} src={ `/hanhanxue@2x.png`} width='64px' height='64px'  />
+                <NextImage className={`${styles.nextImage}`} src={ `/hanhanxue@2x.png`} width='64px' height='64px'  />
                     </div>
                     </div>
 

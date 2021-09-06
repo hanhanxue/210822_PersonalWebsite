@@ -1,23 +1,31 @@
 ---
-tileSize: "single"
 
-title: "Redshift for Houdini Shader Ball"
-date: 2016-11-27T12:00:00-00:00
-draft: false
-
-summary: "Shader ball for material testing in Redshift."
-tags: ["Tag 1", "Tag 2"]
-categories: ["Asset", "Category 2"]
+title: ''
+subtitle: 'Shader ball for material testing in Redshift.'
 
 
-category: 'Asset'
+categories: ['Asset']
+
 ---
 
-<!--postText--> {{< postText >}}
-<p>I built a material test scene for use with Redshift in Houdini over the weekend. You can <a class="link link--loud-simple" href="https://www.dropbox.com/s/fm7akohi1mdqd7y/Redshift%20for%20Houdini%20Material%20Test%20Scene%20%28hhx%29.zip?dl=0">download</a> the project file.</p>
+<SectionTitle 
+title={title} 
+subtitle={subtitle}
+categories={categories}
+date={date}
+/>
 
-<p>Shader ball model is Sub-D and has non-overlapping UVs (I tried to make them as straight as possible while minimizing distortion).</p>
 
-{{< /postText >}}
 
-<!--postImage--> {{< postImage filename="000*" size="small" alt="alt text" >}} 
+I built a material test scene for use with Redshift in Houdini over the weekend. You can download the project file.
+
+Shader ball model is Sub-D and has non-overlapping UVs (I tried to make them as straight as possible while minimizing distortion).
+
+<SectionImage
+directory={directory}
+image={{
+    src: '000_free-redshift-for-houdini-shader-ball_hanhanxue.jpg',
+    width: '1280',
+    height: '1280',
+}}
+/>
