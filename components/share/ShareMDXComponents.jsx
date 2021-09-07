@@ -7,37 +7,31 @@ let moment = require('moment'); // require
 
 const ShareMDXComponents = {
 
+    // inlineCode: (props) => <code {...props} className={`code ${styles.code}`} />,
 
+    // a: (props) => {
 
+    //     if(props.className === 'autolinkHeadings')
+    //     {
+    //         return (
+    //             <a {...props} className={`${styles.autolinkHeadings}`} />
+    //         )
+    //     }
+    //     else{
+    //         return (
+    //             <a {...props}  />
+    //         )
+    //     }
 
-    
-
-
-    inlineCode: (props) => <code {...props} className={`code ${styles.code}`} />,
-
-    a: (props) => {
-
-        if(props.className === 'autolinkHeadings')
-        {
-            return (
-                <a {...props} className={`${styles.autolinkHeadings}`} />
-            )
-        }
-        else{
-            return (
-                <a {...props}  />
-            )
-        }
-
-    // <a {...props} className={`${styles.a}`} />
-    },
+    // // <a {...props} className={`${styles.a}`} />
+    // },
 
 
 
 
 
 
-    SectionTitle: (props) => {
+    SectionTitle: SectionTitle = (props) => {
         const date = `20${props.date}`
         return (
         <section className={`section sectionWhite ${styles.sectionTitle}`}>
@@ -57,7 +51,7 @@ const ShareMDXComponents = {
         </section>
     )},
 
-    SectionImage: (props) => (
+    SectionImage: SectionImage = (props) => (
         <section className={`section sectionWhite ${styles.sectionImage}`}>
         <div className={`wrapper share`}>
         <div className={`${styles.letterBox}`}>
@@ -75,7 +69,7 @@ const ShareMDXComponents = {
 
 
 
-    p: (props) => (
+    p: p = (props) => (
         <section className={`section sectionWhite`}>
         <div className={`wrapper share`}>
         <div className={`${styles.letterBox}`}>
@@ -87,7 +81,7 @@ const ShareMDXComponents = {
         </section>
     ),
 
-    h2: (props) =>  (
+    h2: h2 = (props) =>  (
         <section className={`section sectionWhite`}>
         <div className={`wrapper share`}>
         <div className={`${styles.letterBox}`}>
@@ -99,7 +93,7 @@ const ShareMDXComponents = {
         </section>
     ),
 
-    h3: (props) =>  (
+    h3: h3 = (props) =>  (
         <section className={`section sectionWhite`}>
         <div className={`wrapper share`}>
         <div className={`${styles.letterBox}`}>
@@ -112,7 +106,7 @@ const ShareMDXComponents = {
     ),
             
 
-    ul: (props) =>  (
+    ul: ul =(props) =>  (
         <section className={`section sectionWhite`}>
         <div className={`wrapper share`}>
         <div className={`${styles.letterBox}`}>
@@ -124,7 +118,7 @@ const ShareMDXComponents = {
         </section>
     ),
 
-    li: (props) =>  (
+    li: li = (props) =>  (
         <li {...props} className={`body_2 ${styles.li}`} />
     ),
 
