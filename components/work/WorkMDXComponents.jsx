@@ -130,7 +130,7 @@ const SectionGallery = (props) => (
 
                     {props.images.map((i, index) => {
                         return (
-                            <div className={`${styles.tile} ${styles['tile' + i.size]} `}   >   
+                            <div className={`${styles.tile} ${styles['tile' + i.size]} `} key={index}  >   
                             <div className={`${styles.card} ${styles.nextImage}`}>
                             <NextImage src={ `/content/work/${props.directory}/${i.src}`} 
                             width={i.width} 
