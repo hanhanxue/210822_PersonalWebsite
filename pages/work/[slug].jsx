@@ -7,7 +7,7 @@ import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/ser
 import { genSlug, genPaths } from '../../lib/clientUtils'
 
 import { MDXRemote } from 'next-mdx-remote'
-import {MDXComponents, HeaderTitle } from '../../components/work/WorkMDXComponents'
+import WorkMDXComponents  from '../../components/work/WorkMDXComponents'
 
 
 
@@ -21,7 +21,7 @@ const WorkSingle = ( {source, frontMatter}) => {
 
 
 
-        <MDXRemote {...source} components={MDXComponents } />
+        <MDXRemote {...source} components={WorkMDXComponents } />
 
 
 

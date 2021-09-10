@@ -6,12 +6,10 @@ import NextImage from 'next/image'
 
 let moment = require('moment'); // require
 
-export const MDXComponents = {
 
 
-    // ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()}
 
-SectionTitle: (props ) => (
+const SectionTitle = (props ) => (
     <section className={`${styles.section} ${styles.sectionDark}`}>
     <div className={`wrapper`}>
     <div className={`${styles.letterBox}`}>
@@ -74,10 +72,9 @@ SectionTitle: (props ) => (
     </div>
     </div>
     </section>
-),
+)
 
-
-SectionDetail: (props ) => (
+const SectionDetail = (props ) => (
     <section className={`${styles.section} ${styles.sectionWhite}`}>
     <div className={`wrapper`}>
     <div className={`${styles.letterBox}`}>
@@ -105,10 +102,9 @@ SectionDetail: (props ) => (
     </div>
     </div>
     </section>
-),
+)
 
-
-SectionImage: (props) => (
+const SectionImage = (props) => (
     <section className={`${styles.section} ${styles.sectionLight}`}>
 
 
@@ -123,11 +119,9 @@ SectionImage: (props) => (
                  
 
     </section>
-),
+)
 
-
-
-SectionGallery: (props) => (
+const SectionGallery = (props) => (
     <section className={`${styles.section} ${styles.sectionLight}`}>
     <div className={`wrapper`}>
     <div className={`${styles.letterBox}`}>
@@ -148,15 +142,21 @@ SectionGallery: (props) => (
                         )
                     })}
             </div>
-
-
-                 
+      
     </div>
     </div>
     </section>
-),
+)
+
+
+
+const WorkMDXComponents = {
+
+    SectionTitle: SectionTitle,
+    SectionDetail: SectionDetail,
+    SectionImage: SectionImage,
+    SectionGallery: SectionGallery,
 
 }
 
-
-
+export default WorkMDXComponents

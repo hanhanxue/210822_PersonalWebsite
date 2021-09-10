@@ -94,7 +94,10 @@ const Li = (props) =>  (
 )
 
 
+
+
 const ShareMDXComponents = {
+    
     SectionTitle: SectionTitle,
     SectionImage: SectionImage,
     p: P,
@@ -103,9 +106,6 @@ const ShareMDXComponents = {
     ul: Ul,
     li: Li,
 }
-
-
-
 
 export default ShareMDXComponents
 
