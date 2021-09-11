@@ -1,30 +1,37 @@
+// Vendor Libs
 
 
-import Footer from '../../components/global/Footer'
-import Header from '../../components/global/Header'
+// Vendor Components
 
+
+// My Libs
 import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/serverUtils'
 import { genSlug, genPaths } from '../../lib/clientUtils'
 
-import { MDXRemote } from 'next-mdx-remote'
-import WorkMDXComponents  from '../../components/work/WorkMDXComponents'
+// My Components
+import Footer from '../../components/global/Footer'
+import Header from '../../components/global/Header'
+
+import WorkSingle from '../../components/work/WorkSingle'
+
+
+// My Styles
 
 
 
-const WorkSingle = ( {source, frontMatter}) => {
+
+
+
+
+
+const WorkSlug = ( {source }) => {
 
 
     return ( 
         <>
-
         <Header theme='Dark' />
 
-
-
-        <MDXRemote {...source} components={WorkMDXComponents } />
-
-
-
+        <WorkSingle source={source} />
 
         <Footer />
         </>
@@ -32,7 +39,7 @@ const WorkSingle = ( {source, frontMatter}) => {
      );
 }
  
-export default WorkSingle;
+export default WorkSlug;
 
 
 
@@ -74,16 +81,16 @@ export const getStaticProps = async ({params}) => {
 
 
     // Auto generate relevant props
-    const frontMatter = autoProps(directory, data)
+    const myProps = autoProps(directory, data)
 
     // Compile MDX
-    const mdxSource = await getMDXSource(content, frontMatter)
+    const mdxSource = await getMDXSource(content, myProps)
 
     //console.log(mdxSource)
     return {
         props: {
             source: mdxSource,
-            frontMatter: frontMatter
+
         }
     }
 }

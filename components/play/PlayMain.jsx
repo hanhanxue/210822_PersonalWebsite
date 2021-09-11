@@ -14,11 +14,11 @@ const PlayMain = ({images}) => {
     
     <div className={`${styles.tilesContainer}`}>
     
-    {images.reverse().map((i, index) => ( 
-                <div className={`${styles.image}`} key={index}>
-                <NextImage src={`/content/play/${i.image}`} width={i.dimensions.width} height={i.dimensions.height} />
-                </div>
-                ))}
+    {images.map((i, index) => ( 
+    <div className={`${styles.image}`} key={index}>
+    <NextImage src={`/content/play/${i.image}`} width={i.dimensions.width} height={i.dimensions.height} />
+    </div>
+    ))}
     
     </div>
     

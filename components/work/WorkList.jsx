@@ -1,6 +1,6 @@
 
 
-import styles from './WorkMain.module.scss'
+import styles from './WorkList.module.scss'
 
 import { WorkTileProject, WorkTileBulletin } from './WorkTile'
 //import BulletinTile from './BulletinTile'
@@ -18,7 +18,7 @@ const WorkMain = ( {workSingles} ) => {
         <div className={styles.tilesContainer}>
 
 
-            {workSingles.reverse().map((w, index) => {
+            {workSingles.map((w, index) => {
             if(w.size !=='B') {
             return (
             <WorkTileProject 

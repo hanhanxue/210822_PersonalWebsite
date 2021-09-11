@@ -1,10 +1,11 @@
 
-var moment = require('moment'); // require
-
-import ShareTile from '../../components/share/ShareTile'
 
 
-import styles from './ShareMain.module.scss'
+
+import ShareTile from './ShareTile'
+
+
+import styles from './ShareList.module.scss'
 
 
 
@@ -17,7 +18,7 @@ const ShareMain = ({shareSingles}) => {
 
             <div className={styles.tilesContainer}>
 
-            {shareSingles.reverse().map((s, index) => (
+            {shareSingles.map((s, index) => (
                 
                 <ShareTile 
                 coverImage={s.coverImage} 

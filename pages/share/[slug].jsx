@@ -1,40 +1,41 @@
 
+// Vendor Libs
 
-import Footer from '../../components/global/Footer'
-import Header from '../../components/global/Header'
 
+// Vendor Components
+
+
+// My Libs
 import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/serverUtils'
 import { genSlug, genPaths} from '../../lib/clientUtils'
 
-import { MDXRemote } from 'next-mdx-remote'
-import ShareMDXComponents from '../../components/share/ShareMDXComponents'
+// My Components
+import Footer from '../../components/global/Footer'
+import Header from '../../components/global/Header'
+import ShareSingle from '../../components/share/ShareSingle'
+
+
+// My Styles
 
 
 
-const data = {
-    title: 'gooafaoisjefsdf',
-}
 
 
-const ShareSingle = ( {source, frontMatter} ) => {
+const ShareSlug = ( {source } ) => {
 
 
-
-    //console.log(source)
-    //console.log(frontMatter)
-    //console.log(frontMatter.date)
     return (
         <>
         <Header />
 
-        <MDXRemote {...source} components={ShareMDXComponents} />
+        <ShareSingle source={source} />
 
         <Footer />
         </>
     )
 }
 
-export default ShareSingle
+export default ShareSlug
 
 
 
@@ -85,16 +86,16 @@ export const getStaticProps = async ({params}) => {
     const {content, data} = getMatter('content/share', directory)
 
     // Auto generate relevant props
-    const frontMatter = autoProps(directory, data)
+    const myProps = autoProps(directory, data)
 
     // Compile MDX
-    const mdxSource = await getMDXSource(content, frontMatter)
+    const mdxSource = await getMDXSource(content, myProps)
 
     //console.log(mdxSource)
     return {
         props: {
             source: mdxSource,
-            frontMatter: frontMatter
+
         }
     }
 }

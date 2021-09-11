@@ -26,7 +26,7 @@ import PlayMain from '../../components/play/PlayMain'
 const sizeOf = require('image-size')
 
 
-const PlayPage = ( {images}) => {
+const Play = ( {images}) => {
     return (
         <>
         <Head>
@@ -37,7 +37,6 @@ const PlayPage = ( {images}) => {
         <Header theme='Light' />
 
         <PlayMain images={images} />
-         
 
         <Footer theme='Light' />
 
@@ -45,7 +44,17 @@ const PlayPage = ( {images}) => {
      );
 }
 
-export default PlayPage;
+export default Play;
+
+
+
+
+
+
+
+
+
+
 
 
 export const getStaticProps = async () => {
@@ -55,7 +64,7 @@ export const getStaticProps = async () => {
 
     let images = await getDirContent('/content/play')
     // 
-    images = images.map(i => {
+    images = images.reverse().map(i => {
         const root = process.cwd()
         const filepath = path.join(root, 'public/content/play', i)
         //console.log(filepath)
@@ -86,7 +95,6 @@ export const getStaticProps = async () => {
         }
     
     })
-    //console.log(images)
 
     return {
         props: {

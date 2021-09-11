@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import Footer from '../../components/global/Footer'
 import Header from '../../components/global/Header'
-import ShareMain  from '../../components/share/ShareMain'
+import ShareList  from '../../components/share/ShareList'
 
 
 
@@ -14,7 +14,7 @@ import { getDirContent, getSingles } from '../../lib/serverUtils'
 
 
 
-const SharePage = ( { shareSingles }) => {
+const Share = ( { shareSingles }) => {
 
 
 
@@ -28,12 +28,7 @@ const SharePage = ( { shareSingles }) => {
 
         <Header theme='Light' />
 
-
-
-
-<ShareMain shareSingles={shareSingles} />
-
-
+        <ShareList shareSingles={shareSingles} />
 
         <Footer theme='Light' />
 
@@ -42,7 +37,7 @@ const SharePage = ( { shareSingles }) => {
     )
 }
 
-export default SharePage
+export default Share
 
 
 

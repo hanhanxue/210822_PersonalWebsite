@@ -5,19 +5,20 @@ import NextImage from 'next/image'
 let moment = require('moment'); // require
 
 
-const SectionTitle = (props) => {
-    const date = `20${props.date}`
+export const ArticleHeader = ( {scope} ) => {
+
+    const date = `20${scope.date}`
     return (
     <section className={`section sectionWhite ${styles.sectionTitle}`}>
     <div className={`wrapper share`}>
     <div className={`${styles.letterBox}`}>
 
             <div className={`title_1 ${styles.titleFrame}`}>
-            {props.title}
+            {scope.title}
             </div>
 
             <div className={`subhead ${styles.metaFrame}`}>
-            {`${props.categories[0]} | ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()})`}     
+            {`${scope.categories[0]} | ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()})`}     
             </div>
 
     </div>
@@ -98,7 +99,7 @@ const Li = (props) =>  (
 
 const ShareMDXComponents = {
     
-    SectionTitle: SectionTitle,
+    // SectionTitle: SectionTitle,
     SectionImage: SectionImage,
     p: P,
     h2: H2,

@@ -8,14 +8,14 @@ import { getDirContent, getSingles } from '../lib/serverUtils'
 
 import Footer from '../components/global/Footer'
 import Header from '../components/global/Header'
-import WorkMain from '../components/work/WorkMain'
+import WorkList from '../components/work/WorkList'
 
 
 
 
 
 
-const WorkPage = ({ workSingles }) => {
+const Work = ({ workSingles }) => {
   return (
     <>
       <Head>
@@ -23,13 +23,15 @@ const WorkPage = ({ workSingles }) => {
       </Head>
 
       <Header theme='Light' />
-      <WorkMain workSingles={workSingles} />
+
+      <WorkList workSingles={workSingles} />
+
       <Footer theme='Light' />
     </>
   )
 }
 
-export default WorkPage
+export default Work
 
 
 

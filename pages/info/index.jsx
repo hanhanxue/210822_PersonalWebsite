@@ -5,7 +5,11 @@ import Header from '../../components/global/Header'
 
 import InfoMain from '../../components/info/InfoMain'
 
-const InfoPage = () => {
+
+
+
+
+const Info = () => {
     return (
         <>
         <Head>
@@ -22,4 +26,4 @@ const InfoPage = () => {
     )
 }
 
-export default InfoPage
+export default Info
