@@ -32,7 +32,7 @@ $breakpoint argument choices:
     }
 
     @if $breakpoint == tablet_Portrait {
-        @media (max-width: 68em) { @content };     // 1088      1056
+        @media (max-width: 63em) { @content };     //  1008   1088      1056
     }
     
     @if $breakpoint == phone_Landscape {

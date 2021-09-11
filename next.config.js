@@ -3,11 +3,6 @@ module.exports = {
 
 
 
-
-
-
-
-
   async redirects() {
     return [
       {
@@ -17,4 +12,7 @@ module.exports = {
       },
     ]
   },
+
+
+
 }
