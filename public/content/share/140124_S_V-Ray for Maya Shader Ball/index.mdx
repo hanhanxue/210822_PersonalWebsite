@@ -26,7 +26,139 @@ Here’s a shader ball / material test scene I made for V-Ray in Maya. The scene
 directory={directory}
 image={{
     src: '000_free-vray-for-maya-shader-ball_hanhanxue.jpg',
-    width: '1024',
+    height: '1024',
+}}
+/>
+
+
+Compared to the same image without proper gamma correction:
+
+
+<SectionImage
+fileNumber='001'
+directory={directory}
+image={{
+    src: '001_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '1280',
+    height: '1024',
+}}
+/>
+
+## Workflow Summary
+
+Under VRay ➡ Color mapping tab in Render Settings window:
+
+- Type: Linear multiply
+- Dark multiplier: 1.000
+- Bright multiplier: 1.000
+- Gamma: 2.200
+- Affect background: ON
+- Subpixel mapping: OFF
+- Don’t affect colors (adaption only): ON
+- Linear workflow: OFF
+- Clamp output: OFF
+- Affect swatches: ON (this way the swatch samples in Hypershade are displayed correctly)
+
+
+<SectionImage
+fileNumber='002'
+directory={directory}
+image={{
+    src: '002_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '382',
+    height: '258',
+}}
+/>
+
+
+For sRGB textures, go to the file node and add Texture input gamma under Attributes ➡ VRay
+
+<SectionImage
+fileNumber='003'
+directory={directory}
+image={{
+    src: '003_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '423',
+    height: '963',
+}}
+/>
+
+For procedural colors / textures within Maya, plug the node into a Gamma Correct node with these settings:
+
+<SectionImage
+fileNumber='004'
+directory={directory}
+image={{
+    src: '004_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '578',
+    height: '258',
+}}
+/>
+
+<SectionImage
+fileNumber='005'
+directory={directory}
+image={{
+    src: '005_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '418',
+    height: '333',
+}}
+/>
+
+
+I generally output my renders in OpenEXR. If you want to output in an sRGB format straight from Maya then you’ll have to turn Don’t affect colors (adaption only) option off.
+
+And don’t forget to press the sRGB button in the V-Ray frame buffer window to display your image properly. This is if the Don’t affect colors (adaption only) option is on.
+
+## Breakdown
+
+Here are a few extra images to demonstrate the process.
+
+Below is an image with proper gamma correction settings applied in the Render Settings window. However the file textures and procedural swatches / ramp are not corrected yet. You can clearly see from the rectangle with the procedural ramp shader and the materials with file textures that they are going through double gamma correction (midtones are too bright).
+
+<SectionImage
+fileNumber='006'
+directory={directory}
+image={{
+    src: '006_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '1280',
+    height: '1024',
+}}
+/>
+
+
+Using Gamma Correction nodes (set to 0.455) to fix the procedural colors / textures. File textures still render incorrectly:
+
+<SectionImage
+fileNumber='007'
+directory={directory}
+image={{
+    src: '007_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '1280',
+    height: '1024',
+}}
+/>
+
+By adding the Texture input gamma attributes in the file nodes, file textures now render correctly:
+
+<SectionImage
+fileNumber='008'
+directory={directory}
+image={{
+    src: '008_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '1280',
+    height: '1024',
+}}
+/>
+
+Finally here is the effect of enabling Affect swatches option:
+
+<SectionImage
+fileNumber='009'
+directory={directory}
+image={{
+    src: '009_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
+    width: '1280',
     height: '1024',
 }}
 />

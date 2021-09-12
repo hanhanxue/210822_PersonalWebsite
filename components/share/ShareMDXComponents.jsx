@@ -36,6 +36,8 @@ const SectionImage = (props) => {
     <div className={`${styles.letterBox}`}>
 
         <div className={`image ${styles.nextImageFrame}`}>
+            <NextImage src={`/content/share/${props.file.directory}/assets/${props.file.fileName}`} width={props.file.width} height={props.file.height} />
+
 
         </div>
 

@@ -6,7 +6,7 @@
 
 
 // My Libs
-import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/serverUtils'
+import { getDirContent, getMatter, getMDXSource, autoProps, getImages } from '../../lib/serverUtils'
 import { genSlug, genPaths} from '../../lib/clientUtils'
 
 // My Components
@@ -89,9 +89,10 @@ export const getStaticProps = async ({params}) => {
 
     // Auto generate relevant props
     const myProps = autoProps(directory, data)
+    myProps.assets = getImages('content/share', directory)
 
+    //console.log(myProps.assets['000'])
 
-    //console.log(myProps)
 
     // Compile MDX
     const mdxSource = await getMDXSource(content, myProps)
