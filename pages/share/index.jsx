@@ -55,7 +55,6 @@ export const getStaticProps = async () => {
     shareSingles = await getSingles('content/share', directories)
 
 
-
     return {
         props: {
             shareSingles,

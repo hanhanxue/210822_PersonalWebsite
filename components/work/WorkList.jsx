@@ -3,10 +3,10 @@
 import styles from './WorkList.module.scss'
 
 import { WorkTileProject, WorkTileBulletin } from './WorkTile'
-//import BulletinTile from './BulletinTile'
 
 
-const WorkMain = ( {workSingles} ) => {
+
+const WorkList = ( {workSingles} ) => {
     return (
 
         <main className={styles.section}>
@@ -64,4 +64,4 @@ const WorkMain = ( {workSingles} ) => {
       );
 }
  
-export default WorkMain
+export default WorkList

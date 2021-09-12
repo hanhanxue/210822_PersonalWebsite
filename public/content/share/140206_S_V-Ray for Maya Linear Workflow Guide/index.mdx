@@ -34,6 +34,7 @@ Compared to the same image without proper gamma correction:
 
 
 <SectionImage
+fileNumber='001'
 directory={directory}
 image={{
     src: '001_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -59,6 +60,7 @@ Under VRay ➡ Color mapping tab in Render Settings window:
 
 
 <SectionImage
+fileNumber='002'
 directory={directory}
 image={{
     src: '002_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -71,6 +73,7 @@ image={{
 For sRGB textures, go to the file node and add Texture input gamma under Attributes ➡ VRay
 
 <SectionImage
+fileNumber='003'
 directory={directory}
 image={{
     src: '003_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -82,6 +85,7 @@ image={{
 For procedural colors / textures within Maya, plug the node into a Gamma Correct node with these settings:
 
 <SectionImage
+fileNumber='004'
 directory={directory}
 image={{
     src: '004_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -91,6 +95,7 @@ image={{
 />
 
 <SectionImage
+fileNumber='005'
 directory={directory}
 image={{
     src: '005_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -111,6 +116,7 @@ Here are a few extra images to demonstrate the process.
 Below is an image with proper gamma correction settings applied in the Render Settings window. However the file textures and procedural swatches / ramp are not corrected yet. You can clearly see from the rectangle with the procedural ramp shader and the materials with file textures that they are going through double gamma correction (midtones are too bright).
 
 <SectionImage
+fileNumber='006'
 directory={directory}
 image={{
     src: '006_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -123,6 +129,7 @@ image={{
 Using Gamma Correction nodes (set to 0.455) to fix the procedural colors / textures. File textures still render incorrectly:
 
 <SectionImage
+fileNumber='007'
 directory={directory}
 image={{
     src: '007_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -134,6 +141,7 @@ image={{
 By adding the Texture input gamma attributes in the file nodes, file textures now render correctly:
 
 <SectionImage
+fileNumber='008'
 directory={directory}
 image={{
     src: '008_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',
@@ -145,6 +153,7 @@ image={{
 Finally here is the effect of enabling Affect swatches option:
 
 <SectionImage
+fileNumber='009'
 directory={directory}
 image={{
     src: '009_vray-for-maya-linear-workflow-guide_hanhanxue.jpg',

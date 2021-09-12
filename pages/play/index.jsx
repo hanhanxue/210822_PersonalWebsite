@@ -1,22 +1,17 @@
 
-// NextJS
+
 import Head from 'next/head'
 import NextImage from 'next/image'
 
 
-// HHX JSX
+
 import Header from '../../components/global/Header'
 import Footer from '../../components/global/Footer'
 
 
-// HHX JS
 
-
-// HHX SCSS
-// import fs from 'fs'
 import path from 'path'
 
-// EXTERNAL
 
 
 import {getDirContent} from '../../lib/serverUtils'
@@ -64,6 +59,7 @@ export const getStaticProps = async () => {
 
     let images = await getDirContent('/content/play')
     // 
+    
     images = images.reverse().map(i => {
         const root = process.cwd()
         const filepath = path.join(root, 'public/content/play', i)

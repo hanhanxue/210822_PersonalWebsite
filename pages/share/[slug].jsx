@@ -76,6 +76,8 @@ export const getStaticPaths = async () => {
     }
 }
 
+
+
 export const getStaticProps = async ({params}) => {
     // Get all directories inside '/content/work' folder
     const directories = await getDirContent('content/share')
@@ -87,6 +89,9 @@ export const getStaticProps = async ({params}) => {
 
     // Auto generate relevant props
     const myProps = autoProps(directory, data)
+
+
+    //console.log(myProps)
 
     // Compile MDX
     const mdxSource = await getMDXSource(content, myProps)

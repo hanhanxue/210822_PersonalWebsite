@@ -26,21 +26,23 @@ export const ArticleHeader = ( {scope} ) => {
     </section>
 )}
 
-const SectionImage = (props) => (
+const SectionImage = (props) => {
+
+    //console.log(props)
+
+    return (
     <section className={`section sectionWhite ${styles.sectionImage}`}>
     <div className={`wrapper share`}>
     <div className={`${styles.letterBox}`}>
 
         <div className={`image ${styles.nextImageFrame}`}>
-            <NextImage src={   `/content/share/${props.directory}/${props.image.src}`   } 
-            width={props.image.width} 
-            height={props.image.height}  />
+
         </div>
 
     </div>
     </div>
     </section>
-)
+)}
 
 const P = (props) => (
     <section className={`section sectionWhite`}>

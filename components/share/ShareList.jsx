@@ -10,10 +10,10 @@ import styles from './ShareList.module.scss'
 
 
 
-const ShareMain = ({shareSingles}) => {
+const ShareList = ({shareSingles}) => {
     return (        
          <main className={styles.section}>
-        <div className={styles.wrapper}>
+        <div className={`wrapper shareList`}>
         <div className={styles.letterBox}>
 
             <div className={styles.tilesContainer}>
@@ -42,4 +42,4 @@ const ShareMain = ({shareSingles}) => {
 }
  
 
-export default ShareMain
+export default ShareList
