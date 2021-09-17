@@ -51,11 +51,13 @@ ul {
 
 
 
-.image {
+.nextImage {
   //display: inline-block;
 
   // Small spacing issue
   vertical-align: bottom;
   line-height: 0;
+
+  // border-radius: $grid-spacing-12;
   
 }

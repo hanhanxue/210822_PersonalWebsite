@@ -3,6 +3,7 @@ import styles from './ShareMDXComponents.module.scss'
 import NextLink from 'next/link'
 import NextImage from 'next/image'
 let moment = require('moment'); // require
+import Highlight, {defaultProps} from 'prism-react-renderer'
 
 
 export const ArticleHeader = ( {scope} ) => {
@@ -35,11 +36,9 @@ const SectionImage = (props) => {
     <div className={`wrapper share`}>
     <div className={`${styles.letterBox}`}>
 
-        <div className={`image ${styles.nextImageFrame}`}>
-            <NextImage src={`/content/share/${props.file.directory}/assets/${props.file.fileName}`} width={props.file.width} height={props.file.height} />
 
-
-        </div>
+            <NextImage src={`/content/share/${props.file.directory}/assets/${props.file.fileName}`} width={props.file.width} height={props.file.height} className={`nextImage`}/>
+    
 
     </div>
     </div>
@@ -99,7 +98,48 @@ const Li = (props) =>  (
 )
 
 
+const InlineCode = (props) => (
+    <section className={`section sectionWhite`}>
+    <div className={`wrapper share`}>
+    <div className={`${styles.letterBox}`}>
 
+        <code {...props} className={`code ${styles.code}`} />
+
+    </div>
+    </div>
+    </section>
+)
+
+const Code = ({children, className}) => {
+    const language = className.replace(/language-/, '')
+
+    return (
+    <section className={`section sectionWhite ${styles.code}`} >
+    <div className={`wrapper share`}>
+    <div className={`${styles.letterBox}`} >
+
+    <Highlight {...defaultProps} code={children} language="javascript" > 
+        {({className, style, tokens, getLineProps, getTokenProps}) => (
+
+            <pre className={className} style={{...style, padding: '20px'}}>
+                {tokens.map((line, i) => (
+                    <div key={i} {...getLineProps({line, key: i})}>
+                        {line.map((token, key) => (
+                            <span key={key} {...getTokenProps({token, key})} />
+                        ))}
+                    </div>
+                ))}
+            </pre>
+
+        )}
+
+    </Highlight>
+
+    </div>
+    </div>
+    </section>
+    )
+}
 
 const ShareMDXComponents = {
     
@@ -110,6 +150,8 @@ const ShareMDXComponents = {
     h3: H3,
     ul: Ul,
     li: Li,
+    code: Code,
+
 }
 
 export default ShareMDXComponents

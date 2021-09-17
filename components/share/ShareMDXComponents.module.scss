@@ -105,3 +105,14 @@
     // margin-inline-end: 0px;
     // padding-inline-start: 40px;
     // padding-inline-end: 40px;
+
+.code {
+    .letterBox {
+        margin-top: $grid-spacing-24;
+
+        pre {
+            border-radius: 4px;
+        }
+    }
+}
+
