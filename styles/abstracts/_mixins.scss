@@ -24,27 +24,36 @@ $breakpoint argument choices:
 
 
     @if $breakpoint == desktop_S {
-        @media (max-width: 90em) { @content };       // 1440
+        @media (max-width: 90em) { @content };    
     }
+
+
+
+
     
     @if $breakpoint == tablet_Landscape {
-        @media (max-width: 80em) { @content };      //  1280
+        @media (max-width: 78em) { @content };    // 80
     }
 
     @if $breakpoint == tablet_Portrait {
-        @media (max-width: 63em) { @content };     //  1008   1088      1056
+        @media (max-width: 66em) { @content };    // 63
     }
     
+
+
+
+
+
     @if $breakpoint == phone_Landscape {
-        @media (max-width: 52em) { @content };   //  832      768
+        @media (max-width: 54em) { @content };  //52
     }
 
     @if $breakpoint == phone_Portrait {
-        @media (max-width: 46em) { @content };  //  736    640 // 34 before
+        @media (max-width: 42em) { @content };  //44
     }
 
     @if $breakpoint == phone_Portrait_S {
-        @media (max-width: 32em) { @content };  // 512 // 34 before
+        @media (max-width: 30em) { @content };  
     }
 
 

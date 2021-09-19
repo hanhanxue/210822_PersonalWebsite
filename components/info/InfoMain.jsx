@@ -18,7 +18,7 @@ return (
 
                 <div className={`column column_2x`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>He is currently working on autonomous vehicles at <MyLink href='/'>Woven Planet</MyLink> in New York City.</p>
+                    <p className={`title_2`}>He is currently working on autonomous vehicles at <MyLink href='/'>Woven Planet</MyLink> in New York</p>
                 </div>
 
                 <div className={`columns column_2x`}>
@@ -30,6 +30,8 @@ return (
                                         <li><MyLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyLink></li>
                                     </ul>
                                 </div>
+
+
                                 <div className={`column column_2x`}>
                                     <h2 className={`title_2 columnHeader`}>Social</h2>
                                     <ul className={`title_3`}>
