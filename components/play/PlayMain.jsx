@@ -1,35 +1,38 @@
 
-import styles from './PlayMain.module.scss'
 
 import NextImage from 'next/image'
 
 
-const PlayMain = ({images}) => {
+const PlayMain = ( {images} ) => {
     return (  
     
-    <main className={`${styles.section}`}>
-    <div className={`${styles.wrapper} `}> 
-    <div className={`${styles.letterBox}`}>
+    <main className={`section sectionDefault`}>
+    <div className={`wrapper`}> 
+    <div className={`letterBox letterBox_64_128`}>
     
     
-    <div className={`${styles.tilesContainer}`}>
-    
-    {images.map((i, index) => ( 
-    <div className={`${styles.image}`} key={index}>
-    <NextImage src={`/content/play/${i.image}`} width={i.dimensions.width} height={i.dimensions.height} />
-    </div>
-    ))}
-    
-    </div>
-    
+        <div className={`tilesContainer centered`}>
+        
+            {images.map((i, index) => ( 
+            <div className={`nextImageDiv nextImageDivMargin`}>
+            <NextImage 
+                src={`/content/play/${i.image}`} 
+                width={i.dimensions.width} 
+                height={i.dimensions.height} 
+                key={index} />
+            </div>
+
+            ))}
+        
+        </div>
+        
     
     </div>
     </div>
     </main>
     
     
-    
-          );
+    );
 }
  
 export default PlayMain;

@@ -11,7 +11,7 @@ export const ArticleHeader = ( {scope} ) => {
     const date = `20${scope.date}`
     return (
     <section className={`section sectionWhite ${styles.sectionTitle}`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
             <div className={`title_1 ${styles.titleFrame}`}>
@@ -33,11 +33,15 @@ const SectionImage = (props) => {
 
     return (
     <section className={`section sectionWhite ${styles.sectionImage}`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
 
-            <NextImage src={`/content/share/${props.file.directory}/assets/${props.file.fileName}`} width={props.file.width} height={props.file.height} className={`nextImage`}/>
+            <NextImage 
+                src={`/content/share/${props.file.directory}/assets/${props.file.fileName}`} 
+                width={props.file.width} 
+                height={props.file.height} 
+                className={`nextImage`}/>
     
 
     </div>
@@ -47,7 +51,7 @@ const SectionImage = (props) => {
 
 const P = (props) => (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
         <p {...props} className={`body_2 ${styles.p}`} />
@@ -59,7 +63,7 @@ const P = (props) => (
 
 const H2 = (props) =>  (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
         <h2 {...props} className={`title_3 ${styles.heading} ${styles.h2}`} />
@@ -71,7 +75,7 @@ const H2 = (props) =>  (
 
 const H3 = (props) =>  (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
         <h2 {...props} className={`headline ${styles.heading} ${styles.h3}`} />
@@ -83,7 +87,7 @@ const H3 = (props) =>  (
 
 const Ul = (props) =>  (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
         <ul {...props} className={`${styles.ul}`} />
@@ -100,7 +104,7 @@ const Li = (props) =>  (
 
 const InlineCode = (props) => (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
         <code {...props} className={`code ${styles.code}`} />
@@ -115,7 +119,7 @@ const Code = ({children, className}) => {
 
     return (
     <section className={`section sectionWhite ${styles.code}`} >
-    <div className={`wrapper share`}>
+    <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`} >
 
     <Highlight {...defaultProps} code={children} language="javascript" > 
@@ -158,23 +162,3 @@ export default ShareMDXComponents
 
 
 
-
-
-    // inlineCode: (props) => <code {...props} className={`code ${styles.code}`} />,
-
-    // a: (props) => {
-
-    //     if(props.className === 'autolinkHeadings')
-    //     {
-    //         return (
-    //             <a {...props} className={`${styles.autolinkHeadings}`} />
-    //         )
-    //     }
-    //     else{
-    //         return (
-    //             <a {...props}  />
-    //         )
-    //     }
-
-    // // <a {...props} className={`${styles.a}`} />
-    // },

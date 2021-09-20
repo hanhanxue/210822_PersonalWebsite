@@ -51,13 +51,14 @@ ul {
 
 
 
-.nextImage {
-  //display: inline-block;
+.nextImageDiv {
+  display: inline-block;
 
-  // Small spacing issue
+  // small spacing issue
   vertical-align: bottom;
   line-height: 0;
 
-  // border-radius: $grid-spacing-12;
-  
+  &Margin {
+    margin: $grid-spacing-6;
+  }
 }

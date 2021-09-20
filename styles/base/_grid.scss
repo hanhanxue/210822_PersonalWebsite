@@ -2,72 +2,84 @@
 
 
 .section {
-    &White {
-        background-color: $color-main-white;
-        color: $color-text-primary;
-    }
-    &Light {
+    // default light and dark wouldn't make sense standalone that's why they are combined
+    // for wrapper workList shareSingle make sense as standalone classes
+    &Default {
         background-color: $color-gray-900;
         color: $color-text-primary;
     }
+
+    &Light {
+        background-color: $color-main-white;
+        color: $color-text-primary;
+    }
+
     &Dark {
         background-color: $color-gray-100;
         color: $color-text-white;
     }
-
 }
 
 
+
+
 .wrapper {
-
-    max-width: $grid-maxWidth;
-
-
     margin-left: auto;
     margin-right: auto;
   
     padding-left: $grid-spacing-48;
     padding-right: $grid-spacing-48;
 
-    // Layout change header change
-    @include respond(phone_Portrait) { // < 640
+    @include respond(phone_Portrait) {
         padding-left: $grid-spacing-12;
         padding-right: $grid-spacing-12;
-    
     }
 
-    &.share {
+    &.workList {
+        max-width: 1680px;
+    }
+
+    &.shareSingle {
         max-width: 864px;
-
-        margin-left: auto;
-        margin-right: auto;
-    
-        padding-left: $grid-spacing-48;
-        padding-right: $grid-spacing-48;
-
-        @include respond(phone_Portrait) { // < 640
-            padding-left: $grid-spacing-12;
-            padding-right: $grid-spacing-12;
-        
-        }
     }
 
     &.shareList {
         max-width: 1476px;
-  
-        margin-left: auto;
-        margin-right: auto;
-      
-        padding-left: $grid-spacing-48;
-        padding-right: $grid-spacing-48;
-
-        @include respond(phone_Portrait) { // < 640
-            padding-left: $grid-spacing-12;
-            padding-right: $grid-spacing-12;
-        
-        }
     }
-  }
+}
+
+
+
+.letterBox {
+    &_64 {
+        padding-top: $grid-spacing-64;
+        padding-bottom: $grid-spacing-64;
+    }
+
+    &_64_128 {
+        padding-top: $grid-spacing-64;
+        padding-bottom: $grid-spacing-128;
+    }
+}
+
+
+.tilesContainer {
+    margin: $grid-spacing-neg6;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,8 +87,6 @@
 
 
 .columns {
-
-
     display: flex;
     flex-wrap: wrap;
 
@@ -95,8 +105,6 @@
         padding-right: $grid-spacing-24;
         padding-left: $grid-spacing-24;
 
-
-
         &_1x {
             flex-basis: 25%;
         }
@@ -112,44 +120,31 @@
             margin-bottom: $grid-spacing-64;
         }
 
-        @include respond(tablet_Portrait) { // < 1200px
-
+        @include respond(tablet_Portrait) {
             &_1x {
                 flex-basis: 50%;
-                &:nth-child(1){
-                    margin-bottom: $grid-spacing-64;
-                }
-                &:nth-child(2){
+
+                &:nth-child(1), &:nth-child(2){
                     margin-bottom: $grid-spacing-64;
                 }
             }
-
         }
 
 
-
-
-            // Layout change header change
-        @include respond(phone_Portrait) { // < 640
-            &_1x {
-                flex-basis: 100%;
-                text-align: center;
-            }
-            &_2x {
-                flex-basis: 100%;
-                text-align: center;
-            }
+        @include respond(phone_Portrait) {
             margin-bottom: $grid-spacing-64;
+
+            &_1x, &_2x {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
             &:last-child{
                 margin-bottom: 0;
             }
         }
-
-
-
     }
-
-  }
+}
   
 
 

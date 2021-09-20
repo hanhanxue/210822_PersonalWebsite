@@ -47,19 +47,6 @@ export default ShareSlug
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // NextJS static generation //
 
 export const getStaticPaths = async () => {

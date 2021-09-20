@@ -1,24 +1,24 @@
 
 
+// Vendor Libs
+import path from 'path'
+const sizeOf = require('image-size')
+
+// Vendor Components
 import Head from 'next/head'
-import NextImage from 'next/image'
 
+// My Libs
+import {getDirContent} from '../../lib/serverUtils'
 
-
+// My Components
 import Header from '../../components/global/Header'
 import Footer from '../../components/global/Footer'
 
-
-
-import path from 'path'
-
-
-
-import {getDirContent} from '../../lib/serverUtils'
-
 import PlayMain from '../../components/play/PlayMain'
 
-const sizeOf = require('image-size')
+// My Styles
+
+
 
 
 const Play = ( {images}) => {
@@ -29,11 +29,9 @@ const Play = ( {images}) => {
         </Head>
 
 
-        <Header theme='Light' />
-
-        <PlayMain images={images} />
-
-        <Footer theme='Light' />
+        <Header theme='Default' />
+            <PlayMain images={images} />
+        <Footer theme='Default' />
 
         </>
      );
