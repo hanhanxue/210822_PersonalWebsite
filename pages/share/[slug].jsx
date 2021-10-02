@@ -26,11 +26,11 @@ const ShareSlug = ( {source } ) => {
 
     return (
         <>
-        <Header />
+        <Header  theme='Light' />
 
         <ShareSingle source={source} />
 
-        <Footer />
+        <Footer  theme='Light' />
         </>
     )
 }

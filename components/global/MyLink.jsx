@@ -1,6 +1,5 @@
 
 
-import moment from 'moment'
 import NextLink from 'next/link'
 
 import styles from './MyLink.module.scss'
@@ -10,11 +9,11 @@ const MyLink = ({href, children, style, handleClick}) => {
         <NextLink href={href}>
             {handleClick ? 
                     <a className={`${styles.a}`} onClick={(e) => handleClick(e)}>
-                    {children}
+                        {children}
                     </a>
                     :
                     <a className={`${styles.a}`} >
-                    {children}
+                        {children}
                     </a>  
         
         }

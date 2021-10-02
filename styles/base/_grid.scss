@@ -26,6 +26,8 @@
 .wrapper {
     margin-left: auto;
     margin-right: auto;
+
+    max-width: 1680px;
   
     padding-left: $grid-spacing-48;
     padding-right: $grid-spacing-48;
@@ -51,6 +53,11 @@
 
 
 .letterBox {
+    &_48 {
+        padding-top: $grid-spacing-48;
+        padding-bottom: $grid-spacing-48;
+    }
+
     &_64 {
         padding-top: $grid-spacing-64;
         padding-bottom: $grid-spacing-64;
@@ -63,8 +70,15 @@
 }
 
 
+
+
 .tilesContainer {
     margin: $grid-spacing-neg6;
+
+    &Flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .centered {

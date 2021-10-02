@@ -26,11 +26,11 @@ const Share = ( { shareSingles }) => {
         </Head>
         
 
-        <Header theme='Light' />
+        <Header theme='Default' />
 
         <ShareList shareSingles={shareSingles} />
 
-        <Footer theme='Light' />
+        <Footer theme='Default' />
 
         </>
 

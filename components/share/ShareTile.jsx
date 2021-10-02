@@ -1,7 +1,6 @@
 
 
 
-import NextLink from 'next/link'
 import { toShortDate, toFullSize, genSlug } from '../../lib/clientUtils'
 
 import {useRouter} from 'next/router'
@@ -37,10 +36,6 @@ const ShareTile = ( {title, date, categories, size, coverImage}) => {
         <div className={`${styles.tile} ${styles['tile' + fullSize]}`}>
 
             <div className={`${styles.card}`}>
-
-
-
-
 
 
                     <div className={styles.imageFrame} style={backgroundImageStyle} onClick={ () => goToSingle(shareSingleLink) }>

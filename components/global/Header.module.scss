@@ -7,39 +7,23 @@
 @import '../../styles/abstracts/mixins';
 
 
-.section {
 
-    //position: absolute;
-    //top: 0px;
-
-    width: 100%;
-    z-index: 999;
-
-
-    &White {
-        background-color: $color-main-white;
-    }
-
-    &Light {
-        background-color: $color-gray-900;
-        color: $color-gray-100;
-    }
-    
-    &Dark {
-        background-color: $color-gray-100;
-        color: $color-gray-900;
-    }
-    
-}
-
-
-.letterBox {
-    padding-top: $grid-spacing-48;
-    padding-bottom: $grid-spacing-48;
-}
 
 
 // SELECTOR STYLES
+
+.logoFrame {
+    display: none;
+
+    margin-bottom: $grid-spacing-48;
+
+    text-align: center;
+
+    @include respond(phone_Portrait) {
+        display: block;
+    }
+}
+
 
 .nav {
     padding-right: $grid-spacing-24;
@@ -60,11 +44,13 @@
             animation-timing-function: ease-out;
         }
 
-        @include respond(phone_Portrait) { // < 640
+        @include respond(phone_Portrait) {
             display: none;
         }
 
     }
+
+
 
 
     .navFrame {
@@ -78,18 +64,32 @@
             }
         }
 
-        @include respond(phone_Portrait) { // < 640
+        @include respond(phone_Portrait) {
             margin-left: auto;
             margin-right: auto;
         }
     }
+
+
 }
 
 
-.spacer {
-    background-color: rgba(0,0,0,0);
-    color: rgba(0,0,0,0);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+// .spacer {
+//     background-color: rgba(0,0,0,0);
+//     color: rgba(0,0,0,0);
+// }
 
 
 // .nextImage img {
@@ -98,53 +98,6 @@
 //     }
 
 // }
-
-
-
-
-.logoFrame {
-    display: none;
-
-
-    margin-bottom: $grid-spacing-48;
-
-    text-align: center;
-
-    @include respond(phone_Portrait) { // < 640
-        display: block;
-    }
-}
-
-
-
-
-
-.imageFrame {
-
-   display: inline-block;
-
-    // Small spacing issue
-    vertical-align: bottom;
-    line-height: 0;
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // .ulist {

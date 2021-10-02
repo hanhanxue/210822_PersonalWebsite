@@ -2,20 +2,7 @@
 @import "../../styles/abstracts/variables";
 @import '../../styles/abstracts/mixins';
 
-.section {
-    &Light {
-        background-color: $color-gray-900;
-    }
-    &White {
-        background-color: $color-main-white;
-    }
-}
 
-
-.thisElement {
-    padding-top: $grid-spacing-64;
-    padding-bottom: $grid-spacing-64;
-}
 
 // SELECTOR STYLES
 

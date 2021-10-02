@@ -1,7 +1,5 @@
 
 
-import styles from './WorkList.module.scss'
-
 import { WorkTileProject, WorkTileBulletin } from './WorkTile'
 
 
@@ -9,13 +7,13 @@ import { WorkTileProject, WorkTileBulletin } from './WorkTile'
 const WorkList = ( {workSingles} ) => {
     return (
 
-        <main className={styles.section}>
-        <div className={`wrapper`}>
-        <div className={styles.letterBox}>
+        <main className={`section sectionDefault`}>
+        <div className={`wrapper workList`}>
+        <div className={`letterBox_64_128`}>
 
 
 
-        <div className={styles.tilesContainer}>
+        <div className={`tilesContainer tilesContainerFlex`}>
 
 
             {workSingles.map((w, index) => {

@@ -33,7 +33,7 @@ const WorkSlug = ( {source }) => {
 
         <WorkSingle source={source} />
 
-        <Footer />
+        <Footer theme='Light' />
         </>
 
      );

@@ -13,13 +13,14 @@ const PlayMain = ( {images} ) => {
     
         <div className={`tilesContainer centered`}>
         
-            {images.map((i, index) => ( 
+            {images.map((i, index) => (
+                
             <div className={`nextImageDiv nextImageDivMargin`}>
-            <NextImage 
-                src={`/content/play/${i.image}`} 
-                width={i.dimensions.width} 
-                height={i.dimensions.height} 
-                key={index} />
+                <NextImage 
+                    src={`/content/play/${i.image}`} 
+                    width={i.dimensions.width} 
+                    height={i.dimensions.height} 
+                    key={index} />
             </div>
 
             ))}

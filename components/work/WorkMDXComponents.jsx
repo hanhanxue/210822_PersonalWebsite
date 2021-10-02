@@ -9,6 +9,32 @@ let moment = require('moment'); // require
 
 
 
+
+
+export const ProjectHeader = ( {scope} ) => {
+
+    const date = `20${scope.date}`
+    return (
+    <section className={`section sectionWhite ${styles.sectionTitle}`}>
+    <div className={`wrapper shareSingle`}>
+    <div className={`${styles.letterBox}`}>
+
+            <div className={`title_1 ${styles.titleFrame}`}>
+            {scope.title}
+            </div>
+
+            <div className={`subhead ${styles.metaFrame}`}>
+            {`${scope.categories[0]} | ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()})`}     
+            </div>
+
+    </div>
+    </div>
+    </section>
+)}
+
+
+
+
 const SectionTitle = (props ) => (
     <section className={`${styles.section} ${styles.sectionDark}`}>
     <div className={`wrapper`}>

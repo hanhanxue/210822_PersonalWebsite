@@ -42,14 +42,6 @@ export default Play;
 
 
 
-
-
-
-
-
-
-
-
 export const getStaticProps = async () => {
     // const root = process.cwd()
     // const filepath = path.join(root, 'public/content/play')

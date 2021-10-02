@@ -17,9 +17,9 @@ const Info = () => {
         </Head>
         
 
-        <Header theme='White' />
+        <Header theme='Light' />
         <InfoMain />
-        <Footer theme='Light' />
+        <Footer theme='Default' />
 
         </>
 

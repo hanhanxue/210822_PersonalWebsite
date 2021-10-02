@@ -1,7 +1,21 @@
-import NextLink from 'next/link'
+
+
+
+// Vendor Libs
+
+
+// Vendor Components
+
+// My Libs
+
+// My Components
 import MyLink from '../global/MyLink'
 
+// My Styles
 import styles from './InfoMain.module.scss'
+
+
+
 
 
 
@@ -10,9 +24,9 @@ const InfoSections = () => {
 return (
 
         <>
-        <section className={`${styles.section} ${styles.sectionWhite}`}>
+        <section className={`section sectionLight`}>
         <div className={`wrapper`}>
-        <div className={styles.thisElement}>
+        <div className={`letterBox_64`}>
 
             <div className={`columns`}>
 
@@ -52,9 +66,9 @@ return (
         </section>
 
 
-        <section className={`${styles.section} ${styles.sectionLight}`}>
+        <section className={`section sectionDefault`}>
         <div className={`wrapper`}>
-        <div className={styles.thisElement}>
+        <div className={`letterBox_64`}>
 
         <div className={`columns`}>
             <div className={`column column_4x`}>
@@ -99,9 +113,9 @@ return (
         </section>
 
 
-        <section className={`${styles.section} ${styles.sectionLight}`}>
+        <section className={`section sectionDefault`}>
         <div className={`wrapper`}>
-        <div className={styles.thisElement}>
+        <div className={`letterBox_64`}>
 
         <div className={`columns`}>
         <div className={`column column_4x`}>
@@ -139,9 +153,9 @@ return (
 
 
 
-        <section className={`${styles.section} ${styles.sectionLight}`}>
+        <section className={`section sectionDefault`}>
         <div className={`wrapper`}>
-        <div className={styles.thisElement}>
+        <div className={`letterBox_64`}>
 
             <div className={`columns`}>
                 <div className={`column column_2x`}>

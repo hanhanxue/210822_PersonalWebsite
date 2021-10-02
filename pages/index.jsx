@@ -22,11 +22,11 @@ const Work = ({ workSingles }) => {
         <title>Han Han Xue</title>
       </Head>
 
-      <Header theme='Light' />
+      <Header theme='Default' />
 
       <WorkList workSingles={workSingles} />
 
-      <Footer theme='Light' />
+      <Footer theme='Default' />
     </>
   )
 }

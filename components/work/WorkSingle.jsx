@@ -9,6 +9,7 @@ import { MDXRemote } from 'next-mdx-remote'
 
 
 // My Components
+import {ProjectHeader} from './WorkMDXComponents'
 import WorkMDXComponents  from './WorkMDXComponents'
 
 
@@ -19,9 +20,13 @@ import WorkMDXComponents  from './WorkMDXComponents'
 
 const WorkSingle = ({source}) => {
     return ( 
-        
+        <>
+        <ProjectHeader scope={source.scope} />
+        <main>
         <MDXRemote {...source} components={WorkMDXComponents } />
+        </main>
 
+        </>
 
      );
 }

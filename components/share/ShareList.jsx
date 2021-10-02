@@ -5,18 +5,15 @@
 import ShareTile from './ShareTile'
 
 
-import styles from './ShareList.module.scss'
-
-
 
 
 const ShareList = ({shareSingles}) => {
     return (        
-         <main className={styles.section}>
+         <main className={`section sectionDefault`}>
         <div className={`wrapper shareList`}>
-        <div className={styles.letterBox}>
+        <div className={`letterBox_48`}>
 
-            <div className={styles.tilesContainer}>
+            <div className={`tilesContainer tilesContainerFlex`}>
 
             {shareSingles.map((s, index) => (
                 

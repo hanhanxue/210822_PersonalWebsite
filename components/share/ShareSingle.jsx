@@ -13,8 +13,6 @@ import {ArticleHeader} from './ShareMDXComponents'
 import ShareMDXComponents from './ShareMDXComponents'
 
 // My Styles
-import styles from './ShareSingle.module.scss'
-
 
 
 
@@ -22,7 +20,7 @@ const ShareSingle = ({source}) => {
     return ( 
         <>
         <ArticleHeader scope={source.scope} />
-        <main className={`${styles.main}`}>
+        <main className={`letterBox_64_128`}>
             <MDXRemote {...source} components={ShareMDXComponents} />
         </main>
         </>
