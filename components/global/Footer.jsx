@@ -20,7 +20,7 @@ const Footer = ( {theme} ) => {
     return (
 
         <footer className={`section section${theme}`}>
-        <div className={`wrapper`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64`}>
 
             <div className={`columns`}>

@@ -12,7 +12,7 @@ import { genSlug, genPaths} from '../../lib/clientUtils'
 // My Components
 import Footer from '../../components/global/Footer'
 import Header from '../../components/global/Header'
-import ShareSingle from '../../components/share/ShareSingle'
+
 import {ArticleHeader} from '../../components/share/ShareMDXComponents'
 import ShareMDXComponents from '../../components/share/ShareMDXComponents'
 

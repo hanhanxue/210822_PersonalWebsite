@@ -1,22 +1,25 @@
 
 
-// Vendor Libs
+// 00 Vendor Libs
 import path from 'path'
 const sizeOf = require('image-size')
 
-// Vendor Components
+// 01 Vendor Components
 import Head from 'next/head'
+import NextImage from 'next/image'
 
-// My Libs
+
+
+// 02 My Libs
 import {getDirContent} from '../../lib/serverUtils'
 
-// My Components
+// 03 My Components
 import Header from '../../components/global/Header'
 import Footer from '../../components/global/Footer'
 
-import PlayMain from '../../components/play/PlayMain'
 
-// My Styles
+
+// 04 My Styles
 
 
 
@@ -30,7 +33,32 @@ const Play = ( {images}) => {
 
 
         <Header theme='Default' />
-            <PlayMain images={images} />
+                
+    <main className={`section sectionDefault`}>
+    <div className={`wrapper`}> 
+    <div className={`letterbox_64_128`}>
+    
+    
+        <div className={`tilesContainer textAlignCenter`}>
+        
+            {images.map((i, index) => (
+                
+            <div className={`nextImageDiv nextImageDivMargin`} key={index} >
+                <NextImage 
+                    src={`/content/play/${i.image}`} 
+                    width={i.dimensions.width} 
+                    height={i.dimensions.height} 
+                    />
+            </div>
+
+            ))}
+        
+        </div>
+        
+    
+    </div>
+    </div>
+    </main>
         <Footer theme='Default' />
 
         </>

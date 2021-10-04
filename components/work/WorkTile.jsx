@@ -1,16 +1,27 @@
+
+
+// 00 Vendor Libs
 import {useState} from 'react'
-
-
-import NextLink from 'next/link'
-
-
-import { toYear, toFullSize, genSlug } from '../../lib/clientUtils'
-
 import {useRouter} from 'next/router'
+let moment = require('moment')
+
+// 01 Vendor Components
+
+
+
+// 02 My Libs
+
+
+
+// 03 My Components
+import MyLink from '../global/MyLink'
+
+
+
+// 04 My Styles
 
 import styles from './WorkTile.module.scss'
-import MyLink from '../global/MyLink'
-let moment = require('moment')
+
 
 
 
@@ -21,12 +32,12 @@ export const ProjectTile = (
     const viewProject = (href) => {
       router.push(href)
     }
+    const projectLink = `/work/${slug}`
 
     const backgroundImageStyle = {
         backgroundImage: `url('${coverImage.publicFilePath}')`
     }
 
-    const projectLink = `/work/${slug}`
 
 
 
@@ -34,9 +45,7 @@ export const ProjectTile = (
     return (
         <div className={`${styles.tile} ${styles['tile' + tileType]}`}>
 
-            <div className={`${styles.card} ${styles.cardWork}`} 
-            style={backgroundImageStyle} 
-            onClick={() => viewProject(projectLink) }>
+            <div className={`${styles.card} ${styles.cardWork}`}  style={backgroundImageStyle} onClick={() => viewProject(projectLink) }>
 
 
 
@@ -47,11 +56,13 @@ export const ProjectTile = (
                         <div className={`body_1 ${styles.metaYear}`}>  {moment(date).format('YYYY')}  </div>
                     </div>
 
-                    <div className={`title_2 ${styles.flexItem} ${styles.titleFrame}`}>{title}<br/>{`for ${client}`}</div>
+                    <div className={`title_2 ${styles.flexItem} ${styles.titleFrame}`}>
+                        {title}<br/>
+                        {`for ${client}`}
+                    </div>
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
                         <MyLink href={projectLink} handleClick={(e) => e.preventDefault()}>+ View Project</MyLink>
-       
                     </div>
 
 

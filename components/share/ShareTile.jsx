@@ -1,60 +1,67 @@
 
 
 
-import { toShortDate, toFullSize, genSlug } from '../../lib/clientUtils'
-
+// 00 Vendor Libs
 import {useRouter} from 'next/router'
+let moment = require('moment')
 
-import styles from './ShareTile.module.scss'
+// 01 Vendor Components
+
+// 02 My Libs
+
+
+// 03 My Components
 import MyLink from '../global/MyLink'
 
+// 04 My Styles
+import styles from './ShareTile.module.scss'
 
-const ShareTile = ( {title, date, categories, size, coverImage}) => {
 
 
-    const fullDate = toShortDate(date)
-    // category
-    const fullSize = toFullSize(size)
 
-    const slug = genSlug(title)
 
-    const backgroundImageStyle = {
-        backgroundImage: `url('${coverImage}')`
-    }
+const ShareTile = ( {tileType, coverImage,   categories, date,    title,    slug }) => {
+
 
     const router = useRouter()
-
-    const goToSingle = (href) => {
-      //console.log(workSinglehref)
-    
-      //window.location.assign(href)
+    const viewPost = (href) => {
       router.push(href)
     }
-    const shareSingleLink = `/share/${slug}`
+    
+        const postLink = `/share/${slug}`
+
+    const backgroundImageStyle = {
+        backgroundImage: `url('${coverImage.publicFilePath}')`
+    }
+
+
+
+
+
+
 
     return ( 
-        <div className={`${styles.tile} ${styles['tile' + fullSize]}`}>
+        <div className={`${styles.tile} ${styles['tile' + tileType]}`}>
 
             <div className={`${styles.card}`}>
 
 
-                    <div className={styles.imageFrame} style={backgroundImageStyle} onClick={ () => goToSingle(shareSingleLink) }>
-          
-                    </div>
-                    <div className={styles.textFrame}>
 
+
+
+                    <div className={styles.imageFrame} style={backgroundImageStyle} onClick={ () => viewPost(postLink) }>
+                    </div>
+
+                    <div className={styles.textFrame}>
                         <div className={`${styles.flexItem} ${styles.metaFrame}`}>
                             <div className={`subhead ${styles.metaCategory}`}>{categories[0]}</div>
-                            <div className={`subhead ${styles.metaDate}`}>{fullDate}</div>
+                            <div className={`subhead ${styles.metaDate}`}>  {moment(date).format('MMM Do YYYY')} </div>
                         </div>
-                        <div className={`headline ${styles.flexItem} ${styles.titleFrame}`}>
- 
-                        <MyLink href={shareSingleLink}>{title}</MyLink>
-                
-                            </div>
-                        
-                    </div>
 
+                        <div className={`headline ${styles.flexItem} ${styles.titleFrame}`}>
+                            <MyLink href={postLink}>{title}</MyLink>
+                        </div>
+                    </div>
 
 
 

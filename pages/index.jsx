@@ -1,16 +1,30 @@
 
+// 00 Vendor Libs
+
+
+// 01 Vendor Components
 
 import Head from 'next/head'
 
 
+// 02 My Libs
+
 import { getDirContent, getMatter, genCustomData } from '../lib/serverUtils'
 
+
+// 03 My Components
 
 import Footer from '../components/global/Footer'
 import Header from '../components/global/Header'
 
 
 import { ProjectTile, BulletinTile } from '../components/work/WorkTile'
+
+
+// 04 My Styles
+
+
+
 
 
 

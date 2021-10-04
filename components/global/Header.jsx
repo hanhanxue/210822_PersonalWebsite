@@ -25,7 +25,7 @@ const Header = ( {theme} ) => {
 
         <>
         <header className={`section section${theme}`}>
-        <div className={`wrapper`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_48`}>
 
             <div className={`${styles.logoFrame}`}>
