@@ -11,7 +11,7 @@ const ShareList = ({shareSingles}) => {
     return (        
          <main className={`section sectionDefault`}>
         <div className={`wrapper shareList`}>
-        <div className={`letterBox_48`}>
+        <div className={`letterbox_64`}>
 
             <div className={`tilesContainer tilesContainerFlex`}>
 

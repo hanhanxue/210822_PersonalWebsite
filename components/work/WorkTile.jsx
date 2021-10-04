@@ -10,53 +10,49 @@ import {useRouter} from 'next/router'
 
 import styles from './WorkTile.module.scss'
 import MyLink from '../global/MyLink'
+let moment = require('moment')
 
 
 
-export const WorkTileProject = ({title, date, categories, client, size, coverImage}) => {
+export const ProjectTile = (
+    {tileType,   coverImage,     categories, date,    title,  client,    slug}) => {
+
     const router = useRouter()
-
-    const goToSingle = (href) => {
-
+    const viewProject = (href) => {
       router.push(href)
     }
 
-    const fullSize = toFullSize(size)
-
-    const year = toYear(date)
-
-    const slug = genSlug(title)
-
     const backgroundImageStyle = {
-        backgroundImage: `url('${coverImage}')`
+        backgroundImage: `url('${coverImage.publicFilePath}')`
     }
 
-    const workSingleLink = `/work/${slug}`
+    const projectLink = `/work/${slug}`
+
+
+
 
     return (
-        <div className={`${styles.tile} ${styles['tile' + fullSize]}`}>
+        <div className={`${styles.tile} ${styles['tile' + tileType]}`}>
 
             <div className={`${styles.card} ${styles.cardWork}`} 
             style={backgroundImageStyle} 
-            onClick={() => goToSingle(workSingleLink) }>
+            onClick={() => viewProject(projectLink) }>
 
 
 
 
-        {/* {console.log(category)} */}
+
                     <div className={`${styles.flexItem} ${styles.metaFrame}`}>
                         <div className={`body_1 ${styles.metaCategory}`}>{categories[0]}</div>
-                        <div className={`body_1 ${styles.metaYear}`}>{year}</div>
+                        <div className={`body_1 ${styles.metaYear}`}>  {moment(date).format('YYYY')}  </div>
                     </div>
 
                     <div className={`title_2 ${styles.flexItem} ${styles.titleFrame}`}>{title}<br/>{`for ${client}`}</div>
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
-                        <MyLink href={workSingleLink} handleClick={(e) => e.preventDefault()}>+ View Project</MyLink>
+                        <MyLink href={projectLink} handleClick={(e) => e.preventDefault()}>+ View Project</MyLink>
        
                     </div>
-
-
 
 
 
@@ -67,8 +63,6 @@ export const WorkTileProject = ({title, date, categories, client, size, coverIma
     
     )
 
-
-
 }
 
 
@@ -77,29 +71,19 @@ export const WorkTileProject = ({title, date, categories, client, size, coverIma
 
 
 
-export const WorkTileBulletin = ({title, date, size, subtitle, article}) => {
+export const BulletinTile = ({date,     title, subtitle,    bulletin}) => {
 
     const [isOpen, setOpen] = useState(false)
 
     const handleReadMore = (e) => {
-
         e.preventDefault()
-        // e.stopPropagation()
-        // e.stopPropagation();
-        // e.nativeEvent.stopImmediatePropagation()
-        // console.log(e.button)
-
-        //console.log(e)
-
         setOpen(!isOpen)
     }
 
-    const fullSize = toFullSize(size)
-    const year = toYear(date)
 
 
     return (
-        <div className={`${styles.tile} ${styles['tile' + fullSize]}`}>
+        <div className={`${styles.tile} ${styles.tileSmall}`}>
 
             <div className={
                 isOpen ? 
@@ -109,24 +93,30 @@ export const WorkTileBulletin = ({title, date, size, subtitle, article}) => {
                 >
 
 
+
+
                     <div className={`${styles.flexItem} ${styles.metaFrame}`}>
                         <div className={`body_1 ${styles.metaCategory}`}>Bulletin</div>
-                        <div className={`body_1 ${styles.metaYear}`}>{year}</div>
+                        <div className={`body_1 ${styles.metaYear}`}>   {moment(date).format('YYYY')}   </div>
                     </div>
 
                     <div className={`title_2 ${styles.flexItem} ${styles.titleFrame}`}>{title}<br/>{subtitle}</div>
 
                     {isOpen ?  <div className={`body_2 ${styles.flexItem} ${styles.detailFrame}`}>
 
-                    {article}
+                    {bulletin}
                     </div> : null }
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
                         {isOpen ? 
                         <MyLink href='https://www.google.com/' handleClick={handleReadMore}>- Read Less</MyLink> :
                         <MyLink href='https://www.google.com/' handleClick={handleReadMore}>+ Read More</MyLink>
-           }
+                         }
                     </div>
+
+
+
+
 
 
             </div>

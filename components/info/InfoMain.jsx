@@ -26,7 +26,7 @@ return (
         <>
         <section className={`section sectionLight`}>
         <div className={`wrapper`}>
-        <div className={`letterBox_64`}>
+        <div className={`letterbox_64`}>
 
             <div className={`columns`}>
 
@@ -68,7 +68,7 @@ return (
 
         <section className={`section sectionDefault`}>
         <div className={`wrapper`}>
-        <div className={`letterBox_64`}>
+        <div className={`letterbox_64`}>
 
         <div className={`columns`}>
             <div className={`column column_4x`}>
@@ -115,7 +115,7 @@ return (
 
         <section className={`section sectionDefault`}>
         <div className={`wrapper`}>
-        <div className={`letterBox_64`}>
+        <div className={`letterbox_64`}>
 
         <div className={`columns`}>
         <div className={`column column_4x`}>
@@ -155,7 +155,7 @@ return (
 
         <section className={`section sectionDefault`}>
         <div className={`wrapper`}>
-        <div className={`letterBox_64`}>
+        <div className={`letterbox_64`}>
 
             <div className={`columns`}>
                 <div className={`column column_2x`}>

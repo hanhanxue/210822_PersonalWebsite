@@ -20,7 +20,7 @@ const ShareSingle = ({source}) => {
     return ( 
         <>
         <ArticleHeader scope={source.scope} />
-        <main className={`letterBox_64_128`}>
+        <main className={`letterbox_64_128`}>
             <MDXRemote {...source} components={ShareMDXComponents} />
         </main>
         </>

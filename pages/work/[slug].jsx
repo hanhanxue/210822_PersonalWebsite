@@ -2,17 +2,18 @@
 
 
 // Vendor Components
-
+import { MDXRemote } from 'next-mdx-remote'
 
 // My Libs
-import { getDirContent, getMatter, getMDXSource, autoProps } from '../../lib/serverUtils'
-import { genSlug, genPaths } from '../../lib/clientUtils'
+import { getDirContent, getMatter, getMDXSource, autoProps, genPaths } from '../../lib/serverUtils'
+import { genSlug,  } from '../../lib/clientUtils'
 
 // My Components
 import Footer from '../../components/global/Footer'
 import Header from '../../components/global/Header'
 
-import WorkSingle from '../../components/work/WorkSingle'
+import { ProjectHeader } from '../../components/work/WorkMDXComponents'
+import WorkMDXComponents  from '../../components/work/WorkMDXComponents'
 
 
 // My Styles
@@ -31,7 +32,10 @@ const WorkSlug = ( {source }) => {
         <>
         <Header theme='Dark' />
 
-        <WorkSingle source={source} />
+        <ProjectHeader scope={source.scope} />
+        <main>
+        <MDXRemote {...source} components={WorkMDXComponents } />
+        </main>
 
         <Footer theme='Light' />
         </>
@@ -56,7 +60,7 @@ export default WorkSlug;
 
 export const getStaticPaths = async () => {
     // Get all directories inside '/content/work' folder
-    const directories = await getDirContent('content/work')
+    const directories = getDirContent('content/work')
 
     // Generate paths
     const paths = genPaths(directories)
@@ -67,6 +71,8 @@ export const getStaticPaths = async () => {
         fallback: false
     }
 }
+
+
 
 export const getStaticProps = async ({params}) => {
     // Get all directories inside '/content/work' folder
@@ -82,6 +88,8 @@ export const getStaticProps = async ({params}) => {
 
     // Auto generate relevant props
     const myProps = autoProps(directory, data)
+    // // Files from assets folder
+    // myProps.assets = getImages('content/work', directory)
 
     // Compile MDX
     const mdxSource = await getMDXSource(content, myProps)
@@ -90,7 +98,6 @@ export const getStaticProps = async ({params}) => {
     return {
         props: {
             source: mdxSource,
-
         }
     }
 }

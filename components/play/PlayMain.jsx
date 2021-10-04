@@ -8,10 +8,10 @@ const PlayMain = ( {images} ) => {
     
     <main className={`section sectionDefault`}>
     <div className={`wrapper`}> 
-    <div className={`letterBox letterBox_64_128`}>
+    <div className={`letterbox_64_128`}>
     
     
-        <div className={`tilesContainer centered`}>
+        <div className={`tilesContainer textAlignCenter`}>
         
             {images.map((i, index) => (
                 

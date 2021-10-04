@@ -6,11 +6,8 @@
 
 
 
-.sectionTitle {
-    .letterBox {
-        padding-top: $grid-spacing-64;
-        padding-bottom: $grid-spacing-64;
-    }
+.ArticleHeader {
+
     .titleFrame {
         text-align: center;
         margin-bottom: $grid-spacing-48;
@@ -20,17 +17,26 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .sectionImage {
     text-align: center;
     .nextImageFrame {
         margin-bottom: $grid-spacing-48;
     }
 }
-
-
-
-
-
 
 
 

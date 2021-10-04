@@ -14,96 +14,84 @@ let moment = require('moment'); // require
 export const ProjectHeader = ( {scope} ) => {
 
     const date = `20${scope.date}`
+
     return (
-    <section className={`section sectionWhite ${styles.sectionTitle}`}>
-    <div className={`wrapper shareSingle`}>
-    <div className={`${styles.letterBox}`}>
+        <section className={`section sectionDark ${styles.ProjectHeader}`}>
+        <div className={`wrapper`}>
+        <div className={`letterbox_64`}>
+    
+                    <div className={`title_1 ${styles.titleFrame}`}>
+                        {scope.title}
+                    </div>
+                    <div className={`body_1 ${styles.metaFrame}`}>
+                        {scope.categories[0]} ~ {scope.client}
+                        </div>
+                    <div className={`title_2 ${styles.subtitleFrame}`}>
+                        {scope.subtitle}
+                        </div>
+    
+    
+    
+                    { scope.YouTubeLink ?
+                    (
+                        <div className={styles.videoFrame} style={ { paddingTop: `${scope.videoRatio}%` }  } >
+                            <iframe 
+                            className={styles.video} 
+                            src={scope.YouTubeLink} 
+                            allow="fullscreen;"></iframe>
+                        </div>
+                    ) :
+                    (            
+                    
+                    <NextImage 
+                        src={`/content/work/${props.file.directory}/assets/${props.file.fileName}`} 
+                        width={props.file.width} 
+                        height={props.file.height} 
+                        className={`nextImage`}/>
 
-            <div className={`title_1 ${styles.titleFrame}`}>
-            {scope.title}
-            </div>
-
-            <div className={`subhead ${styles.metaFrame}`}>
-            {`${scope.categories[0]} | ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()})`}     
-            </div>
-
-    </div>
-    </div>
-    </section>
+                        // <div className={styles.imageFrame}   >   
+                        //     <NextImage src={ `/content/work/${scope.directory}/${scope.image.src}`} width={scope.image.width} height={scope.image.height}  />
+                        // </div>
+                    )}
+    
+    
+    
+                        <div className={`columns`}>
+                            <div className={`column column_2x`}>
+                            <h3 className={`headline columnHeader`}>
+                                    Year
+                                </h3>
+                                    <ul className={`body_1`}>
+                                        <li>                        {moment(20 + scope.date).format('YYYY')}</li>
+                                    </ul>
+                            </div>
+                            <div className={`column column_1x`}>
+                            <h3 className={`headline columnHeader`}>Category</h3>
+                                    <ul className={`body_1`}>
+                                        <li>{scope.categories[0]}</li>
+                                    </ul>
+                            </div>
+                            <div className={`column column_1x`}>
+                            <h3 className={`headline columnHeader`}>Client</h3>
+                                    <ul className={`body_1`}>
+                                        <li>{scope.client}</li>
+                                    </ul>
+                            </div>
+                        </div>
+    
+        </div>
+        </div>
+        </section>
 )}
 
 
 
 
-const SectionTitle = (props ) => (
-    <section className={`${styles.section} ${styles.sectionDark}`}>
-    <div className={`wrapper`}>
-    <div className={`${styles.letterBox}`}>
-
-                <div className={`title_1 ${styles.sectionTitle}`}>
-                    {props.title}
-                </div>
-                <div className={`body_1 ${styles.sectionMeta}`}>
-                    {props.categories[0]} ~ {props.client}
-                    </div>
-                <div className={`title_2 ${styles.sectionSubtitle}`}>
-                    {props.subtitle}
-                    </div>
-
-
-
-                { props.YouTubeLink ?
-                (
-                    <div className={styles.videoFrame} style={ { paddingTop: `${props.videoRatio}%` }  } >
-                        <iframe 
-                        className={styles.video} 
-                        src={props.YouTubeLink} 
-                        allow="fullscreen;"></iframe>
-                    </div>
-                ) :
-                (
-
-                    <div className={styles.imageFrame}   >   
-                        <NextImage src={ `/content/work/${props.directory}/${props.image.src}`} width={props.image.width} height={props.image.height}  />
-                    </div>
-                )}
-
-
-
-                    <div className={`columns`}>
-                        <div className={`column column_2x`}>
-                        <h3 className={`headline columnHeader`}>
-                                Year
-                            </h3>
-                                <ul className={`body_1`}>
-                                    <li>                        {moment(20 + props.date).format('YYYY')}</li>
-                                </ul>
-                        </div>
-                        <div className={`column column_1x`}>
-                        <h3 className={`headline columnHeader`}>Category</h3>
-                                <ul className={`body_1`}>
-                                    <li>{props.categories[0]}</li>
-                                </ul>
-                        </div>
-                        <div className={`column column_1x`}>
-                        <h3 className={`headline columnHeader`}>Client</h3>
-                                <ul className={`body_1`}>
-                                    <li>{props.client}</li>
-                                </ul>
-                        </div>
-                    </div>
-
-                 
-
-    </div>
-    </div>
-    </section>
-)
 
 const SectionDetail = (props ) => (
-    <section className={`${styles.section} ${styles.sectionWhite}`}>
+    <section className={`section sectionLight`}>
     <div className={`wrapper`}>
-    <div className={`${styles.letterBox}`}>
+    <div className={`letterbox_64`}>
 
 
 
@@ -131,9 +119,8 @@ const SectionDetail = (props ) => (
 )
 
 const SectionImage = (props) => (
-    <section className={`${styles.section} ${styles.sectionLight}`}>
 
-
+    <section className={`section`}>
 
                     <div className={styles.imageFrameMax}   >   
                     <div className={`${styles.nextImage}`}>
@@ -143,14 +130,13 @@ const SectionImage = (props) => (
                     </div>
                     </div>
                  
-
     </section>
 )
 
 const SectionGallery = (props) => (
-    <section className={`${styles.section} ${styles.sectionLight}`}>
+    <section className={`section sectionDefault`}>
     <div className={`wrapper`}>
-    <div className={`${styles.letterBox}`}>
+    <div className={`letterbox_64`}>
 
         <div className={styles.imagesContainer}>
 
@@ -178,7 +164,7 @@ const SectionGallery = (props) => (
 
 const WorkMDXComponents = {
 
-    SectionTitle: SectionTitle,
+    // SectionTitle: SectionTitle,
     SectionDetail: SectionDetail,
     SectionImage: SectionImage,
     SectionGallery: SectionGallery,
@@ -186,3 +172,77 @@ const WorkMDXComponents = {
 }
 
 export default WorkMDXComponents
+
+
+
+
+
+
+
+
+
+
+
+
+// const SectionTitle = (props ) => (
+//     <section className={`section sectionDark`}>
+//     <div className={`wrapper`}>
+//     <div className={`letterbox_64`}>
+
+//                 <div className={`title_1 ${styles.sectionTitle}`}>
+//                     {props.title}
+//                 </div>
+//                 <div className={`body_1 ${styles.sectionMeta}`}>
+//                     {props.categories[0]} ~ {props.client}
+//                     </div>
+//                 <div className={`title_2 ${styles.sectionSubtitle}`}>
+//                     {props.subtitle}
+//                     </div>
+
+
+
+//                 { props.YouTubeLink ?
+//                 (
+//                     <div className={styles.videoFrame} style={ { paddingTop: `${props.videoRatio}%` }  } >
+//                         <iframe 
+//                         className={styles.video} 
+//                         src={props.YouTubeLink} 
+//                         allow="fullscreen;"></iframe>
+//                     </div>
+//                 ) :
+//                 (
+
+//                     <div className={styles.imageFrame}   >   
+//                         <NextImage src={ `/content/work/${props.directory}/${props.image.src}`} width={props.image.width} height={props.image.height}  />
+//                     </div>
+//                 )}
+
+
+
+//                     <div className={`columns`}>
+//                         <div className={`column column_2x`}>
+//                         <h3 className={`headline columnHeader`}>
+//                                 Year
+//                             </h3>
+//                                 <ul className={`body_1`}>
+//                                     <li>                        {moment(20 + props.date).format('YYYY')}</li>
+//                                 </ul>
+//                         </div>
+//                         <div className={`column column_1x`}>
+//                         <h3 className={`headline columnHeader`}>Category</h3>
+//                                 <ul className={`body_1`}>
+//                                     <li>{props.categories[0]}</li>
+//                                 </ul>
+//                         </div>
+//                         <div className={`column column_1x`}>
+//                         <h3 className={`headline columnHeader`}>Client</h3>
+//                                 <ul className={`body_1`}>
+//                                     <li>{props.client}</li>
+//                                 </ul>
+//                         </div>
+//                     </div>
+
+//     </div>
+//     </div>
+//     </section>
+// )

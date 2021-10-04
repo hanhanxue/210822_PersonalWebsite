@@ -10,9 +10,9 @@ export const ArticleHeader = ( {scope} ) => {
 
     const date = `20${scope.date}`
     return (
-    <section className={`section sectionWhite ${styles.sectionTitle}`}>
+    <section className={`section sectionWhite ${styles.ArticleHeader}`}>
     <div className={`wrapper shareSingle`}>
-    <div className={`${styles.letterBox}`}>
+    <div className={`letterbox_64`}>
 
             <div className={`title_1 ${styles.titleFrame}`}>
             {scope.title}
@@ -27,6 +27,9 @@ export const ArticleHeader = ( {scope} ) => {
     </section>
 )}
 
+
+
+
 const SectionImage = (props) => {
 
     //console.log(props)
@@ -36,11 +39,13 @@ const SectionImage = (props) => {
     <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
+    
 
             <NextImage 
-                src={`/content/share/${props.file.directory}/assets/${props.file.fileName}`} 
-                width={props.file.width} 
-                height={props.file.height} 
+                // src={`/content/share/${props.file.filePath}/assets/${props.file.fileName}`} 
+                src={`${props.file.publicFilePath}`}
+                width={props.file.fileMeta.width} 
+                height={props.file.fileMeta.height} 
                 className={`nextImage`}/>
     
 

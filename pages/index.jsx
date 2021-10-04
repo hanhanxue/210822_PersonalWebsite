@@ -3,19 +3,19 @@
 import Head from 'next/head'
 
 
-import { getDirContent, getSingles } from '../lib/serverUtils'
+import { getDirContent, getMatter, genCustomData } from '../lib/serverUtils'
 
 
 import Footer from '../components/global/Footer'
 import Header from '../components/global/Header'
-import WorkList from '../components/work/WorkList'
+
+
+import { ProjectTile, BulletinTile } from '../components/work/WorkTile'
 
 
 
 
-
-
-const Work = ({ workSingles }) => {
+const Work = ({ works }) => {
   return (
     <>
       <Head>
@@ -24,7 +24,61 @@ const Work = ({ workSingles }) => {
 
       <Header theme='Default' />
 
-      <WorkList workSingles={workSingles} />
+      {/* <WorkList works={works} /> */}
+
+      <main className={`section sectionDefault`}>
+        <div className={`wrapper workList`}>
+        <div className={`letterbox_64_128`}>
+
+        <div className={`tilesContainer tilesContainerFlex`}>
+
+
+            {works.map((work, index) => {
+            if(work.tileType !=='Bulletin') {
+            return (
+                    <ProjectTile 
+                        tileType={work.tileType} 
+
+                        coverImage={work.coverImage} 
+
+                        categories={work.categories} 
+                        date={work.date} 
+                        
+                        title={work.title} 
+                        client={work.client} 
+
+                        slug={work.slug}
+
+                        key={index} />
+                )
+            } else {
+              return (
+                <BulletinTile 
+           
+
+                    date={work.date} 
+
+                    title={work.title} 
+                    subtitle={work.subtitle}
+
+
+                    bulletin = {work.bulletin}
+
+                    key={index} />
+            )
+            }
+            }
+
+            )}
+
+            </div>
+
+
+
+        </div>
+        </div>
+        </main>
+
 
       <Footer theme='Default' />
     </>
@@ -38,23 +92,29 @@ export default Work
 
 
 
-
-
-
-
-
-
 export const getStaticProps = async () => {
-  let workSingles = []
-
-  const directories = await getDirContent('content/work')
-  workSingles = await getSingles('content/work', directories)
 
 
-  //console.log(workSingles)
+  let works = []
+
+  const directories = getDirContent('/content/work')
+
+  directories.map(directory => {
+    const {content, data} = getMatter('/content/work', directory)
+
+
+    works.push(  genCustomData('/content/work', directory, data)  )
+
+  })
+
+  works = works.reverse()
+
+
+
   return {
       props: {
-          workSingles,
+
+          works,
       }
   }
 }

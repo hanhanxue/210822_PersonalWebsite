@@ -21,8 +21,6 @@
 }
 
 
-
-
 .wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -52,7 +50,7 @@
 
 
 
-.letterBox {
+.letterbox {
     &_48 {
         padding-top: $grid-spacing-48;
         padding-bottom: $grid-spacing-48;
@@ -81,23 +79,9 @@
     }
 }
 
-.centered {
+.textAlignCenter {
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .columns {

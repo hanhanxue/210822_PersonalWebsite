@@ -21,7 +21,7 @@ const Footer = ( {theme} ) => {
 
         <footer className={`section section${theme}`}>
         <div className={`wrapper`}>
-        <div className={`letterBox_64`}>
+        <div className={`letterbox_64`}>
 
             <div className={`columns`}>
 

@@ -26,7 +26,7 @@ const Header = ( {theme} ) => {
         <>
         <header className={`section section${theme}`}>
         <div className={`wrapper`}>
-        <div className={`letterBox_48`}>
+        <div className={`letterbox_48`}>
 
             <div className={`${styles.logoFrame}`}>
 
@@ -151,7 +151,7 @@ export default Header
 
     // <header className={`${styles.spacer}`}>
     // <div className={`wrapper`}>
-    // <div className={`${styles.letterBox}`}>
+    // <div className={`${styles.letterbox}`}>
         
     //     <div className={`body_1 ${styles.invisible}`}>
 
