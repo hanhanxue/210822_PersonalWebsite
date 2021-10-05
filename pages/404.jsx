@@ -24,7 +24,7 @@ const NotFound = () => {
         setTimeout(() => {
             router.push('/')
         }, 20000)
-    }, [])
+    })
 
 
     return (

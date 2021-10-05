@@ -8,7 +8,7 @@ import Highlight, {defaultProps} from 'prism-react-renderer'
 
 export const ArticleHeader = ( {scope} ) => {
 
-    const date = `20${scope.date}`
+
     return (
     <section className={`section sectionWhite ${styles.ArticleHeader}`}>
     <div className={`wrapper shareSingle`}>
@@ -19,7 +19,7 @@ export const ArticleHeader = ( {scope} ) => {
             </div>
 
             <div className={`subhead ${styles.metaFrame}`}>
-            {`${scope.categories[0]} | ${moment(date).format('MMMM Do YYYY')} (${moment(date).fromNow()})`}     
+            {`${scope.categories[0]} | ${moment(scope.date).format('MMMM Do YYYY')} (${moment(scope.date).fromNow()})`}     
             </div>
 
     </div>
@@ -107,17 +107,6 @@ const Li = (props) =>  (
 )
 
 
-const InlineCode = (props) => (
-    <section className={`section sectionWhite`}>
-    <div className={`wrapper shareSingle`}>
-    <div className={`${styles.letterBox}`}>
-
-        <code {...props} className={`code ${styles.code}`} />
-
-    </div>
-    </div>
-    </section>
-)
 
 const Code = ({children, className}) => {
     const language = className.replace(/language-/, '')
@@ -167,3 +156,27 @@ export default ShareMDXComponents
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+const InlineCode = (props) => (
+    <section className={`section sectionWhite`}>
+    <div className={`wrapper shareSingle`}>
+    <div className={`${styles.letterBox}`}>
+
+        <code {...props} className={`code ${styles.code}`} />
+
+    </div>
+    </div>
+    </section>
+)

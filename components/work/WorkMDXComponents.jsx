@@ -13,8 +13,6 @@ let moment = require('moment'); // require
 
 export const ProjectHeader = ( {scope} ) => {
 
-    const date = `20${scope.date}`
-
     return (
         <section className={`section sectionDark ${styles.ProjectHeader}`}>
         <div className={`wrapper`}>
@@ -62,7 +60,7 @@ export const ProjectHeader = ( {scope} ) => {
                                     Year
                                 </h3>
                                     <ul className={`body_1`}>
-                                        <li>                        {moment(20 + scope.date).format('YYYY')}</li>
+                                        <li>                        {moment(scope.date).format('YYYY')}</li>
                                     </ul>
                             </div>
                             <div className={`column column_1x`}>
