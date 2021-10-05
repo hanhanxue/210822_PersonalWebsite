@@ -30,6 +30,13 @@ import { ProjectTile, BulletinTile } from '../components/work/WorkTile'
 
 
 const Work = ({ works }) => {
+
+
+
+
+
+
+
   return (
     <>
       <Head>
@@ -37,8 +44,6 @@ const Work = ({ works }) => {
       </Head>
 
       <Header theme='Default' />
-
-      {/* <WorkList works={works} /> */}
 
       <main className={`section sectionDefault`}>
         <div className={`wrapper workList`}>
@@ -87,8 +92,6 @@ const Work = ({ works }) => {
 
             </div>
 
-
-
         </div>
         </div>
         </main>
@@ -127,7 +130,6 @@ export const getStaticProps = async () => {
 
   return {
       props: {
-
           works,
       }
   }

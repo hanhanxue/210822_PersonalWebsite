@@ -5,7 +5,7 @@
 import { MDXRemote } from 'next-mdx-remote'
 
 // My Libs
-import { getDirContent, getMatter, getMDXSource, autoProps, genPaths } from '../../lib/serverUtils'
+import { getDirContent, getMatter, getMDXSource, genPaths,  genCustomData } from '../../lib/serverUtils'
 import { genSlug,  } from '../../lib/clientUtils'
 
 // My Components
@@ -60,7 +60,7 @@ export default WorkSlug;
 
 export const getStaticPaths = async () => {
     // Get all directories inside '/content/work' folder
-    const directories = getDirContent('content/work')
+    const directories = getDirContent('/content/work')
 
     // Generate paths
     const paths = genPaths(directories)
@@ -76,23 +76,18 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({params}) => {
     // Get all directories inside '/content/work' folder
-    const directories = await getDirContent('content/work')
-
-
+    const directories = getDirContent('/content/work')
     // Get relevant directory by matching slug and returning the first match (should only have one)
     const directory = directories.filter(d => genSlug(d.split('_')[2]) === params.slug)[0]
 
     // Read index.mdx inside the directory file
-    const {content, data} = getMatter('content/work', directory)
+    const {content, data} = getMatter('/content/work', directory)
 
+    const customData = genCustomData('/content/work', directory, data)
 
-    // Auto generate relevant props
-    const myProps = autoProps(directory, data)
-    // // Files from assets folder
-    // myProps.assets = getImages('content/work', directory)
 
     // Compile MDX
-    const mdxSource = await getMDXSource(content, myProps)
+    const mdxSource = await getMDXSource(content, customData)
 
     //console.log(mdxSource)
     return {

@@ -11,7 +11,7 @@ import Head from 'next/head'
 // 02 My Libs
 
 
-import { getDirContent, getSingles, genCustomData, getMatter } from '../../lib/serverUtils'
+import { getDirContent, getMatter,  genCustomData } from '../../lib/serverUtils'
 
 
 // 03 My Components
@@ -25,7 +25,11 @@ import ShareTile from '../../components/share/ShareTile'
 // 04 My Styles
 
 
-const Share = ( { shareSingles, shares }) => {
+
+
+
+
+const Share = ( { shares }) => {
 
 
 
@@ -90,12 +94,10 @@ export default Share
 
 export const getStaticProps = async () => {
 
-    let shareSingles = []
 
     let shares = []
 
     const directories = getDirContent('/content/share')
-
     directories.map(directory => {
         const {content, data} = getMatter('/content/share', directory)
 
@@ -105,12 +107,8 @@ export const getStaticProps = async () => {
     shares = shares.reverse()
 
 
-    shareSingles = await getSingles('content/share', directories)
-
-
     return {
         props: {
-            shareSingles,
             shares,
         }
     }
@@ -120,43 +118,5 @@ export const getStaticProps = async () => {
 
 
 
-
-// export const getStaticProps = async () => {
-
-//     const root = process.cwd()
-//     const directories = fs.readdirSync(path.join(root, 'content/share'))
-
-
-
-//     let shareSingles = []
-
-//     directories.forEach(d => {
-
-//         let shareSingle = {}
-//         const dateSizeTitle = d.split('_')
-
-//         const filepath = path.join(root, 'content/share', d, 'index.mdx')
-//         const source = fs.readFileSync(filepath, 'utf8')
-//         const { content, data } = matter(source)
-
-
-
-//         shareSingle.date = dateSizeTitle[0]
-//         shareSingle.size = dateSizeTitle[1]
-//         shareSingle.title = dateSizeTitle[2]
-//         shareSingle.category = data.category
-
-
-//         shareSingles.push(shareSingle)
-
-//     });
-
-
-//     return {
-//         props: {
-//             shareSingles,
-//         }
-//     }
-// }
 
 
