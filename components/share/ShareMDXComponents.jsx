@@ -1,6 +1,7 @@
 
 import styles from './ShareMDXComponents.module.scss'
-import NextLink from 'next/link'
+
+
 import NextImage from 'next/image'
 let moment = require('moment'); // require
 import Highlight, {defaultProps} from 'prism-react-renderer'
@@ -42,7 +43,6 @@ const SectionImage = (props) => {
     
 
             <NextImage 
-                // src={`/content/share/${props.file.filePath}/assets/${props.file.fileName}`} 
                 src={`${props.file.publicFilePath}`}
                 width={props.file.fileMeta.width} 
                 height={props.file.fileMeta.height} 
@@ -66,12 +66,17 @@ const P = (props) => (
     </section>
 )
 
+
+
+
+
+
 const H2 = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
-        <h2 {...props} className={`title_3 ${styles.heading} ${styles.h2}`} />
+        <h2 {...props} className={`title_3 myHeading ${styles.heading} ${styles.h2}`} />
 
     </div>
     </div>
@@ -83,12 +88,16 @@ const H3 = (props) =>  (
     <div className={`wrapper shareSingle`}>
     <div className={`${styles.letterBox}`}>
 
-        <h2 {...props} className={`headline ${styles.heading} ${styles.h3}`} />
+        <h2 {...props} className={`headline myHeading ${styles.heading} ${styles.h3}`} />
 
     </div>
     </div>
     </section>
 )
+
+
+
+
 
 const Ul = (props) =>  (
     <section className={`section sectionWhite`}>

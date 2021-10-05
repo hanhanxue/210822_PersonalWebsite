@@ -36,9 +36,7 @@
     &Default {
         max-width: 1680px;
     }
-    &.workList {
-        max-width: 1680px;
-    }
+
 
     &.shareSingle {
         max-width: 864px;
@@ -117,6 +115,14 @@
             flex-basis: 100%;
         }
 
+        &_618 {
+            flex-basis: 61.8%;
+        }
+
+        &_382 {
+            flex-basis: 38.2%;
+        }
+
         &ForceBottomMargin {
             margin-bottom: $grid-spacing-64;
         }
@@ -135,7 +141,7 @@
         @include respond(phone_Portrait) {
             margin-bottom: $grid-spacing-64;
 
-            &_1x, &_2x {
+            &_1x, &_2x, &_618, &_382 {
                 flex-basis: 100%;
                 text-align: center;
             }

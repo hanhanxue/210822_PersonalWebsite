@@ -1,10 +1,23 @@
 
+// 00 Vendor Libs
 
+
+// 01 Vendor Components
 import NextLink from 'next/link'
 
-import styles from './MyLink.module.scss'
+// 02 My Libs
 
-const MyLink = ({href, children, style, handleClick}) => {
+
+// 03 My Components
+
+
+// 04 My Styles
+import styles from './MyNextLink.module.scss'
+
+
+
+
+const MyNextLink = ({href, children, style, handleClick}) => {
     return ( 
         <NextLink href={href}>
             {handleClick ? 
@@ -22,4 +35,4 @@ const MyLink = ({href, children, style, handleClick}) => {
      );
 }
  
-export default MyLink;
+export default MyNextLink;

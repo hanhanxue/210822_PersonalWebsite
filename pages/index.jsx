@@ -41,6 +41,7 @@ const Work = ({ works }) => {
     <>
       <Head>
         <title>Han Han Xue</title>
+        {/* <meta name="description" content="Han Han Xue — Interdisciplinary Design" /> */}
       </Head>
 
       <Header theme='Default' />

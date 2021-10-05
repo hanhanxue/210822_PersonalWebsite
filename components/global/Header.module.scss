@@ -40,7 +40,7 @@
         .tagline {
             display: inline-block;
             animation-name: moveInRight;
-            animation-duration: 2.2s;
+            animation-duration: $anim-timing-lazy;
             animation-timing-function: ease-out;
         }
 

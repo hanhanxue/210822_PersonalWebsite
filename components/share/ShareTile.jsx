@@ -11,7 +11,7 @@ let moment = require('moment')
 
 
 // 03 My Components
-import MyLink from '../global/MyLink'
+import MyNextLink from '../global/MyNextLink'
 
 // 04 My Styles
 import styles from './ShareTile.module.scss'
@@ -59,7 +59,7 @@ const ShareTile = ( {tileType, coverImage,   categories, date,    title,    slug
                         </div>
 
                         <div className={`headline ${styles.flexItem} ${styles.titleFrame}`}>
-                            <MyLink href={postLink}>{title}</MyLink>
+                            <MyNextLink href={postLink}>{title}</MyNextLink>
                         </div>
                     </div>
 

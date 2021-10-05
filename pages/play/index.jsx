@@ -6,7 +6,6 @@ const sizeOf = require('image-size')
 
 // 01 Vendor Components
 import Head from 'next/head'
-import NextImage from 'next/image'
 
 
 
@@ -16,7 +15,7 @@ import {getDirContent} from '../../lib/serverUtils'
 // 03 My Components
 import Header from '../../components/global/Header'
 import Footer from '../../components/global/Footer'
-
+import MyNextImage from '../../components/global/MyNextImage'
 
 
 // 04 My Styles
@@ -43,13 +42,15 @@ const Play = ( {images}) => {
         
             {images.map((i, index) => (
                 
-            <div className={`nextImageDiv nextImageDivMargin`} key={index} >
-                <NextImage 
-                    src={`/content/play/${i.image}`} 
-                    width={i.dimensions.width} 
-                    height={i.dimensions.height} 
-                    />
-            </div>
+                <MyNextImage
+                source={`/content/play/${i.image}`} 
+                width={i.dimensions.width} 
+                height={i.dimensions.height} 
+                divClasses ={['BorderMargin_6']}
+                imgClasses={['']}
+                key={index}
+                />
+
 
             ))}
         

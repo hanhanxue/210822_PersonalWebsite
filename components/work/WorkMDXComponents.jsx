@@ -13,6 +13,8 @@ let moment = require('moment'); // require
 
 export const ProjectHeader = ( {scope} ) => {
 
+
+
     return (
         <section className={`section sectionDark ${styles.ProjectHeader}`}>
         <div className={`wrapper`}>
@@ -30,9 +32,9 @@ export const ProjectHeader = ( {scope} ) => {
     
     
     
-                    { scope.YouTubeLink ?
+                    { scope.YouTubeLink !== 'ERROR' ?
                     (
-                        <div className={styles.videoFrame} style={ { paddingTop: `${scope.videoRatio}%` }  } >
+                        <div className={styles.heroFrame} style={ { paddingTop: `${scope.videoRatio}%` }  } >
                             <iframe 
                             className={styles.video} 
                             src={scope.YouTubeLink} 
@@ -41,11 +43,11 @@ export const ProjectHeader = ( {scope} ) => {
                     ) :
                     (            
                     
-                    <NextImage 
-                        src={`/content/work/${props.file.directory}/assets/${props.file.fileName}`} 
-                        width={props.file.width} 
-                        height={props.file.height} 
-                        className={`nextImage`}/>
+                        <div className={`${styles.heroFrame} nextImageDiv`}>      
+                            <NextImage className={`${styles.nextImage}`} src={ `${scope.assets[scope.heroImage].publicFilePath}`} 
+                            width={ `${scope.assets[scope.heroImage].fileMeta.width}`} 
+                            height={ `${scope.assets[scope.heroImage].fileMeta.height}`}  />
+                        </div>
 
                         // <div className={styles.imageFrame}   >   
                         //     <NextImage src={ `/content/work/${scope.directory}/${scope.image.src}`} width={scope.image.width} height={scope.image.height}  />
@@ -122,9 +124,9 @@ const SectionImage = (props) => (
 
                     <div className={styles.imageFrameMax}   >   
                     <div className={`${styles.nextImage}`}>
-                    <NextImage src={ `/content/work/${props.directory}/${props.image.src}`} 
+                    {/* <NextImage src={ `/content/work/${props.directory}/${props.image.src}`} 
                     width={props.image.width} 
-                    height={props.image.height}  />
+                    height={props.image.height}  /> */}
                     </div>
                     </div>
                  
@@ -142,10 +144,10 @@ const SectionGallery = (props) => (
                         return (
                             <div className={`${styles.tile} ${styles['tile' + i.size]} `} key={index}  >   
                             <div className={`${styles.card} ${styles.nextImage}`}>
-                            <NextImage src={ `/content/work/${props.directory}/${i.src}`} 
+                            {/* <NextImage src={ `/content/work/${props.directory}/${i.src}`} 
                             width={i.width} 
                             height={i.height} 
-                            className={`${styles.nextImage}`} />
+                            className={`${styles.nextImage}`} /> */}
                                 </div>
 
                             </div>

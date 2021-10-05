@@ -14,7 +14,7 @@ let moment = require('moment')
 
 
 // 03 My Components
-import MyLink from '../global/MyLink'
+import MyNextLink from '../global/MyNextLink'
 
 
 
@@ -62,7 +62,7 @@ export const ProjectTile = (
                     </div>
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
-                        <MyLink href={projectLink} handleClick={(e) => e.preventDefault()}>+ View Project</MyLink>
+                        <MyNextLink href={projectLink} handleClick={(e) => e.preventDefault()}>+ View Project</MyNextLink>
                     </div>
 
 
@@ -120,8 +120,8 @@ export const BulletinTile = ({date,     title, subtitle,    bulletin}) => {
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
                         {isOpen ? 
-                        <MyLink href='https://www.google.com/' handleClick={handleReadMore}>- Read Less</MyLink> :
-                        <MyLink href='https://www.google.com/' handleClick={handleReadMore}>+ Read More</MyLink>
+                        <MyNextLink href='https://www.google.com/' handleClick={handleReadMore}>- Read Less</MyNextLink> :
+                        <MyNextLink href='https://www.google.com/' handleClick={handleReadMore}>+ Read More</MyNextLink>
                          }
                     </div>
 

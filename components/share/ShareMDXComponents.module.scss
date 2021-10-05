@@ -29,17 +29,6 @@
 
 
 
-
-
-.sectionImage {
-    text-align: center;
-    .nextImageFrame {
-        margin-bottom: $grid-spacing-48;
-    }
-}
-
-
-
 .p {
     margin-bottom: $grid-spacing-24;
 }
@@ -86,32 +75,6 @@
 
 
 
-
-.autolinkHeadings {
-    //outline: none;
-    font-weight: 600;
-    opacity: 0;
-    margin-left: $grid-spacing-24;
-    color: $color-main-primary;
-
-    // &:hover {
-    //     opacity: 100;
-    // }
-}
-
-.heading:hover .autolinkHeadings {
-    opacity: 100;
-}
-
-    
-        //padding-inline-start: 40px;
-    // margin-block-start: 1em;
-    // margin-block-end: 1em;
-    // margin-inline-start: 0px;
-    // margin-inline-end: 0px;
-    // padding-inline-start: 40px;
-    // padding-inline-end: 40px;
-
 .code {
     .letterBox {
         margin-top: $grid-spacing-24;
@@ -122,3 +85,30 @@
     }
 }
 
+
+
+
+
+
+.sectionImage {
+    text-align: center;
+    .nextImageFrame {
+        margin-bottom: $grid-spacing-48;
+    }
+}
+
+
+
+
+        //padding-inline-start: 40px;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+    // padding-inline-start: 40px;
+    // padding-inline-end: 40px;
+
+
+        // &:hover {
+    //     opacity: 100;
+    // }

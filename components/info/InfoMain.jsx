@@ -9,7 +9,7 @@
 // My Libs
 
 // My Components
-import MyLink from '../global/MyLink'
+import MyNextLink from '../global/MyNextLink'
 
 // My Styles
 import styles from './InfoMain.module.scss'
@@ -25,34 +25,34 @@ return (
 
         <>
         <section className={`section sectionLight`}>
-        <div className={`wrapper`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64`}>
 
             <div className={`columns`}>
 
-                <div className={`column column_2x`}>
+                <div className={`column column_618`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>He is currently working on autonomous vehicles at <MyLink href='/'>Woven Planet</MyLink> in New York</p>
+                    <p className={`title_2`}>He is currently working on autonomous vehicles at <MyNextLink href='/'>Woven Planet</MyNextLink> in New York.</p>
                 </div>
 
-                <div className={`columns column_2x`}>
+                <div className={`columns column_382`}>
 
 
-                                <div className={`column column_2x columnForceBottomMargin`}>
+                                <div className={`column column_4x columnForceBottomMargin`}>
                                     <h2 className={`title_2 columnHeader`}>Contact</h2>
                                     <ul className={`title_3`}>
-                                        <li><MyLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyLink></li>
+                                        <li><MyNextLink href='mailto:hello@hanhanxue.com'>hello@hanhanxue.com</MyNextLink></li>
                                     </ul>
                                 </div>
 
 
-                                <div className={`column column_2x`}>
+                                <div className={`column column_4x`}>
                                     <h2 className={`title_2 columnHeader`}>Social</h2>
                                     <ul className={`title_3`}>
-                                        <li><MyLink href='/'>Github</MyLink></li>
-                                        <li><MyLink href='/'>Instagram</MyLink></li>
-                                        <li><MyLink href='/'>LinkedIn</MyLink></li>
-                                        <li><MyLink href='/'>YouTube</MyLink></li>
+                                        <li><MyNextLink href='/'>Github</MyNextLink></li>
+                                        <li><MyNextLink href='/'>Instagram</MyNextLink></li>
+                                        <li><MyNextLink href='/'>LinkedIn</MyNextLink></li>
+                                        <li><MyNextLink href='/'>YouTube</MyNextLink></li>
                                     </ul>
                                 </div>
 
@@ -67,7 +67,7 @@ return (
 
 
         <section className={`section sectionDefault`}>
-        <div className={`wrapper`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64`}>
 
         <div className={`columns`}>
@@ -114,7 +114,7 @@ return (
 
 
         <section className={`section sectionDefault`}>
-        <div className={`wrapper`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64`}>
 
         <div className={`columns`}>
@@ -154,7 +154,7 @@ return (
 
 
         <section className={`section sectionDefault`}>
-        <div className={`wrapper`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64`}>
 
             <div className={`columns`}>

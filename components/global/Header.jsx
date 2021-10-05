@@ -8,7 +8,8 @@ import NextImage from 'next/image'
 // My Libs
 
 // My Components
-import MyLink from './MyLink'
+import MyNextLink from './MyNextLink'
+import MyNextImage from './MyNextImage'
 
 // My Styles
 import styles from './Header.module.scss'
@@ -29,25 +30,21 @@ const Header = ( {theme} ) => {
         <div className={`letterbox_48`}>
 
             <div className={`${styles.logoFrame}`}>
-
-                <div className={`nextImageDiv`}>
-                    <NextImage className={`${styles.nextImage}`} src={ `/hanhanxue@2x.png`} width='64px' height='64px'  />
-                </div>
-
+                <MyNextImage source={ `/hanhanxue@2x.png`} width='64px' height='64px' />
             </div>
 
             <nav className={`${styles.nav}`}>
 
                 <div className={`${styles.introFrame}`}>
-                    <span className={`body_1 ${styles.logotype}`}><MyLink href="/">Han Han Xue</MyLink></span>
+                    <span className={`body_1 ${styles.logotype}`}><MyNextLink href="/">Han Han Xue</MyNextLink></span>
                     <pre className={`body_1 ${styles.tagline}`}> — Interdisciplinary Design</pre>
                 </div>
 
                 <ul className={`body_1 ${styles.navFrame}`}>
-                    <li className={`${styles.item}`}><MyLink href="/">Work</MyLink></li>
-                    <li className={`${styles.item}`}><MyLink href="/share">Share</MyLink></li>
-                    <li className={`${styles.item}`}><MyLink href="/play">Play</MyLink></li>
-                    <li className={`${styles.item}`}><MyLink href="/info">Info</MyLink></li>
+                    <li className={`${styles.item}`}><MyNextLink href="/">Work</MyNextLink></li>
+                    <li className={`${styles.item}`}><MyNextLink href="/share">Share</MyNextLink></li>
+                    <li className={`${styles.item}`}><MyNextLink href="/play">Play</MyNextLink></li>
+                    <li className={`${styles.item}`}><MyNextLink href="/info">Info</MyNextLink></li>
                 </ul>
 
             </nav>

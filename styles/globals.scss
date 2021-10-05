@@ -53,18 +53,33 @@ ul {
 
 
 
-.nextImageDiv {
-  display: inline-block;
 
-  // small spacing issue
-  vertical-align: bottom;
-  line-height: 0;
 
-  &Center {
-    text-align: center;
-  }
 
-  &Margin {
-    margin: $grid-spacing-6;
-  }
+
+
+.myHeading {
+ display: inline-block;
+
+
+    .rehypeAutolinkHeadings {
+      //outline: none;
+      font-weight: 600;
+      opacity: 0;
+      margin-left: $grid-spacing-12;
+      margin-right: $grid-spacing-12;
+      color: $color-main-primary;
+      transition: $anim-timing-snappy;
+
+    }
+
+
+    &:hover  .rehypeAutolinkHeadings {
+      opacity: 100;
+  
+    }
 }
+
+
+
+
