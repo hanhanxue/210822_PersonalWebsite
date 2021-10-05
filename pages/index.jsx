@@ -47,7 +47,7 @@ const Work = ({ works }) => {
       <Header theme='Default' />
 
       <main className={`section sectionDefault`}>
-        <div className={`wrapper workList`}>
+        <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64_128`}>
 
         <div className={`tilesContainer tilesContainerFlex`}>
