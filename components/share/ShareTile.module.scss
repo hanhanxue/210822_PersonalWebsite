@@ -10,7 +10,7 @@
 .tile {
     position: relative;
 
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 0;
 
 
@@ -19,9 +19,15 @@
     @include respond(phone_Portrait) {
         padding-top: 60%;
     }
+    @include respond(phone_Portrait_S) {
+        padding-top: 70%;
+    }
 
     &Large {
         flex-basis: 50%;
+        @include respond(tablet_Portrait) {
+            flex-basis: 33%;
+        }
         @include respond(phone_Portrait) {
             flex-basis: 50%;
         }
@@ -29,6 +35,9 @@
 
     &Small {
         flex-basis: 25%;
+        @include respond(tablet_Portrait) {
+            flex-basis: 33%;
+        }
         @include respond(phone_Portrait) {
             flex-basis: 50%;
         }
@@ -79,6 +88,10 @@
 
             .metaDate {
                 color: $color-text-secondary;
+            }
+
+            @include respond(phone_Portrait_S) {
+                flex-direction: column;
             }
         }
 

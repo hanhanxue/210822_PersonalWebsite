@@ -35,6 +35,7 @@ $breakpoint argument choices:
         @media (max-width: 78em) { @content };    // 80
     }
 
+    //LAYOUT CHANGE
     @if $breakpoint == tablet_Portrait {
         @media (max-width: 66em) { @content };    // 63
     }
@@ -48,12 +49,13 @@ $breakpoint argument choices:
         @media (max-width: 54em) { @content };  //52
     }
 
+    //LAYOUT CHANGE
     @if $breakpoint == phone_Portrait {
         @media (max-width: 46em) { @content };  //44
     }
 
     @if $breakpoint == phone_Portrait_S {
-        @media (max-width: 32em) { @content };  
+        @media (max-width: 28em) { @content };  
     }
 
 

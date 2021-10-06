@@ -21,13 +21,17 @@ html {
         font-size: 70%;
     }
 
+
+
+
+    
     // Layout change to PHONE
     @include respond(phone_Portrait) { // < 640
-        font-size: 75%;
+        font-size: 65%;
     }
 
     @include respond(phone_Portrait_S) { // < 512
-        font-size: 70%;
+        font-size: 60%;
     }
 
 }
