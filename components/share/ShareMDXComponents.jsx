@@ -28,20 +28,113 @@ export const ArticleHeader = ( {scope} ) => {
     <section className={`section sectionWhite ${styles.ArticleHeader}`}>
     <div className={`wrapper wrapperSharePost`}>
     <div className={`letterbox_64`}>
-            <div className={`${styles.copyFrame}`}>
-                <div className={`title_1 ${styles.titleFrame}`}>
-                {scope.title}
+
+            
+        <div className={`columns`}>
+        <div className={`column column_4x ${styles.copyFrame}`}>
+                    <div className={`title_1 ${styles.titleFrame}`}>
+                    {scope.title}
+                    </div>
+
+                    <div className={`subhead ${styles.metaFrame}`}>
+                    {`${scope.categories[0]} | ${moment(scope.date).format('MMMM Do YYYY')} (${moment(scope.date).fromNow()})`}     
+                    </div>
                 </div>
 
-                <div className={`subhead ${styles.metaFrame}`}>
-                {`${scope.categories[0]} | ${moment(scope.date).format('MMMM Do YYYY')} (${moment(scope.date).fromNow()})`}     
-                </div>
-            </div>
+
+        </div>
+
 
     </div>
     </div>
     </section>
 )}
+
+
+
+const P = (props) => (
+    <section className={`section sectionWhite`}>
+    <div className={`wrapper wrapperSharePost`}>
+    <div className={``}>
+
+    <div className={`columns`}>
+        <div className={`column column_4x `}>
+        <p {...props} className={`body_2 ${styles.P}`} />
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    </section>
+)
+
+
+const H2 = (props) =>  (
+    <section className={`section sectionWhite`}>
+    <div className={`wrapper wrapperSharePost`}>
+    <div className={``}>
+
+    <div className={`columns`}>
+    <div className={`column column_4x `}>
+        <h2 {...props} className={`title_3 myHeading ${styles.H2}`} />
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    </section>
+)
+
+const H3 = (props) =>  (
+    <section className={`section sectionWhite`}>
+    <div className={`wrapper wrapperSharePost`}>
+    <div className={``}>
+
+
+    <div className={`columns`}>
+        <div className={`column column_4x `}>
+        <h2 {...props} className={`headline myHeading ${styles.H3}`} />
+        </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    </section>
+)
+
+
+const Ul = (props) =>  (
+    <section className={`section sectionWhite`}>
+    <div className={`wrapper wrapperSharePost`}>
+    <div className={``}>
+
+    <div className={`columns`}>
+        <div className={`column column_4x `}>
+
+        <ul {...props} className={`${styles.ul}`} />
+
+        </div>
+        </div>
+
+    </div>
+    </div>
+    </section>
+)
+
+const Li = (props) =>  (
+    <li {...props} className={`body_2 ${styles.li}`} />
+)
+
+
+
+
+
+
+
 
 
 
@@ -88,66 +181,16 @@ const SectionImage = (props) => {
     </section>
 )}
 
-const P = (props) => (
-    <section className={`section sectionWhite`}>
-    <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`}>
-
-        <p {...props} className={`body_2 ${styles.p}`} />
-
-    </div>
-    </div>
-    </section>
-)
 
 
 
 
 
 
-const H2 = (props) =>  (
-    <section className={`section sectionWhite`}>
-    <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`}>
-
-        <h2 {...props} className={`title_3 myHeading ${styles.heading} ${styles.h2}`} />
-
-    </div>
-    </div>
-    </section>
-)
-
-const H3 = (props) =>  (
-    <section className={`section sectionWhite`}>
-    <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`}>
-
-        <h2 {...props} className={`headline myHeading ${styles.heading} ${styles.h3}`} />
-
-    </div>
-    </div>
-    </section>
-)
 
 
 
 
-
-const Ul = (props) =>  (
-    <section className={`section sectionWhite`}>
-    <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`}>
-
-        <ul {...props} className={`${styles.ul}`} />
-
-    </div>
-    </div>
-    </section>
-)
-
-const Li = (props) =>  (
-    <li {...props} className={`body_2 ${styles.li}`} />
-)
 
 
 
@@ -157,16 +200,23 @@ const Code = ({children, className}) => {
     return (
     <section className={`section sectionWhite ${styles.code}`} >
     <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`} >
+    <div className={``} >
+
+
+
+
 
     <Highlight {...defaultProps} code={children} language="javascript" > 
-        {({className, style, tokens, getLineProps, getTokenProps}) => (
 
-            <pre className={className} style={{...style, padding: '20px'}}>
+        {   ({className, style, tokens, getLineProps, getTokenProps}) => (
+
+            <pre className={` code  ${className}  ${styles.codeFrame} `} style={{...style}}>
                 {tokens.map((line, i) => (
                     <div key={i} {...getLineProps({line, key: i})}>
                         {line.map((token, key) => (
                             <span key={key} {...getTokenProps({token, key})} />
+
+
                         ))}
                     </div>
                 ))}
@@ -175,6 +225,10 @@ const Code = ({children, className}) => {
         )}
 
     </Highlight>
+
+
+
+
 
     </div>
     </div>

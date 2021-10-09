@@ -2,23 +2,23 @@ html {
     font-size: 100%; // 1rem is root font size which is 16px
 
     @include respond(desktop_S) { // < 1440px
-        font-size: 90%;
+        font-size: 92%;
     }
 
     @include respond(tablet_Landscape) { // < 1280px
-        font-size: 80%;
+        font-size: 82%;
     }
 
     // Layout change to TABLET
     @include respond(tablet_Portrait) { // < 1088px
-        font-size: 75%;
+        font-size: 80%;
     }
 
 
 
 
     @include respond(phone_Landscape) { // < 768px
-        font-size: 70%;
+        font-size: 72%;
     }
 
 
@@ -27,11 +27,11 @@ html {
     
     // Layout change to PHONE
     @include respond(phone_Portrait) { // < 640
-        font-size: 65%;
+        font-size: 70%;
     }
 
     @include respond(phone_Portrait_S) { // < 512
-        font-size: 60%;
+        //font-size: 65%;
     }
 
 }

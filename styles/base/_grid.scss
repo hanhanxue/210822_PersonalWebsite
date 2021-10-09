@@ -96,6 +96,8 @@
 
     flex-shrink: 1;
     flex-grow: 0;
+
+    align-items: flex-start;
   
     .columnHeader {
         margin-bottom: $grid-spacing-24;
@@ -118,6 +120,7 @@
         }
         &_4x {
             flex-basis: 100%;
+
         }
 
         &_618 {
@@ -126,6 +129,9 @@
 
         &_382 {
             flex-basis: 38.2%;
+
+            // display: flex;
+            // flex-direction: column;
         }
 
         &ForceBottomMargin {
