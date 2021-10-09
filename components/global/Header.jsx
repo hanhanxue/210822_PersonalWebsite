@@ -29,9 +29,15 @@ const Header = ( {theme} ) => {
         <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_48`}>
 
+
+        <div className={`columns`}>
+                    <div className={`column column_4x`}>
             <div className={`${styles.logoFrame}`}>
                 <MyNextImage source={ `/hanhanxue@2x.png`} width='64px' height='64px' />
             </div>
+            </div>
+            </div>
+
 
             <nav className={`${styles.nav}`}>
 

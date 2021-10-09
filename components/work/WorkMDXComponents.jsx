@@ -34,9 +34,9 @@ export const ProjectHeader = ( {scope} ) => {
         <div className={`letterbox_64`}>
 
         <div className={`wrapper wrapperDefault`}>
+
+
             <div className={`columns`}>
-
-
                     <div className={`column column_4x ${styles.copyFrame}`}>
 
                         <div className={`title_1 ${styles.titleFrame}`}>
@@ -50,9 +50,9 @@ export const ProjectHeader = ( {scope} ) => {
                         </div>
 
                     </div>
-
-
             </div>
+
+
         </div>
 
 

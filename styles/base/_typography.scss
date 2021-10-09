@@ -68,6 +68,11 @@
 
     font-size: rem(64);
     line-height: rem(88);
+
+    @include respond(phone_Portrait_S) { // < 640
+        font-size: 42px;
+        line-height: 58px;
+    }
 }
 
 .title_2 {
@@ -77,6 +82,11 @@
 
     font-size: rem(40);
     line-height: rem(56);
+
+    @include respond(phone_Portrait_S) { // < 640
+        font-size: 26px;
+        line-height: 36px;
+    }
 }
 
 .title_3 {
