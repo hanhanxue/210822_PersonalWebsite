@@ -1,11 +1,12 @@
 
 
 // 00 Vendor Libs
-
+import moment from 'moment'
 
 // 01 Vendor Components
 
 import NextImage from 'next/image'
+import Highlight, {defaultProps} from 'prism-react-renderer'
 
 
 // 02 My Libs
@@ -18,9 +19,6 @@ import NextImage from 'next/image'
 import styles from './ShareMDXComponents.module.scss'
 
 
-import NextImage from 'next/image'
-let moment = require('moment'); // require
-import Highlight, {defaultProps} from 'prism-react-renderer'
 
 
 export const ArticleHeader = ( {scope} ) => {
@@ -44,6 +42,25 @@ export const ArticleHeader = ( {scope} ) => {
     </div>
     </section>
 )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
