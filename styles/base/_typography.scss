@@ -106,6 +106,24 @@
     line-height: rem(32);
 }
 
+.subhead {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: rem(16);
+    line-height: rem(24);
+
+    @include respond(phone_Landscape) { // < 640
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+
+
+// FIXED
+
 .body_2 {
     font-family: 'Inter';
     font-weight: 400;
@@ -131,20 +149,6 @@
     @include respond(phone_Portrait) { // < 640
         font-size: 12px;
         line-height: 18px;
-    }
-}
-
-.subhead {
-    font-family: 'Inter';
-    font-weight: 500;
-    font-style: normal;
-
-    font-size: 15px;
-    line-height: 24px;
-
-    @include respond(phone_Portrait) { // < 640
-        font-size: 12px;
-        line-height: 20px;
     }
 }
 
