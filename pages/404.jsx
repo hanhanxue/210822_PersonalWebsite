@@ -17,6 +17,7 @@ import Header from '../components/global/Header'
 
 
 
+
 const NotFound = () => {
     const router = useRouter()
 

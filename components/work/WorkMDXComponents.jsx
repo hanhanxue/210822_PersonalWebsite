@@ -1,10 +1,23 @@
 
+
+
+
+
+// 00 Vendor Libs
+import moment from 'moment'
+
+// 01 Vendor Components
+
+// 02 My Libs
+
+// 03 My Components
+
+import MyNextImage from '../global/MyNextImage'
+import MyNextLink from '../global/MyNextLink'
+
+
+// 04 My Styles
 import styles from './WorkMDXComponents.module.scss'
-
-import NextLink from 'next/link'
-import NextImage from 'next/image'
-
-let moment = require('moment'); // require
 
 
 
@@ -16,46 +29,56 @@ export const ProjectHeader = ( {scope} ) => {
 
 
     return (
-        <section className={`section sectionDark ${styles.ProjectHeader}`}>
-        <div className={`wrapper`}>
+        <section className={`section section${scope.theme} ${styles.ProjectHeader}`}>
+
         <div className={`letterbox_64`}>
-    
-                    <div className={`title_1 ${styles.titleFrame}`}>
-                        {scope.title}
+
+        <div className={`wrapper wrapperDefault`}>
+                    <div className={`${styles.copyFrame}`}>
+
+                        <div className={`title_1 ${styles.titleFrame}`}>
+                            {scope.title}
+                        </div>
+                        <div className={`body_1 ${styles.metaFrame}`}>
+                            {scope.categories[0]} ~ {scope.client}
+                        </div>
+                        <div className={`title_2 ${styles.subtitleFrame}`}>
+                            {scope.subtitle}
+                        </div>
+
                     </div>
-                    <div className={`body_1 ${styles.metaFrame}`}>
-                        {scope.categories[0]} ~ {scope.client}
-                        </div>
-                    <div className={`title_2 ${styles.subtitleFrame}`}>
-                        {scope.subtitle}
-                        </div>
-    
-    
-    
+    </div>
+
+
+
+    <div className={`wrapper`}>
                     { scope.YouTubeLink !== 'ERROR' ?
                     (
                         <div className={styles.heroFrame} style={ { paddingTop: `${scope.videoRatio}%` }  } >
-                            <iframe 
-                            className={styles.video} 
-                            src={scope.YouTubeLink} 
+                            <iframe
+                            className={styles.video}
+                            src={scope.YouTubeLink}
                             allow="fullscreen;"></iframe>
                         </div>
                     ) :
-                    (            
-                    
-                        <div className={`${styles.heroFrame} nextImageDiv`}>      
-                            <NextImage className={`${styles.nextImage}`} src={ `${scope.assets[scope.heroImage].publicFilePath}`} 
-                            width={ `${scope.assets[scope.heroImage].fileMeta.width}`} 
-                            height={ `${scope.assets[scope.heroImage].fileMeta.height}`}  />
+                    (
+
+                        <div className={`${styles.heroFrame} nextImageDiv`}>
+                            <MyNextImage
+                            source={ `${scope.assets[scope.heroImage].publicFilePath}`}
+                            width={ `${scope.assets[scope.heroImage].fileMeta.width}`}
+                            height={ `${scope.assets[scope.heroImage].fileMeta.height}`} />
                         </div>
 
-                        // <div className={styles.imageFrame}   >   
+                        // <div className={styles.imageFrame}   >
                         //     <NextImage src={ `/content/work/${scope.directory}/${scope.image.src}`} width={scope.image.width} height={scope.image.height}  />
                         // </div>
                     )}
-    
-    
-    
+                    </div>
+
+
+
+                    <div className={`wrapper wrapperDefault`}>
                         <div className={`columns`}>
                             <div className={`column column_2x`}>
                             <h3 className={`headline columnHeader`}>
@@ -78,9 +101,11 @@ export const ProjectHeader = ( {scope} ) => {
                                     </ul>
                             </div>
                         </div>
-    
+                        </div>
+
+
         </div>
-        </div>
+
         </section>
 )}
 
@@ -88,86 +113,81 @@ export const ProjectHeader = ( {scope} ) => {
 
 
 
-const SectionDetail = (props ) => (
+const Description = (props ) => (
     <section className={`section sectionLight`}>
-    <div className={`wrapper`}>
+    <div className={`wrapper wrapperDefault`}>
     <div className={`letterbox_64`}>
 
 
 
-                    <div className={`columns`}>
+            <div className={`columns`}>
 
-                        <div className={`column column_2x`}>
-                        <h2 className={`title_2`}>
-                                {props.title}
-                            </h2>
-                        </div>
+                <div className={`column column_2x`}>
+                <h2 className={`title_2`}>
+                        {props.title}
+                    </h2>
+                </div>
 
-                        <div className={`column column_2x`}>
-                        <h3 className={`title_3`}>
-                        {props.detail}
-                            </h3>
-                        </div>
+                <div className={`column column_2x`}>
+                <h3 className={`title_3`}>
+                {props.children}
+                    </h3>
+                </div>
 
-                    </div>
+            </div>
 
-                 
+
 
     </div>
     </div>
     </section>
 )
 
-const SectionImage = (props) => (
 
-    <section className={`section`}>
 
-                    <div className={styles.imageFrameMax}   >   
-                    <div className={`${styles.nextImage}`}>
-                    {/* <NextImage src={ `/content/work/${props.directory}/${props.image.src}`} 
-                    width={props.image.width} 
-                    height={props.image.height}  /> */}
-                    </div>
-                    </div>
-                 
-    </section>
-)
 
-const SectionGallery = (props) => (
-    <section className={`section sectionDefault`}>
-    <div className={`wrapper`}>
+
+
+
+
+const Gallery = (props) => (
+    <section className={`section sectionLight`}>
+    <div className={`wrapper wrapperDefault`}>
     <div className={`letterbox_64`}>
 
-        <div className={styles.imagesContainer}>
+        <div className={`tilesContainer tilesContainerFlex`}>
 
                     {props.images.map((i, index) => {
-                        return (
-                            <div className={`${styles.tile} ${styles['tile' + i.size]} `} key={index}  >   
-                            <div className={`${styles.card} ${styles.nextImage}`}>
-                            {/* <NextImage src={ `/content/work/${props.directory}/${i.src}`} 
-                            width={i.width} 
-                            height={i.height} 
-                            className={`${styles.nextImage}`} /> */}
-                                </div>
 
+                        return (
+                            <div className={`${styles.tile} ${styles['tile' + i.tileType]}`} key={index}>
+                                 <div className={`${styles.card}`}  >
+                                            <MyNextImage
+                                            source={i.file.publicFilePath}
+                                            width={i.file.fileMeta.width}
+                                            height={i.file.fileMeta.height}
+                                            />
+                                </div>
                             </div>
                         )
                     })}
-            </div>
-      
+        </div>
+
     </div>
     </div>
     </section>
 )
+
 
 
 
 const WorkMDXComponents = {
 
     // SectionTitle: SectionTitle,
-    SectionDetail: SectionDetail,
-    SectionImage: SectionImage,
-    SectionGallery: SectionGallery,
+    Description: Description,
+    // SectionImage: SectionImage,
+    Gallery: Gallery,
+    MyNextLink: MyNextLink,
 
 }
 
@@ -180,7 +200,20 @@ export default WorkMDXComponents
 
 
 
+const SectionImage = (props) => (
 
+    <section className={`section`}>
+
+                    <div className={styles.imageFrameMax}   >
+                    <div className={`${styles.nextImage}`}>
+                    {/* <NextImage src={ `/content/work/${props.directory}/${props.image.src}`}
+                    width={props.image.width}
+                    height={props.image.height}  /> */}
+                    </div>
+                    </div>
+
+    </section>
+)
 
 
 
@@ -204,15 +237,15 @@ export default WorkMDXComponents
 //                 { props.YouTubeLink ?
 //                 (
 //                     <div className={styles.videoFrame} style={ { paddingTop: `${props.videoRatio}%` }  } >
-//                         <iframe 
-//                         className={styles.video} 
-//                         src={props.YouTubeLink} 
+//                         <iframe
+//                         className={styles.video}
+//                         src={props.YouTubeLink}
 //                         allow="fullscreen;"></iframe>
 //                     </div>
 //                 ) :
 //                 (
 
-//                     <div className={styles.imageFrame}   >   
+//                     <div className={styles.imageFrame}   >
 //                         <NextImage src={ `/content/work/${props.directory}/${props.image.src}`} width={props.image.width} height={props.image.height}  />
 //                     </div>
 //                 )}

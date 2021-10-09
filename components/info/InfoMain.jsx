@@ -1,17 +1,17 @@
 
 
 
-// Vendor Libs
+// 00 Vendor Libs
 
 
-// Vendor Components
+// 01 Vendor Components
 
-// My Libs
+// 02 My Libs
 
-// My Components
+// 03 My Components
 import MyNextLink from '../global/MyNextLink'
 
-// My Styles
+// 04 My Styles
 import styles from './InfoMain.module.scss'
 
 
@@ -32,7 +32,7 @@ return (
 
                 <div className={`column column_618`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>He is currently working on autonomous vehicles at <MyNextLink href='/'>Woven Planet</MyNextLink> in New York.</p>
+                    <p className={`title_2`}>Previously at Lyft in San Francisco and Framestore before that, he is currently working on autonomous vehicles at <MyNextLink href='/'>Woven Planet</MyNextLink> in New York.</p>
                 </div>
 
                 <div className={`columns column_382`}>
@@ -49,9 +49,9 @@ return (
                                 <div className={`column column_4x`}>
                                     <h2 className={`title_2 columnHeader`}>Social</h2>
                                     <ul className={`title_3`}>
-                                        <li><MyNextLink href='/'>Github</MyNextLink></li>
-                                        <li><MyNextLink href='/'>Instagram</MyNextLink></li>
-                                        <li><MyNextLink href='/'>LinkedIn</MyNextLink></li>
+                                        <li><MyNextLink href='https://github.com/hanhanxue'>Github</MyNextLink></li>
+                                        <li><MyNextLink href='https://www.instagram.com/han.han.xue/?hl=en'>Instagram</MyNextLink></li>
+                                        <li><MyNextLink href='https://www.linkedin.com/in/hanhanxue/'>LinkedIn</MyNextLink></li>
                                         <li><MyNextLink href='/'>YouTube</MyNextLink></li>
                                     </ul>
                                 </div>

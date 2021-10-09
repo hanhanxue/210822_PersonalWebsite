@@ -7,14 +7,20 @@
 
 
 .ArticleHeader {
+    .copyFrame {
+        padding-left: $grid-spacing-48;
+        padding-right: $grid-spacing-48;
 
-    .titleFrame {
-        text-align: center;
-        margin-bottom: $grid-spacing-48;
+        .titleFrame {
+
+            text-align: center;
+            margin-bottom: $grid-spacing-48;
+        }
+        .metaFrame {
+            text-align: center;
+        }
     }
-    .metaFrame {
-        text-align: center;
-    }
+
 }
 
 

@@ -1,14 +1,18 @@
-// Vendor Libs
 
 
-// Vendor Components
+
+
+// 00 Vendor Libs
+
+
+// 01 Vendor Components
 import { MDXRemote } from 'next-mdx-remote'
 
-// My Libs
-import { getDirContent, getMatter, getMDXSource, genPaths,  genCustomData } from '../../lib/serverUtils'
-import { genSlug,  } from '../../lib/clientUtils'
+// 02 My Libs
+import { getDirContent, getMatter, getMDXSource, genPaths,  genCustomData,  genSlug,   } from '../../lib/serverUtils'
 
-// My Components
+
+// 03 My Components
 import Footer from '../../components/global/Footer'
 import Header from '../../components/global/Header'
 
@@ -16,7 +20,7 @@ import { ProjectHeader } from '../../components/work/WorkMDXComponents'
 import WorkMDXComponents  from '../../components/work/WorkMDXComponents'
 
 
-// My Styles
+// 04 My Styles
 
 
 
@@ -30,9 +34,11 @@ const WorkSlug = ( {source }) => {
 
     return ( 
         <>
-        <Header theme='Dark' />
+        <Header theme={source.scope.theme} />
 
         <ProjectHeader scope={source.scope} />
+
+        
         <main>
         <MDXRemote {...source} components={WorkMDXComponents } />
         </main>

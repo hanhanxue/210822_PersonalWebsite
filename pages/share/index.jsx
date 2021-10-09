@@ -44,7 +44,7 @@ const Share = ( { shares }) => {
         <Header theme='Default' />
 
         <main className={`section sectionDefault`}>
-        <div className={`wrapper shareList`}>
+        <div className={`wrapper wrapperShare`}>
         <div className={`letterbox_64_128`}>
 
             <div className={`tilesContainer tilesContainerFlex`}>

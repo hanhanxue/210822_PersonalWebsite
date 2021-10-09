@@ -36,15 +36,16 @@
     &Default {
         max-width: 1680px;
     }
+    
+    &Share {
+        max-width: 1476px;
+    }
 
-
-    &.shareSingle {
+    &SharePost {
         max-width: 864px;
     }
 
-    &.shareList {
-        max-width: 1476px;
-    }
+
 }
 
 
@@ -62,6 +63,10 @@
 
     &_64_128 {
         padding-top: $grid-spacing-64;
+        padding-bottom: $grid-spacing-128;
+    }
+
+    &_0_128 {
         padding-bottom: $grid-spacing-128;
     }
 }

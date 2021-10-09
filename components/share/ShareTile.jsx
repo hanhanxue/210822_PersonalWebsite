@@ -3,7 +3,7 @@
 
 // 00 Vendor Libs
 import {useRouter} from 'next/router'
-let moment = require('moment')
+import moment from 'moment'
 
 // 01 Vendor Components
 

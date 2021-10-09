@@ -1,4 +1,20 @@
 
+
+// 00 Vendor Libs
+
+
+// 01 Vendor Components
+
+import NextImage from 'next/image'
+
+
+// 02 My Libs
+
+
+// 03 My Components
+
+
+// 04 My Styles
 import styles from './ShareMDXComponents.module.scss'
 
 
@@ -12,15 +28,16 @@ export const ArticleHeader = ( {scope} ) => {
 
     return (
     <section className={`section sectionWhite ${styles.ArticleHeader}`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`letterbox_64`}>
+            <div className={`${styles.copyFrame}`}>
+                <div className={`title_1 ${styles.titleFrame}`}>
+                {scope.title}
+                </div>
 
-            <div className={`title_1 ${styles.titleFrame}`}>
-            {scope.title}
-            </div>
-
-            <div className={`subhead ${styles.metaFrame}`}>
-            {`${scope.categories[0]} | ${moment(scope.date).format('MMMM Do YYYY')} (${moment(scope.date).fromNow()})`}     
+                <div className={`subhead ${styles.metaFrame}`}>
+                {`${scope.categories[0]} | ${moment(scope.date).format('MMMM Do YYYY')} (${moment(scope.date).fromNow()})`}     
+                </div>
             </div>
 
     </div>
@@ -37,7 +54,7 @@ const SectionImage = (props) => {
 
     return (
     <section className={`section sectionWhite ${styles.sectionImage}`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`}>
 
     
@@ -56,7 +73,7 @@ const SectionImage = (props) => {
 
 const P = (props) => (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`}>
 
         <p {...props} className={`body_2 ${styles.p}`} />
@@ -73,7 +90,7 @@ const P = (props) => (
 
 const H2 = (props) =>  (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`}>
 
         <h2 {...props} className={`title_3 myHeading ${styles.heading} ${styles.h2}`} />
@@ -85,7 +102,7 @@ const H2 = (props) =>  (
 
 const H3 = (props) =>  (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`}>
 
         <h2 {...props} className={`headline myHeading ${styles.heading} ${styles.h3}`} />
@@ -101,7 +118,7 @@ const H3 = (props) =>  (
 
 const Ul = (props) =>  (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`}>
 
         <ul {...props} className={`${styles.ul}`} />
@@ -122,7 +139,7 @@ const Code = ({children, className}) => {
 
     return (
     <section className={`section sectionWhite ${styles.code}`} >
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`} >
 
     <Highlight {...defaultProps} code={children} language="javascript" > 
@@ -180,7 +197,7 @@ export default ShareMDXComponents
 
 const InlineCode = (props) => (
     <section className={`section sectionWhite`}>
-    <div className={`wrapper shareSingle`}>
+    <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterBox}`}>
 
         <code {...props} className={`code ${styles.code}`} />

@@ -1,15 +1,16 @@
 
-// Vendor Libs
 
 
-// Vendor Components
+// 00 Vendor Libs
+
+
+// 01 Vendor Components
 import { MDXRemote } from 'next-mdx-remote'
 
-// My Libs
-import { getDirContent, getMatter, getMDXSource, genCustomData } from '../../lib/serverUtils'
-import { genSlug, genPaths} from '../../lib/clientUtils'
+// 02 My Libs
+import { getDirContent, getMatter, getMDXSource, genCustomData, genPaths,  genSlug,  } from '../../lib/serverUtils'
 
-// My Components
+// 03 My Components
 import Footer from '../../components/global/Footer'
 import Header from '../../components/global/Header'
 
@@ -17,7 +18,7 @@ import {ArticleHeader} from '../../components/share/ShareMDXComponents'
 import ShareMDXComponents from '../../components/share/ShareMDXComponents'
 
 
-// My Styles
+// 04 My Styles
 
 
 

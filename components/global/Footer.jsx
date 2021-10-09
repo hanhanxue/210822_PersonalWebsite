@@ -1,16 +1,16 @@
 
 
-// Vendor Libs
+// 00 Vendor Libs
 import moment from 'moment'
 
-// Vendor Components
+// 01 Vendor Components
 
-// My Libs
+// 02 My Libs
 
-// My Components
+// 03 My Components
 import MyNextLink from './MyNextLink'
 
-// My Styles
+// 04 My Styles
 
 
 
@@ -37,9 +37,9 @@ const Footer = ( {theme} ) => {
                 <div className={`column column_1x`}>
                     <h3 className={`headline columnHeader`}>Social</h3>
                     <ul className={`body_1`}>
-                        <li><MyNextLink href='/'>Github</MyNextLink></li>
-                        <li><MyNextLink href='/'>Instagram</MyNextLink></li>
-                        <li><MyNextLink href='/'>LinkedIn</MyNextLink></li>
+                        <li><MyNextLink href='https://github.com/hanhanxue'>Github</MyNextLink></li>
+                        <li><MyNextLink href='https://www.instagram.com/han.han.xue/?hl=en'>Instagram</MyNextLink></li>
+                        <li><MyNextLink href='https://www.linkedin.com/in/hanhanxue/'>LinkedIn</MyNextLink></li>
                         <li><MyNextLink href='/'>YouTube</MyNextLink></li>
                     </ul>
                 </div>

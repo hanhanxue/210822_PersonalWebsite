@@ -17,7 +17,7 @@ import styles from './MyNextLink.module.scss'
 
 
 
-const MyNextLink = ({href, children, style, handleClick}) => {
+const MyNextLink = ({href, children, handleClick}) => {
     return ( 
         <NextLink href={href}>
             {handleClick ? 
@@ -30,7 +30,6 @@ const MyNextLink = ({href, children, style, handleClick}) => {
                     </a>  
         
         }
-
         </NextLink>
      );
 }
