@@ -19,11 +19,13 @@ This is not an explanation as to what is LWF and / or why it is important. There
 
 Here is an image rendered with LWF:
 
-<SectionImage file={assets[1000]} />
+
+
+<SingleImage file={assets[1000]} />
 
 Compared to the same image without proper gamma correction:
 
-<SectionImage file={assets[1001]} />
+<SingleImage file={assets[1001]} />
 
 ## Workflow Summary
 
@@ -41,18 +43,18 @@ Under VRay ➡ Color mapping tab in Render Settings window:
 - Affect swatches: ON (this way the swatch samples in Hypershade are displayed correctly)
 
 
-<SectionImage file={assets[1002]} />
+<SingleImage file={assets[1002]} />
 
 
 For sRGB textures, go to the file node and add Texture input gamma under Attributes ➡ VRay
 
-<SectionImage file={assets[1003]} />
+<SingleImage file={assets[1003]} />
 
 For procedural colors / textures within Maya, plug the node into a Gamma Correct node with these settings:
 
-<SectionImage file={assets[1004]} />
+<SingleImage file={assets[1004]} />
 
-<SectionImage file={assets[1005]} />
+<SingleImage file={assets[1005]} />
 
 
 I generally output my renders in OpenEXR. If you want to output in an sRGB format straight from Maya then you’ll have to turn Don’t affect colors (adaption only) option off.
@@ -70,17 +72,17 @@ Here are a few extra images to demonstrate the process.
 
 Below is an image with proper gamma correction settings applied in the Render Settings window. However the file textures and procedural swatches / ramp are not corrected yet. You can clearly see from the rectangle with the procedural ramp shader and the materials with file textures that they are going through double gamma correction (midtones are too bright).
 
-<SectionImage file={assets[1006]} />
+<SingleImage file={assets[1006]} />
 
 
 Using Gamma Correction nodes (set to 0.455) to fix the procedural colors / textures. File textures still render incorrectly:
 
-<SectionImage file={assets[1007]} />
+<SingleImage file={assets[1007]} />
 
 By adding the Texture input gamma attributes in the file nodes, file textures now render correctly:
 
-<SectionImage file={assets[1008]} />
+<SingleImage file={assets[1008]} />
 
 Finally here is the effect of enabling Affect swatches option:
 
-<SectionImage file={assets[1009]} />
+<SingleImage file={assets[1009]} />

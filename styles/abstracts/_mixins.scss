@@ -51,7 +51,7 @@ $breakpoint argument choices:
 
     //LAYOUT CHANGE
     @if $breakpoint == phone_Portrait {
-        @media (max-width: 46em) { @content };  //44
+        @media (max-width: 48em) { @content };  //44
     }
 
     @if $breakpoint == phone_Portrait_S {

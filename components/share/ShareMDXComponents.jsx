@@ -7,6 +7,7 @@ import moment from 'moment'
 
 import NextImage from 'next/image'
 import Highlight, {defaultProps} from 'prism-react-renderer'
+import MyNextImage from '../global/MyNextImage'
 
 
 // 02 My Libs
@@ -55,7 +56,7 @@ export const ArticleHeader = ( {scope} ) => {
 const P = (props) => (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={``}>
+    <div className={`${styles.letterbox_0_24}`}>
 
     <div className={`columns`}>
         <div className={`column column_4x `}>
@@ -73,7 +74,7 @@ const P = (props) => (
 const H2 = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={``}>
+    <div className={`${styles.letterbox_24_24}`}>
 
     <div className={`columns`}>
     <div className={`column column_4x `}>
@@ -90,7 +91,7 @@ const H2 = (props) =>  (
 const H3 = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={``}>
+    <div className={`${styles.letterbox_24_24}`}>
 
 
     <div className={`columns`}>
@@ -110,7 +111,7 @@ const H3 = (props) =>  (
 const Ul = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={``}>
+    <div className={`${styles.letterbox_12_12}`}>
 
     <div className={`columns`}>
         <div className={`column column_4x `}>
@@ -136,45 +137,21 @@ const Li = (props) =>  (
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const SectionImage = (props) => {
+const SingleImage = (props) => {
 
     //console.log(props)
 
     return (
-    <section className={`section sectionWhite ${styles.sectionImage}`}>
+    <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`}>
+    <div className={`${styles.letterbox_24_24}`}>
 
-    
-
-            <NextImage 
-                src={`${props.file.publicFilePath}`}
-                width={props.file.fileMeta.width} 
-                height={props.file.fileMeta.height} 
-                className={`nextImage`}/>
-    
+    <div className={`textAlignCenter`}>
+            <MyNextImage
+            source={`${props.file.publicFilePath}`}
+            width={props.file.fileMeta.width} 
+            height={props.file.fileMeta.height} />
+    </div>
 
     </div>
     </div>
@@ -200,7 +177,7 @@ const Code = ({children, className}) => {
     return (
     <section className={`section sectionWhite ${styles.code}`} >
     <div className={`wrapper wrapperSharePost`}>
-    <div className={``} >
+    <div className={`${styles.letterbox_24_24}`} >
 
 
 
@@ -236,17 +213,22 @@ const Code = ({children, className}) => {
     )
 }
 
+
+const InlineCode = (props) => (
+        <code {...props} className={`code ${styles.inlineCode}`} />
+)
+
 const ShareMDXComponents = {
     
     // SectionTitle: SectionTitle,
-    SectionImage: SectionImage,
+    SingleImage: SingleImage,
     p: P,
     h2: H2,
     h3: H3,
     ul: Ul,
     li: Li,
     code: Code,
-
+    inlineCode: InlineCode,
 }
 
 export default ShareMDXComponents
@@ -265,15 +247,3 @@ export default ShareMDXComponents
 
 
 
-
-const InlineCode = (props) => (
-    <section className={`section sectionWhite`}>
-    <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterBox}`}>
-
-        <code {...props} className={`code ${styles.code}`} />
-
-    </div>
-    </div>
-    </section>
-)

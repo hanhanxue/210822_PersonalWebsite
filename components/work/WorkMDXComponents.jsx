@@ -69,7 +69,7 @@ export const ProjectHeader = ( {scope} ) => {
                     ) :
                     (
 
-                        <div className={`${styles.heroFrame} nextImageDiv`}>
+                        <div className={`${styles.heroFrame}`}>
                             <MyNextImage
                             source={ `${scope.assets[scope.heroImage].publicFilePath}`}
                             width={ `${scope.assets[scope.heroImage].fileMeta.width}`}

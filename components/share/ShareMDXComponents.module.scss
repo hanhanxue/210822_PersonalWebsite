@@ -22,10 +22,27 @@
 
 }
 
+.letterbox {
+
+    &_12_12 {
+        padding-top: $grid-spacing-12;
+        padding-bottom: $grid-spacing-12;
+    }
+
+    &_0_24 {
+        padding-bottom: $grid-spacing-24;
+    }
+
+    &_24_24 {
+        padding-top: $grid-spacing-24;
+        padding-bottom: $grid-spacing-24;
+    }
+
+}
+
 
 .codeFrame {
-    margin-top: $grid-spacing-24;
-    margin-bottom: $grid-spacing-24;
+
 
     padding: $grid-spacing-24;
 
@@ -34,30 +51,8 @@
 
 
 
-.P {
-    margin-bottom: $grid-spacing-24;
-}
-
-.H2 {
-    margin-top: $grid-spacing-24;
-    margin-bottom: $grid-spacing-24;
-}
-
-.H3 {
-    margin-top: $grid-spacing-24;
-    margin-bottom: $grid-spacing-24;
-}
-
-
-
-
-
-
-
 
 .ul {
-    margin-top: $grid-spacing-12;
-    margin-bottom: $grid-spacing-12;
 
     list-style-position: outside;
     padding-left: $grid-spacing-24;
@@ -76,6 +71,41 @@
 }
 
 
+.inlineCode {
+    color: $color-main-primary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,7 +114,7 @@
 
 
 // .code {
-//     color: $color-main-primary;
+//     
 // }
 
 
