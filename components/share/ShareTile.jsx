@@ -49,19 +49,19 @@ const ShareTile = ( {tileType, coverImage,   categories, date,    title,    slug
 
 
 
-                    <div className={styles.imageFrame} style={backgroundImageStyle} onClick={ () => viewPost(postLink) }>
-                    </div>
+                        <div className={styles.imageFrame} style={backgroundImageStyle} onClick={ () => viewPost(postLink) }>
+                                </div>
 
-                    <div className={styles.textFrame}>
-                        <div className={`${styles.flexItem} ${styles.metaFrame}`}>
-                            <div className={`subhead ${styles.metaCategory}`}>{categories[0]}</div>
-                            <div className={`subhead ${styles.metaDate}`}>  {moment(date).format('MMM Do YYYY')} </div>
-                        </div>
+                                <div className={styles.textFrame}>
+                                    <div className={`${styles.flexItem} ${styles.metaFrame}`}>
+                                        <div className={`subhead ${styles.metaCategory}`}>{categories[0]}</div>
+                                        <div className={`subhead ${styles.metaDate}`}>  {moment(date).format('MMM Do YYYY')} </div>
+                                    </div>
 
-                        <div className={`headline ${styles.flexItem} ${styles.titleFrame}`}>
-                            <MyNextLink href={postLink}>{title}</MyNextLink>
-                        </div>
-                    </div>
+                                    <div className={`headline ${styles.flexItem} ${styles.titleFrame}`}>
+                                        <MyNextLink href={postLink}>{title}</MyNextLink>
+                                    </div>
+                                </div>
 
 
 
