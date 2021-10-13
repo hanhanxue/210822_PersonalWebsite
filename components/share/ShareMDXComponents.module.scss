@@ -24,9 +24,9 @@
 
 .letterbox {
 
-    &_12_12 {
+    &_12_24 {
         padding-top: $grid-spacing-12;
-        padding-bottom: $grid-spacing-12;
+        padding-bottom: $grid-spacing-24;
     }
 
     &_0_24 {
@@ -50,7 +50,12 @@
 }
 
 
+.caption {
+    text-align: center;
+    padding-top: $grid-spacing-12;
 
+    color: $color-gray-650;
+}
 
 .ul {
 
@@ -63,7 +68,7 @@
     margin-bottom: $grid-spacing-12;
 
     &::before {
-        content: '--';
+        content: '-';
         position:absolute;
 
         margin-left: rem(-24);
@@ -72,12 +77,20 @@
 
 
 .inlineCode {
-    color: $color-main-primary;
+    color: rgb(212, 0, 255);
+
+    
+    background-color: rgba(1.0, 1.0, 1.0, 0.04);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(1.0, 1.0, 1.0, 0.08);
+
 }
-
-
-
-
 
 
 

@@ -111,7 +111,7 @@ const H3 = (props) =>  (
 const Ul = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterbox_12_12}`}>
+    <div className={`${styles.letterbox_12_24}`}>
 
     <div className={`columns`}>
         <div className={`column column_4x `}>
@@ -146,14 +146,20 @@ const SingleImage = (props) => {
     <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterbox_24_24}`}>
 
-    <div className={`textAlignCenter`}>
+    <figure className={`textAlignCenter`}>
             <MyNextImage
             source={`${props.file.publicFilePath}`}
             width={props.file.fileMeta.width} 
             height={props.file.fileMeta.height} />
+    </figure>
+    {props.caption &&
+    <div className={`caption ${styles.caption}`}>
+        {props.caption}
     </div>
+    }   
 
     </div>
+
     </div>
     </section>
 )}

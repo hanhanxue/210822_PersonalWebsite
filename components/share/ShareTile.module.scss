@@ -10,7 +10,7 @@
 .tile {
     position: relative;
 
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
 
 
@@ -26,7 +26,7 @@
     &Large {
         flex-basis: 50%;
         @include respond(tablet_Portrait) {
-            flex-basis: 33%;
+            flex-basis: 33.333%;
         }
         @include respond(phone_Portrait) {
             flex-basis: 50%;
@@ -36,7 +36,7 @@
     &Small {
         flex-basis: 25%;
         @include respond(tablet_Portrait) {
-            flex-basis: 33%;
+            flex-basis: 33.333%;
         }
         @include respond(phone_Portrait) {
             flex-basis: 50%;
