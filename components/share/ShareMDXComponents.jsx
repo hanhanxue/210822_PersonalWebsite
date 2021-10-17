@@ -74,7 +74,7 @@ const P = (props) => (
 const H2 = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterbox_24_24}`}>
+    <div className={`${styles.letterbox_48_24}`}>
 
     <div className={`columns`}>
     <div className={`column column_4x `}>
@@ -111,7 +111,7 @@ const H3 = (props) =>  (
 const Ul = (props) =>  (
     <section className={`section sectionWhite`}>
     <div className={`wrapper wrapperSharePost`}>
-    <div className={`${styles.letterbox_12_24}`}>
+    <div className={`${styles.letterbox_0_24}`}>
 
     <div className={`columns`}>
         <div className={`column column_4x `}>

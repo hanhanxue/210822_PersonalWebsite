@@ -24,17 +24,24 @@
 
 .letterbox {
 
+    &_0_24 {
+        padding-bottom: $grid-spacing-24;
+    }
+
     &_12_24 {
         padding-top: $grid-spacing-12;
         padding-bottom: $grid-spacing-24;
     }
 
-    &_0_24 {
-        padding-bottom: $grid-spacing-24;
-    }
+
 
     &_24_24 {
         padding-top: $grid-spacing-24;
+        padding-bottom: $grid-spacing-24;
+    }
+
+    &_48_24 {
+        padding-top: $grid-spacing-48;
         padding-bottom: $grid-spacing-24;
     }
 
@@ -72,6 +79,10 @@
         position:absolute;
 
         margin-left: rem(-24);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
