@@ -88,7 +88,7 @@
 
 
 .inlineCode {
-    color: rgb(212, 0, 255);
+    color: $color-main-primary;
 
     
     background-color: rgba(1.0, 1.0, 1.0, 0.04);
@@ -115,7 +115,19 @@
 
 
 
-
+.postLink {
+    //color: blue;
+    color: $color-main-primary;
+    transition: $anim-timing-snappy;
+    //text-decoration: underline;
+  
+    &:hover {
+      color: $color-main-white;
+      background-color: $color-main-primary;
+  
+    }
+  
+}
 
 
 

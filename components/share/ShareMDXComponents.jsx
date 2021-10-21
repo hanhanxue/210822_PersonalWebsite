@@ -224,6 +224,17 @@ const InlineCode = (props) => (
         <code {...props} className={`code ${styles.inlineCode}`} />
 )
 
+const Link = (props) => (
+
+    
+    <>
+    {props.className === 'rehypeAutolinkHeadings'
+    ? <a {...props} />
+    : <a {...props} className={`${styles.postLink}`}/>
+    }
+    </>
+)
+
 const ShareMDXComponents = {
     
     // SectionTitle: SectionTitle,
@@ -235,6 +246,7 @@ const ShareMDXComponents = {
     li: Li,
     code: Code,
     inlineCode: InlineCode,
+    a: Link,
 }
 
 export default ShareMDXComponents

@@ -33,7 +33,7 @@ const ShareSlug = ( {source } ) => {
 
                     {/* <ShareSingle source={source} /> */}
                     <ArticleHeader scope={source.scope} />
-                    <main className={`letterbox_64_128`}>
+                    <main className={`letterbox_64_128 post`}>
                         <MDXRemote {...source} components={ShareMDXComponents} />
                     </main>
 
