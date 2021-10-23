@@ -159,7 +159,6 @@ const SingleImage = (props) => {
     }   
 
     </div>
-
     </div>
     </section>
 )}
@@ -167,7 +166,29 @@ const SingleImage = (props) => {
 
 
 
+const Video = (props) => {
+    return (
+        <section className={`section sectionWhite`}>
+        <div className={`wrapper wrapperSharePost`}>
+        <div className={`${styles.letterbox_24_24}`}>
 
+
+
+        <div className={styles.videoFrame} style={ { paddingTop: `${props.ratio}%` }  } >
+        <iframe
+        className={styles.video}
+        src={props.source}
+        allow="fullscreen;"></iframe>
+    </div>
+
+
+    </div>
+    </div>
+    </section>
+    )
+
+
+}
 
 
 
@@ -239,6 +260,7 @@ const ShareMDXComponents = {
     
     // SectionTitle: SectionTitle,
     SingleImage: SingleImage,
+    Video: Video,
     p: P,
     h2: H2,
     h3: H3,
