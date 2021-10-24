@@ -1,0 +1,16 @@
+
+
+@import "../../styles/abstracts/variables";
+
+
+
+
+.lists {
+    li {
+        margin-bottom: $grid-spacing-6;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

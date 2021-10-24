@@ -35,7 +35,7 @@ return (
                     <p className={`title_2`}>Previously at Lyft in San Francisco and Framestore before that, he is currently working on autonomous vehicles at <MyNextLink href='/'>Woven Planet</MyNextLink> in New York.</p>
                 </div>
 
-                <div className={`columns column_382`}>
+                <div className={`columns column_382 ${styles.contactsList}`}>
 
 
                                 <div className={`column column_4x columnForceBottomMargin`}>

@@ -9,9 +9,34 @@ categories: ['Reference']
 ---
 
 
+
 ## General
 
 ## VEX
+### Set Packed Transform
+```c
+//Apply transformations to packed geometry
+
+matrix xform = getpackedtransform(1, @ptnum);
+setpackedtransform(0, @ptnum, xform);
+```
+### Attribute Prefixes
+```c
+// @attribute prefixes
+
+f@attribute // float 
+u@attribute // vector2 (2 floats) 
+v@attribute // vector (3 floats) 
+p@attribute // vector4 (4 floats)
+
+i@attribute // int
+
+2@attribute // matrix2 (2×2 floats) 
+3@attribute // matrix3 (3×3 floats) 
+4@attribute // matrix (4×4 floats)
+
+s@attribute // string
+````
 
 ## Python
 

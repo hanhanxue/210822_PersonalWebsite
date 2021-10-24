@@ -12,6 +12,8 @@ import MyNextLink from './MyNextLink'
 
 // 04 My Styles
 
+import styles from './Footer.module.scss'
+
 
 
 
@@ -23,7 +25,7 @@ const Footer = ( {theme} ) => {
         <div className={`wrapper wrapperDefault`}>
         <div className={`letterbox_64`}>
 
-            <div className={`columns`}>
+            <div className={`columns ${styles.lists}`}>
 
 
                 <div className={`column column_1x`}>
@@ -36,7 +38,7 @@ const Footer = ( {theme} ) => {
 
                 <div className={`column column_1x`}>
                     <h3 className={`headline columnHeader`}>Social</h3>
-                    <ul className={`body_1`}>
+                    <ul className={`body_1 `}>
                         <li><MyNextLink href='https://github.com/hanhanxue'>Github</MyNextLink></li>
                         <li><MyNextLink href='https://www.instagram.com/han.han.xue/?hl=en'>Instagram</MyNextLink></li>
                         <li><MyNextLink href='https://www.linkedin.com/in/hanhanxue/'>LinkedIn</MyNextLink></li>
