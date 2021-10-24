@@ -60,41 +60,6 @@ a {
   text-decoration: none;
 }
 
-.myHeading {
- display: inline-block;
 
-
-    .rehypeAutolinkHeadings {
-      color: $color-main-primary;
-      //color: blue;
-      //outline: none;
-      font-weight: 600;
-      opacity: 0;
-      padding-left: $grid-spacing-6;
-      padding-right: $grid-spacing-6;
-      
-      transition: $anim-timing-snappy;
-
-    }
-
-
-    &:hover .rehypeAutolinkHeadings {
-      opacity: 100;
-  
-    }
-}
-
-// Prism code wrap
-pre[class*="language-" ],
-code[class*="language-"] {
-
-  //white-space: normal;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  word-break: break-word;
-
-  
-
-}
 
 

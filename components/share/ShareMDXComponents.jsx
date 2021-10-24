@@ -78,7 +78,7 @@ const H2 = (props) =>  (
 
     <div className={`columns`}>
     <div className={`column column_4x `}>
-        <h2 {...props} className={`title_3 myHeading ${styles.H2}`} />
+        <h2 {...props} className={`title_3 ${styles.myHeading} ${styles.H2}`} />
         </div>
     </div>
 
@@ -96,7 +96,7 @@ const H3 = (props) =>  (
 
     <div className={`columns`}>
         <div className={`column column_4x `}>
-        <h2 {...props} className={`headline myHeading ${styles.H3}`} />
+        <h2 {...props} className={`headline ${styles.myHeading} ${styles.H3}`} />
         </div>
         </div>
 
@@ -200,33 +200,39 @@ const Video = (props) => {
 
 const Code = ({children, className}) => {
     const language = className.replace(/language-/, '')
+    //let noLastLine = tokens.pop()
 
     return (
-    <section className={`section sectionWhite ${styles.code}`} >
+    <section className={`section sectionWhite ${styles.prismCode}`} >
     <div className={`wrapper wrapperSharePost`}>
     <div className={`${styles.letterbox_24_24}`} >
 
 
+    <Highlight {...defaultProps} code={children} language={language} > 
 
+        {   ({className, style, tokens, getLineProps, getTokenProps}) => 
 
-
-    <Highlight {...defaultProps} code={children} language="javascript" > 
-
-        {   ({className, style, tokens, getLineProps, getTokenProps}) => (
-
-            <pre className={` code  ${className}  ${styles.codeFrame} `} style={{...style}}>
-                {tokens.map((line, i) => (
-                    <div key={i} {...getLineProps({line, key: i})}>
-                        {line.map((token, key) => (
-                            <span key={key} {...getTokenProps({token, key})} />
-
-
+     
+      
+ 
+                    <pre className={` code  ${className}  ${styles.codeFrame} `} style={{...style}}>
+                            
+                                           
+                        {tokens.map(  (line, i) => (
+                            
+                            <>
+                                <div key={i} {...getLineProps({line, key: i})}>
+                                    {line.map((token, key) => (
+                                        <span key={key} {...getTokenProps({token, key})} />
+                                    ))}
+                                </div>
+                            </>
+                
                         ))}
-                    </div>
-                ))}
-            </pre>
-
-        )}
+                    </pre>
+         
+   
+        }
 
     </Highlight>
 
@@ -245,9 +251,8 @@ const InlineCode = (props) => (
         <code {...props} className={`code ${styles.inlineCode}`} />
 )
 
-const Link = (props) => (
 
-    
+const Link = (props) => (
     <>
     {props.className === 'rehypeAutolinkHeadings'
     ? <a {...props} />

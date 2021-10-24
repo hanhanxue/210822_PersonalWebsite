@@ -19,7 +19,11 @@ categories: ['Reference']
 
 matrix xform = getpackedtransform(1, @ptnum);
 setpackedtransform(0, @ptnum, xform);
+
+p@orient = quaternion(matrix3(xform));
 ```
+
+
 ### Attribute Prefixes
 ```c
 // @attribute prefixes

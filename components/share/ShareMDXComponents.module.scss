@@ -128,7 +128,14 @@
 
 
 .H2 {
+    padding-top: 96px;
+    margin-top: -96px;
     font-weight: 600;
+}
+
+.H3 {
+    padding-top: 96px;
+    margin-top: -96px;
 }
 
 
@@ -159,11 +166,46 @@
 
 
 
+.prismCode{
+    // Prism code wrap
+    pre[class*="language-" ],
+    code[class*="language-"] {
+
+    //white-space: normal;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    }
+}
 
 
 
 
 
+.myHeading {
+    display: inline-block;
+   
+   
+       a {
+         color: $color-main-primary;
+         //color: blue;
+         //outline: none;
+         font-weight: 600;
+         opacity: 0;
+         padding-left: $grid-spacing-6;
+         padding-right: $grid-spacing-6;
+         
+         transition: $anim-timing-snappy;
+   
+       }
+   
+   
+       &:hover a {
+         opacity: 100;
+     
+       }
+   }
+   
 
 
 
