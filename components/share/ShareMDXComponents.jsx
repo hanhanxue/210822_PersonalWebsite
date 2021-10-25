@@ -5,16 +5,15 @@ import moment from 'moment'
 
 // 01 Vendor Components
 
-import NextImage from 'next/image'
 import Highlight, {defaultProps} from 'prism-react-renderer'
-import MyNextImage from '../global/MyNextImage'
+
 
 
 // 02 My Libs
 
 
 // 03 My Components
-
+import MyNextImage from '../global/MyNextImage'
 
 // 04 My Styles
 import styles from './ShareMDXComponents.module.scss'
@@ -210,32 +209,33 @@ const Code = ({children, className}) => {
 
     <Highlight {...defaultProps} code={children} language={language} > 
 
-        {   ({className, style, tokens, getLineProps, getTokenProps}) => 
-
-     
-      
- 
+        {   ({className, style, tokens, getLineProps, getTokenProps}) => {
+            //console.log(tokens.splice(-1))     // SPLICE 
+            tokens.splice(-1)
+  return(
                     <pre className={` code  ${className}  ${styles.codeFrame} `} style={{...style}}>
                             
-                                           
-                        {tokens.map(  (line, i) => (
+                              
+                        {tokens.map(  (line, i) => {
                             
-                            <>
+                            return(
+                                <>
                                 <div key={i} {...getLineProps({line, key: i})}>
                                     {line.map((token, key) => (
                                         <span key={key} {...getTokenProps({token, key})} />
                                     ))}
                                 </div>
                             </>
-                
-                        ))}
+                            )
+
+                        })} 
+
+
                     </pre>
-         
-   
+  )}
         }
 
     </Highlight>
-
 
 
 
