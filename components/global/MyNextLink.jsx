@@ -17,15 +17,15 @@ import styles from './MyNextLink.module.scss'
 
 
 
-const MyNextLink = ({href, children, handleClick}) => {
+const MyNextLink = ({href, children, handleClick, linkStyle}) => {
     return ( 
-        <NextLink href={href}>
+        <NextLink href={href} >
             {handleClick ? 
-                    <a className={`${styles.a}`} onClick={(e) => handleClick(e)}>
+                    <a className={`  ${styles[linkStyle]}  ${styles.a}    `} onClick={(e) => handleClick(e)}>
                         {children}
                     </a>
                     :
-                    <a className={`${styles.a}`} >
+                    <a className={`  ${styles[linkStyle]}  ${styles.a}    `} >
                         {children}
                     </a>  
         

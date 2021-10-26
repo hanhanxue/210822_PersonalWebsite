@@ -4,7 +4,13 @@
 
 @import "../../styles/abstracts/variables";
 
+
+
+
+
 .a {
+
+
     text-decoration: none;
     transition: .22s;
 
@@ -17,7 +23,7 @@
 
     &:hover
     {
-        transition: .22s;
+
         color: $color-main-primary;
     }
 
@@ -25,4 +31,27 @@
     // {
         
     // }
+
+
+
+
+
+
+
+    &.invisible {
+
+        color: rgb(219, 219, 219);
+        text-decoration: none;
+        transition: .22s;
+
+        &:hover
+        {
+            color: $color-main-primary;
+        }
+
+    }
+
 }
+
+
+

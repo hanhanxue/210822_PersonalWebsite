@@ -32,7 +32,7 @@ return (
 
                 <div className={`column column_618`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>Previously at Lyft in San Francisco and Framestore before that, he is currently working on autonomous vehicles at <MyNextLink href='/'>Woven Planet</MyNextLink> in New York.</p>
+                    <p className={`title_2`}>Previously at <MyNextLink href='https://www.lyft.com/' linkStyle='invisible'>Lyft</MyNextLink> in San Francisco and <MyNextLink href='https://www.framestore.com/?language=en' linkStyle='invisible'>Framestore</MyNextLink> before that, he is currently working on autonomous vehicles at <MyNextLink href='https://www.woven-planet.global/en/company-information' linkStyle='invisible'>Woven Planet</MyNextLink> in New York.</p>
                 </div>
 
                 <div className={`columns column_382 ${styles.contactsList}`}>
