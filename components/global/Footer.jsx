@@ -42,7 +42,7 @@ const Footer = ( {theme} ) => {
                         <li><MyNextLink href='https://github.com/hanhanxue'>Github</MyNextLink></li>
                         <li><MyNextLink href='https://www.instagram.com/han.han.xue/?hl=en'>Instagram</MyNextLink></li>
                         <li><MyNextLink href='https://www.linkedin.com/in/hanhanxue/'>LinkedIn</MyNextLink></li>
-                        <li><MyNextLink href='/'>YouTube</MyNextLink></li>
+                        <li><MyNextLink href='https://twitter.com/han_han_xue'>Twitter</MyNextLink></li>
                     </ul>
                 </div>
 
