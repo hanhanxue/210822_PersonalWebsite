@@ -158,7 +158,7 @@ return (
         <div className={`letterbox_64`}>
 
             <div className={`columns`}>
-                <div className={`column column_2x`}>
+                <div className={`column column_2x column_phoneBottom128`}>
                     <h2 className={`title_2 columnHeader columnHeaderCentered`}>Friends</h2>
                     <ul>
                         <li className={`title_3 ${styles.row}`}>Nicolas Girard ~ Designer</li>

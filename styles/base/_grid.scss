@@ -160,6 +160,11 @@
             &:last-child{
                 margin-bottom: 0;
             }
+
+            // Used on Info Page between Friends and Resources
+            &_phoneBottom128 {
+                margin-bottom: $grid-spacing-128;
+            }
         }
     }
 }
