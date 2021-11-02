@@ -11,10 +11,10 @@ categories: ['Asset']
 
 <!-- When the topic of camera implementation in OpenGL is introduced, most of the resources I have come across opt for a first-person shooter (FPS) style system. This make sense for those who are interested in learning OpenGL for game applications, but from a UX standpoint it is a sub optimal scheme for scene navigation. The type of camera found in most 3D modeling software (Maya, Houdini, Cinema 4D, Blender, Rhino to name just a few) offers a more intuitive way to navigate around in 3D space. Since I'm more interested in applications for content creation, I have implemented this type of camera for use in my OpenGL projects. -->
 
-This is a little helper class I created while going through [these](https://learnopengl.com/) tutorials. Most of the OpenGL tutorials I came across implement a first-person shooter (FPS) style camera system for viewport navigation, which I find less flexible compared to an orbit camera system used in most 3D authoring software.
+This is a little helper class I made while going through [these](https://learnopengl.com/) tutorials. Many OpenGL tutorials online implement a first-person shooter (FPS) style camera system for viewport navigation, which I find less flexible compared to an orbit camera system like the ones found in most 3D authoring software.
 
 ## The Code
-The camera object expects two floats as inputs (I recommend using `delta x` and `delta y` cursor coordinates) and enables tumbling, tracking and dollying. The object outputs view and projection matrices for use in your shader.
+The camera object expects two floats as inputs (simply use `delta x` and `delta y` cursor coordinates) and enables tumbling, tracking and dollying. The object outputs view and projection matrices for use in your shader.
 
 Find the .h and .cpp files [here](https://gist.github.com/hanhanxue/f235cfbea08b0e1db7cc828608643b1f). Below is the .h file to give an idea of available methods:
 
