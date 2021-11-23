@@ -49,7 +49,7 @@ const WorkSlug = ( {source }) => {
      );
 }
  
-export default WorkSlug;
+export default WorkSlug
 
 
 
