@@ -89,19 +89,15 @@ return (
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>FX Technical Director ~ Framestore</h3>
                         <div className={`body_1 ${styles.flexRowItemRight}`}>May 2016 — Oct 2017</div>
                     </li>
-                    <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Montreal ~ Canada</div>
-                        <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Visual Designer ~ Moment Factory</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>Jun 2015 — Feb 2016</div>
-                    </li>
+
                     <li className={`${styles.flexRow}`}>
                         <div className={`body_1 ${styles.flexRowItemLeft}`}>Montreal ~ Canada</div>
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>3D Generalist ~ Moment Factory</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>Nov 2014 — Apr 2015</div>
+                        <div className={`body_1 ${styles.flexRowItemRight}`}>Nov 2014 — Feb 2016</div>
                     </li>
                     <li className={`${styles.flexRow}`}>
                         <div className={`body_1 ${styles.flexRowItemLeft}`}>Beijing ~ China</div>
-                        <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Architectural Intern ~ MAD Architects</h3>
+                        <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Intern Architect ~ MAD Architects</h3>
                         <div className={`body_1 ${styles.flexRowItemRight}`}>May 2012 — Aug 2012</div>
                     </li>
                 </ul>
