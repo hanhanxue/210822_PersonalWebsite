@@ -7,6 +7,7 @@
 // 01 Vendor Components
 
 // 02 My Libs
+import {github, instagram, linkedin, twitter } from '../../lib/globalVars'
 
 // 03 My Components
 import MyNextLink from '../global/MyNextLink'
@@ -49,10 +50,10 @@ return (
                                 <div className={`column column_4x`}>
                                     <h2 className={`title_2 columnHeader`}>Social</h2>
                                     <ul className={`title_3`}>
-                                        <li><MyNextLink href='https://github.com/hanhanxue'>Github</MyNextLink></li>
-                                        <li><MyNextLink href='https://www.instagram.com/han.han.xue/?hl=en'>Instagram</MyNextLink></li>
-                                        <li><MyNextLink href='https://www.linkedin.com/in/hanhanxue/'>LinkedIn</MyNextLink></li>
-                                        <li><MyNextLink href='https://twitter.com/han_han_xue'>Twitter</MyNextLink></li>
+                                        <li><MyNextLink href={`${github}`}>Github</MyNextLink></li>
+                                        <li><MyNextLink href={`${instagram}`}>Instagram</MyNextLink></li>
+                                        <li><MyNextLink href={`${linkedin}`}>LinkedIn</MyNextLink></li>
+                                        <li><MyNextLink href={`${twitter}`}>Twitter</MyNextLink></li>
                                     </ul>
                                 </div>
 
