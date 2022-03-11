@@ -62,7 +62,7 @@ export const ProjectTile = (
                     </div>
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
-                        <MyNextLink href={projectLink} handleClick={(e) => e.preventDefault()}>+ View Project</MyNextLink>
+                        <MyNextLink href={projectLink} handleClick={(e) => e.preventDefault()}>→ View Project</MyNextLink>
                     </div>
 
 
@@ -120,8 +120,8 @@ export const BulletinTile = ({date,     title, subtitle,    bulletin}) => {
 
                     <div className={`body_1 ${styles.flexItem} ${styles.linkFrame}`}>
                         {isOpen ? 
-                        <MyNextLink href='https://www.google.com/' handleClick={handleReadMore}>- Read Less</MyNextLink> :
-                        <MyNextLink href='https://www.google.com/' handleClick={handleReadMore}>+ Read More</MyNextLink>
+                        <MyNextLink href='https://www.google.com/' handleClick={handleReadMore}>↑ Read Less</MyNextLink> :
+                        <MyNextLink href='https://www.google.com/' handleClick={handleReadMore}>↓ Read More</MyNextLink>
                          }
                     </div>
 
