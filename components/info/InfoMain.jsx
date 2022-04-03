@@ -33,7 +33,7 @@ return (
 
                 <div className={`column column_618`}>
                     <p className={`title_2 columnHeader`}>Han Han Xue is an interdisciplinary designer from Montreal, Canada.</p>
-                    <p className={`title_2`}>Previously at <MyNextLink href='https://www.lyft.com/' linkStyle='invisible'>Lyft</MyNextLink> in San Francisco and <MyNextLink href='https://www.framestore.com/?language=en' linkStyle='invisible'>Framestore</MyNextLink> before that, he is currently working on autonomous vehicles at <MyNextLink href='https://www.woven-planet.global/en/company-information' linkStyle='invisible'>Woven Planet</MyNextLink> in New York.</p>
+                    <p className={`title_2`}>Previously at <MyNextLink href='https://www.lyft.com/' linkStyle='invisible'>Lyft</MyNextLink> and <MyNextLink href='https://www.framestore.com/?language=en' linkStyle='invisible'>Framestore</MyNextLink> before that, he is currently working on autonomous vehicles at <MyNextLink href='https://www.woven-planet.global/en/company-information' linkStyle='invisible'>Woven Planet</MyNextLink> in San Francisco.</p>
                 </div>
 
                 <div className={`columns column_382 ${styles.contactsList}`}>
@@ -76,30 +76,30 @@ return (
                 <h2 className={`title_2 columnHeader columnHeaderCentered`}>Work Experience</h2>
                 <ul>
                     <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>New York ~ USA</div>
-                        <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Product Designer ~ Woven Planet</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>Aug 2021 — Present</div>
+                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Aug 2021 — Present</div>
+                        <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Senior Product Designer ~ Woven Planet</h3>
+                        <div className={`body_1 ${styles.flexRowItemRight}`}>San Francisco ~ USA</div>
                     </li>
                     <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>San Francisco ~ USA</div>
+                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Nov 2017 — Jul 2021</div>
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Product Designer ~ Lyft</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>Nov 2017 — Jul 2021</div>
+                        <div className={`body_1 ${styles.flexRowItemRight}`}>San Francisco ~ USA</div>
                     </li>
                     <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Montreal ~ Canada</div>
+                        <div className={`body_1 ${styles.flexRowItemLeft}`}>May 2016 — Oct 2017</div>
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>FX Technical Director ~ Framestore</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>May 2016 — Oct 2017</div>
+                        <div className={`body_1 ${styles.flexRowItemRight}`}>Montreal ~ Canada</div>
                     </li>
 
                     <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Montreal ~ Canada</div>
+                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Nov 2014 — Feb 2016</div>
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>3D Generalist ~ Moment Factory</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>Nov 2014 — Feb 2016</div>
+                        <div className={`body_1 ${styles.flexRowItemRight}`}>Montreal ~ Canada</div>
                     </li>
                     <li className={`${styles.flexRow}`}>
-                        <div className={`body_1 ${styles.flexRowItemLeft}`}>Beijing ~ China</div>
+                        <div className={`body_1 ${styles.flexRowItemLeft}`}>May 2012 — Aug 2012</div>
                         <h3 className={`title_3 ${styles.flexRowItemCenter}`}>Intern Architect ~ MAD Architects</h3>
-                        <div className={`body_1 ${styles.flexRowItemRight}`}>May 2012 — Aug 2012</div>
+                        <div className={`body_1 ${styles.flexRowItemRight}`}>Beijing ~ China</div>
                     </li>
                 </ul>
             </div>
