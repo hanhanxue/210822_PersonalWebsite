@@ -73,7 +73,7 @@ return (
 
         <div className={`columns`}>
             <div className={`column column_4x`}>
-                <h2 className={`title_2 columnHeader columnHeaderCentered`}>Work Experience</h2>
+                <h2 className={`title_2 columnHeader columnHeaderCentered`}>Professional Experience</h2>
                 <ul>
                     <li className={`${styles.flexRow}`}>
                         <div className={`body_1 ${styles.flexRowItemLeft}`}>Aug 2021 — Present</div>
