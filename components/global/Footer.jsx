@@ -50,7 +50,7 @@ const Footer = ( {theme} ) => {
                 <div className={`column column_1x`}>
                     <h3 className={`headline columnHeader`}>Studio</h3>
                     <ul className={`body_1`}>
-                        <li><MyNextLink href='/'>Epoch</MyNextLink></li>
+                        <li><MyNextLink href='/'>Manifold</MyNextLink></li>
                     </ul>
                 </div>
 
