@@ -27,7 +27,7 @@ const Play = ( {images}) => {
     return (
         <>
         <Head>
-            <title>Info ~ Han Han Xue</title>
+            <title>Play ~ Han Han Xue</title>
         </Head>
 
 
