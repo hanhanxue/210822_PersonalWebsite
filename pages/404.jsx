@@ -25,7 +25,7 @@ const NotFound = () => {
     useEffect(() => {
         setTimeout(() => {
             router.push('/')
-        }, 20000)
+        }, 3000)
     })
 
     const styles = {
