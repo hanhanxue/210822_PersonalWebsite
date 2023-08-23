@@ -1,32 +1,9 @@
 
-
-// 00 Vendor Libs
-import {useEffect} from 'react'
-import {useRouter} from 'next/router'
-
-// 01 Vendor Components
 import Head from 'next/head'
 import NextLink from 'next/link'
-// 02 My Libs
-
-// 03 My Components
-import Footer from '../components/global/Footer'
-import Header from '../components/global/Header'
-
-// 04 My Styles
 
 
-
-
-
-const NotFound = () => {
-    const router = useRouter()
-
-    useEffect(() => {
-        setTimeout(() => {
-            router.push('/')
-        }, 20000)
-    })
+const Home = ({ }) => {
 
     const styles = {
         // color: 'blue',
@@ -56,25 +33,15 @@ const NotFound = () => {
       </Head>
 
       <div className={`  text-brand   `}  style={styles}>
-      <h1>404 Not Found</h1>
+      <h1>Design at <NextLink href={`https://www.supermanifold.com/`}>
+        <a style={linkStyles}>Super Manifold®</a>
+        </NextLink></h1>
       </div>
 
         </>
     )
-
   }
   
-  export default NotFound
-
-
-
-//   return (
-//     <>
-//     <Header theme='Default' />
-
-//     <h1>NotFound</h1>
-
-//     <Footer theme='Default' />
-//     </>
-
-// )
+  export default Home
+  
+  

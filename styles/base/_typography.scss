@@ -43,7 +43,22 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: Torsos;
+    src: url('/fonts/BBTorsosPro-Regular.otf') format('opentype'),
+}
 
+
+
+.text-brand {
+    font-family: Torsos;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.01em;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
 
 
 // 100 Thin (Hairline)

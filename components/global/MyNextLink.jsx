@@ -4,6 +4,7 @@
 
 // 01 Vendor Components
 import NextLink from 'next/link'
+import Head from 'next/dist/shared/lib/head';
 
 // 02 My Libs
 

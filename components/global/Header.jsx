@@ -42,12 +42,12 @@ const Header = ( {theme} ) => {
             <nav className={`${styles.nav}`}>
 
                 <div className={`${styles.introFrame}`}>
-                    <span className={`body_1 ${styles.logotype}`}><MyNextLink href="/">Han Han Xue</MyNextLink></span>
+                    <span className={`body_1 ${styles.logotype}`}><MyNextLink href="/work">Han Han Xue</MyNextLink></span>
                     <pre className={`body_1 ${styles.tagline}`}> — Interdisciplinary Design</pre>
                 </div>
 
                 <ul className={`body_1 ${styles.navFrame}`}>
-                    <li className={`${styles.item}`}><MyNextLink href="/">Work</MyNextLink></li>
+                    <li className={`${styles.item}`}><MyNextLink href="/work">Work</MyNextLink></li>
                     <li className={`${styles.item}`}><MyNextLink href="/share">Share</MyNextLink></li>
                     <li className={`${styles.item}`}><MyNextLink href="/play">Play</MyNextLink></li>
                     <li className={`${styles.item}`}><MyNextLink href="/info">Info</MyNextLink></li>
