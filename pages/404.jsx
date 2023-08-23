@@ -41,12 +41,6 @@ const NotFound = () => {
 
     }
 
-    const linkStyles = {
-        color: 'inherit',
-        textDecoration: 'underline',
-
-    }
-
 
     return (
       <>
@@ -55,8 +49,8 @@ const NotFound = () => {
         {/* <meta name="description" content="Han Han Xue — Interdisciplinary Design" /> */}
       </Head>
 
-      <div className={`  text-brand   `}  style={styles}>
-      <h1>404 Not Found</h1>
+      <div  style={styles}>
+      <h1 className={`  text-brand   `} >404 Not Found</h1>
       </div>
 
         </>
@@ -69,7 +63,7 @@ const NotFound = () => {
 
 
 
-  
+
 
 //   return (
 //     <>
