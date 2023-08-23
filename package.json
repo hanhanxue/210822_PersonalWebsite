@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
-    "build": "react-scripts --openssl-legacy-provider next build",
-    "start": "react-scripts --openssl-legacy-provider next start",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "start": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next start",
     "lint": "next lint"
   },
   "dependencies": {
