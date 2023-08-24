@@ -132,7 +132,7 @@ const Home = ({ }) => {
 
 
       <div  style={divThirdStyles}>
-      <h1 className={`  text-brand   `}>Design at <NextLink href={`https://www.supermanifold.com/`}>
+      <h1 className={`  text-brand   `}>Product at <NextLink href={`https://www.supermanifold.com/`}>
                 <a style={linkStyles}><span style={spanStyles}>Super Manifold</span>®</a>
                 </NextLink></h1>
 
