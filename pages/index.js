@@ -28,12 +28,16 @@ const Home = ({ }) => {
 
         display: 'flex',
         justifyContent: 'center',
+
         alignItems: 'center',
+        textAlign: 'center',
+
 
         padding: '32px',
     }
 
     const linkStyles = {
+        display: 'inline-block',
         color: 'inherit',
     }
 
@@ -138,7 +142,7 @@ const Home = ({ }) => {
 
       <div  style={divThirdStyles}>
       <h1 className={`  text-brand   `}>Design & Product at <NextLink href={`https://www.supermanifold.com/`}>
-                <a style={linkStyles}><span style={spanStyles}>Super Manifold</span>®</a>
+                <a style={linkStyles}><u>Super Manifold</u>®</a>
                 </NextLink></h1>
 
 
