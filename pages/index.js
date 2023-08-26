@@ -12,11 +12,18 @@ const Home = ({ }) => {
         // color: 'blue',
         // lineHeight: 10,
         // padding: '1.5em',
-        height: '100vh',
-        width: '100vw',
+        minHeight: '100vh',
+        // gridTemplateColumns: '1fr 1fr 1fr',
+        // gridTemplateRows: '1fr 1fr 1fr',
+
+        // width: '100vw',
 
         display: 'flex',
         flexDirection: 'Column',
+
+        // display: 'grid',
+        // gap: '12px',
+        // height: 'fit-content',
 
         // justifyContent: 'center',
         // alignItems: 'center',
@@ -57,7 +64,7 @@ const Home = ({ }) => {
     
         alignItems: 'baseline',
         
-        padding: '12px 16px',
+        // padding: '12px 16px',
         borderRadius: '8px',
         width: '100%',
         maxWidth: '640px',
