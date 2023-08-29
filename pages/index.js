@@ -120,7 +120,7 @@ const Home = ({ }) => {
         padding: '16px',
     }
 
-    const [buttonLabel, setButtonLabel] = useState(`Let's chat`)
+    const [buttonLabel, setButtonLabel] = useState(`Let’s chat`)
 
     const router = useRouter()
 
@@ -130,7 +130,7 @@ const Home = ({ }) => {
     }
 
     const handleOnMouseLeave = () => {
-        setButtonLabel(`Let's chat`)
+        setButtonLabel(`Let’s chat`)
     }
 
     const handleOnClick = () => {
