@@ -90,7 +90,7 @@ const Home = ({ }) => {
         // padding: '12px 16px',
         // borderRadius: '8px',
         // width: '100%',
-        minWidth: '280px',
+        minWidth: '266px',
         // overflow: 'hidden',
         // justifyContent: 'end',
         
@@ -163,7 +163,7 @@ const Home = ({ }) => {
                         onMouseEnter={handleOnMouseEnter}
                         onMouseLeave={handleOnMouseLeave}
                         onClick={handleOnClick}>
-                    <h2  className={`  text-brand   `} >{buttonLabel}</h2>
+                    <h2  className={`  brand-base   `} >{buttonLabel}</h2>
 
                     <svg style={svgStyles}
                     width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +182,7 @@ const Home = ({ }) => {
 
 
         <div  style={divThirdStyles}>
-            <h1 className={`  text-brand   `}  style={{...textPad  } }  >Design & Product at <NextLink href={`https://www.supermanifold.com/`}>
+            <h1 className={`  brand-base   `}  style={{...textPad  } }  >Design & Product at <NextLink href={`https://www.supermanifold.com/`}>
             <a style={linkStyles}><u>Super Manifold</u>®</a>
             </NextLink></h1>   
         </div>
@@ -190,7 +190,7 @@ const Home = ({ }) => {
 
 
         <div  style={divThirdStyles}>
-            <h2  className={`  text-brand   `}  style={textPad} >{moment().format('YYYY')}</h2>
+            <h2  className={`  brand-base   `}  style={textPad} >{moment().format('YYYY')}</h2>
         </div>
 
 
